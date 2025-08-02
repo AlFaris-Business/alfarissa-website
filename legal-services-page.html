@@ -524,34 +524,110 @@
     </div>
 
     <!-- Footer (similar to homepage for consistency) -->
-    <footer id="footer" class="bg-[var(--color-primary-text)] text-white py-10 px-4 md:px-8 lg:px-16 mt-auto rounded-t-3xl shadow-xl">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 font-arabic-text">
-            <!-- عن الفارس للأعمال -->
-            <div class="footer-col-header">
-                <h3 class="text-xl font-amiri font-bold mb-6" style="color: var(--color-headings-cta);">عن الفارس للأعمال</h3>
-                <ul class="space-y-3 text-gray-300 footer-col-content">
-                    <li><a href="our-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">خدماتنا</a></li>
-                    <li><a href="vision-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">رؤيتنا</a></li>
-                    <li><a href="licenses-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">التراخيص</a></li>
-                    <li><a href="team-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الفريق</a></li>
-                </ul>
+        <footer id="footer" class="bg-[var(--color-primary-text)] text-white py-12 px-4 md:px-8 lg:px-16 mt-auto rounded-t-3xl shadow-xl">
+        <div class="container mx-auto">
+            <!-- العلامة التجارية والوصف -->
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold mb-4" style="color: var(--color-headings-cta);">
+                    <i class="fas fa-balance-scale-right mr-3"></i>الفارس للأعمال
+                </h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto font-arabic-text">
+                    شريكك المعتمد في الحلول القانونية والإدارية. نقدم خدمات احترافية متخصصة للأفراد والمنشآت مع ضمان الجودة والسرعة في الإنجاز.
+                </p>
             </div>
-            <!-- روابط سريعة -->
-            <div class="footer-col-header">
-                <h3 class="text-xl font-amiri font-bold mb-6" style="color: var(--color-headings-cta);">روابط سريعة</h3>
-                <ul class="space-y-3 text-gray-300 footer-col-content">
-                    <li><a href="homepage-html-v1.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الصفحة الرئيسية</a></li>
-                    <li><a href="legal-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الخدمات القانونية</a></li>
-                    <li><a href="government-transactions-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">تعقيب المعاملات الحكومية</a></li>
-                    <li><a href="packages-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الاشتراك بالباقات</a></li>
-                    <li><a href="zakat-tax-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الإقرارات الزكوية والضريبية</a></li>
-                    <li><a href="faq-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الأسئلة الشائعة</a></li>
-                    <li><a href="privacy-policy-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">سياسة الخصوصية</a></li>
-                </ul>
+
+            <!-- معلومات التواصل والخدمات -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+                <!-- معلومات التواصل -->
+                <div class="text-center md:text-right">
+                    <h3 class="text-xl font-bold mb-6" style="color: var(--color-headings-cta);">
+                        <i class="fas fa-phone mr-3"></i>تواصل معنا
+                    </h3>
+                    <div class="space-y-3 text-gray-300">
+                        <p class="flex items-center justify-center md:justify-end">
+                            <i class="fas fa-phone-alt ml-3 text-[var(--color-headings-cta)]"></i>
+                            <a href="tel:+966555490800" class="hover:text-[var(--color-headings-cta)] transition-colors">0555490800</a>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-end">
+                            <i class="fas fa-mobile-alt ml-3 text-[var(--color-headings-cta)]"></i>
+                            <a href="tel:+966555648602" class="hover:text-[var(--color-headings-cta)] transition-colors">0555648602</a>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-end">
+                            <i class="fas fa-envelope ml-3 text-[var(--color-headings-cta)]"></i>
+                            <a href="mailto:info.org" class="hover:text-[var(--color-headings-cta)] transition-colors">info.org</a>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-end">
+                            <i class="fas fa-map-marker-alt ml-3 text-[var(--color-headings-cta)]"></i>
+                            <span>جدة – حي الحمدانية</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- الخدمات الرئيسية -->
+                <div class="text-center md:text-right">
+                    <h3 class="text-xl font-bold mb-6" style="color: var(--color-headings-cta);">
+                        <i class="fas fa-cogs mr-3"></i>خدماتنا الرئيسية
+                    </h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="legal-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-gavel ml-2 text-[var(--color-headings-cta)]"></i>الخدمات القانونية
+                        </a></li>
+                        <li><a href="government-transactions-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-building ml-2 text-[var(--color-headings-cta)]"></i>تعقيب المعاملات الحكومية
+                        </a></li>
+                        <li><a href="packages-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-handshake ml-2 text-[var(--color-headings-cta)]"></i>الاشتراك بالباقات
+                        </a></li>
+                        <li><a href="zakat-tax-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-calculator ml-2 text-[var(--color-headings-cta)]"></i>الإقرارات الزكوية والضريبية
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- روابط مهمة -->
+                <div class="text-center md:text-right">
+                    <h3 class="text-xl font-bold mb-6" style="color: var(--color-headings-cta);">
+                        <i class="fas fa-link mr-3"></i>روابط مهمة
+                    </h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="vision-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-eye ml-2 text-[var(--color-headings-cta)]"></i>رؤيتنا
+                        </a></li>
+                        <li><a href="licenses-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-certificate ml-2 text-[var(--color-headings-cta)]"></i>التراخيص
+                        </a></li>
+                        <li><a href="faq-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-question-circle ml-2 text-[var(--color-headings-cta)]"></i>الأسئلة الشائعة
+                        </a></li>
+                        <li><a href="privacy-policy-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors flex items-center justify-center md:justify-end">
+                            <i class="fas fa-shield-alt ml-2 text-[var(--color-headings-cta)]"></i>سياسة الخصوصية
+                        </a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- شريط سفلي لحقوق الملكية -->
-            <div class="md:col-span-4 border-t border-gray-700 pt-4 mt-8 text-center text-gray-500 text-sm font-arabic-text">
-                جميع الحقوق محفوظة © الفارس للأعمال 2025
+
+            <!-- دعوة للعمل -->
+            <div class="text-center py-8 border-t border-gray-700">
+                <p class="text-lg text-gray-300 mb-6 font-arabic-text">هل تحتاج لاستشارة قانونية أو خدمة إدارية؟</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/966555490800?text=مرحباً، أود طلب استشارة قانونية" 
+                       class="bg-[var(--color-headings-cta)] text-[var(--color-primary-text)] px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition-all transform hover:scale-105" 
+                       target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp mr-2"></i>طلب استشارة فورية
+                    </a>
+                    <a href="tel:+966555490800" 
+                       class="border-2 border-[var(--color-headings-cta)] text-[var(--color-headings-cta)] px-8 py-3 rounded-full font-bold hover:bg-[var(--color-headings-cta)] hover:text-[var(--color-primary-text)] transition-all">
+                        <i class="fas fa-phone mr-2"></i>اتصل بنا الآن
+                    </a>
+                </div>
+            </div>
+
+            <!-- حقوق الطبع والنشر -->
+            <div class="text-center pt-6 border-t border-gray-700">
+                <p class="text-gray-500 text-sm font-arabic-text">
+                    جميع الحقوق محفوظة © الفارس للأعمال 2025 | 
+                    <span class="text-[var(--color-headings-cta)]">مرخص من وزارة العدل</span>
+                </p>
             </div>
         </div>
     </footer>

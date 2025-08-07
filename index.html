@@ -10,167 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Define custom CSS variables for the color palette */
-        :root {
-            --color-background-light: #FBF7F1; /* Beige warm */
-            --color-primary-text: #1B2A41; /* Dark blue */
-            --color-headings-cta: #D4C29A; /* Light gold/creamy */
-            --color-secondary-text: #6E6E6E; /* Medium gray */
-        }
-        body {
-            font-family: 'Noto Kufi Arabic', sans-serif;
-            background-color: var(--color-background-light);
-            color: var(--color-primary-text);
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Noto Kufi Arabic', sans-serif;
-            color: var(--color-primary-text); /* Default for headings */
-        }
-        /* Override specifically for Hero Section H2 to be gold */
-        .hero-section-h2 {
-            color: var(--color-headings-cta) !important; /* Ensure it's gold */
-        }
-
-        /* Custom styles for buttons based on the new palette */
-        .btn-primary {
-            background-color: var(--color-headings-cta); /* Light gold */
-            color: var(--color-primary-text); /* Dark blue text on gold */
-            padding: 12px 24px;
-            border-radius: 9999px; /* Fully rounded */
-            font-weight: 600;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .btn-primary:hover {
-            background-color: #C0B08E; /* Slightly darker gold on hover */
-        }
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--color-headings-cta); /* Light gold text */
-            border: 2px solid var(--color-headings-cta); /* Light gold border */
-            padding: 12px 24px;
-            border-radius: 9999px;
-            font-weight: 600;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .btn-secondary:hover {
-            background-color: var(--color-headings-cta);
-            color: var(--color-primary-text);
-        }
-        .card-icon {
-            color: var(--color-primary-text); /* Dark blue for icons in service cards */
-        }
-        /* Styling for the quick request form inputs */
-        .form-input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 0.5rem; /* Rounded corners */
-            border: 1px solid #d1d5db; /* Light gray border */
-            outline: none; /* Remove outline on focus */
-            transition: border-color 0.3s ease;
-            color: var(--color-primary-text); /* Ensure text color is primary */
-            background-color: #ffffff; /* White background for inputs */
-        }
-        .form-input:focus {
-            border-color: var(--color-headings-cta); /* Gold border on focus */
-        }
-
-        /* Specific styles for responsive spacing */
-        .section-margin-y {
-            margin-top: 60px;
-            margin-bottom: 60px;
-        }
-        .section-padding-x {
-            padding-left: 40px;
-            padding-right: 40px;
-        }
-        .section-padding-y {
-            padding-top: 40px;
-            padding-bottom: 40px;
-        }
-        @media (max-width: 768px) {
-            .section-margin-y {
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-            .section-padding-x {
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-            .section-padding-y {
-                padding-top: 16px;
-                padding-bottom: 16px;
-            }
-        }
-
-        /* Floating WhatsApp Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 28px;
-            box-shadow: 2px 2px 12px rgba(0,0,0,0.15);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-            box-shadow: 2px 2px 16px rgba(0,0,0,0.25);
-        }
-        .whatsapp-float:focus {
-            outline: none;
-        }
-        .whatsapp-float i {
-            margin: 0;
-        }
-        @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                bottom: 15px;
-                right: 15px;
-            }
-        }
-
-        /* Footer specific alignment for columns */
-        /* Default: centered for mobile */
-        .footer-col-header,
-        .footer-col-content {
-            text-align: center;
-        }
-        .footer-col-content p {
-            justify-content: center; /* For flex items like phone/email lines */
-        }
-        
-        /* Desktop: right-aligned for RTL */
-        @media (min-width: 768px) {
-            .footer-col-header {
-                text-align: right; /* Right align on desktop */
-            }
-            .footer-col-content {
-                text-align: right; /* Right align on desktop */
-            }
-            .footer-col-content.contact-info p {
-                justify-content: flex-end; /* Right align for flex items */
-            }
-        }
+        /* Page-specific styles if needed */
     </style>
 </head>
 <body class="text-[var(--color-primary-text)]">
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo/Brand -->
+                <div class="flex items-center">
+                    <i class="fas fa-balance-scale-right text-2xl text-[var(--color-headings-cta)] mr-2"></i>
+                    <span class="text-xl font-bold text-[var(--color-primary-text)]">الفارس للأعمال</span>
+                </div>
+                
+                <!-- Mobile menu toggle -->
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Navigation Links -->
+                <div class="nav-links hidden md:flex space-x-4 space-x-reverse" id="nav-links">
+                    <a href="index.html">الرئيسية</a>
+                    <a href="our-services-page.html">خدماتنا</a>
+                    <a href="legal-services-page.html">الخدمات القانونية</a>
+                    <a href="government-transactions-page.html">المعاملات الحكومية</a>
+                    <a href="packages-page.html">الباقات</a>
+                    <a href="zakat-tax-page.html">الزكاة والضرائب</a>
+                    <a href="vision-page.html">رؤيتنا</a>
+                    <a href="faq-page.html">أسئلة شائعة</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- 1. الواجهة الرئيسية – Hero Section -->
     <header class="bg-gradient-to-r from-[var(--color-primary-text)] to-[#2A3F5B] text-white py-20 px-4 md:px-8 lg:px-16 rounded-b-3xl shadow-xl section-padding-y md:section-padding-y">
@@ -291,7 +167,7 @@
             <div class="footer-col-header">
                 <h3 class="text-xl font-amiri font-bold mb-6" style="color: var(--color-headings-cta);">روابط سريعة</h3>
                 <ul class="space-y-3 text-gray-300 footer-col-content">
-                    <li><a href="homepage-html-v1.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الصفحة الرئيسية</a></li>
+                    <li><a href="index.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الصفحة الرئيسية</a></li>
                     <li><a href="legal-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الخدمات القانونية</a></li>
                     <li><a href="government-transactions-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">تعقيب المعاملات الحكومية</a></li>
                     <li><a href="packages-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الاشتراك بالباقات</a></li>
@@ -315,15 +191,15 @@
                 <!-- نموذج التواصل السريع داخل الفوتر -->
                 <div class="footer-form-container mt-8 text-center md:text-right">
                     <h4 class="text-lg font-amiri font-semibold mb-4" style="color: var(--color-headings-cta);">أرسل لنا رسالة سريعة</h4>
-                    <form>
+                    <form id="quick-contact-form">
                         <div class="mb-3">
-                            <input type="text" id="footerFullName" name="fullName" placeholder="اسمك الكامل" class="form-input" required>
+                            <input type="text" id="contact-name" name="fullName" placeholder="اسمك الكامل" class="form-input" required>
                         </div>
                         <div class="mb-3">
-                            <input type="tel" id="footerPhoneNumber" name="phoneNumber" placeholder="رقم جوالك" class="form-input" required>
+                            <input type="tel" id="contact-phone" name="phoneNumber" placeholder="رقم جوالك" class="form-input" required>
                         </div>
                         <div class="mb-4">
-                            <textarea id="footerDescription" name="description" rows="3" placeholder="وصف موجز لطلبك" class="form-input"></textarea>
+                            <textarea id="contact-message" name="description" rows="3" placeholder="وصف موجز لطلبك" class="form-input"></textarea>
                         </div>
                         <button type="submit" class="btn-primary w-full text-md">
                             إرسال الطلب <i class="fas fa-paper-plane mr-2"></i>
@@ -350,58 +226,14 @@
                 },
             },
         };
-
-        // Function to handle automatic population of service type in the main Quick Request form (now hidden)
-        // This function would ideally be more complex if the form was still visible.
-        document.addEventListener('DOMContentLoaded', function() {
-            const serviceTypeSelect = document.getElementById('serviceType');
-            const selectedService = localStorage.getItem('selectedServiceType');
-
-            if (selectedService && serviceTypeSelect) {
-                let optionExists = false;
-                for (let i = 0; i < serviceTypeSelect.options.length; i++) {
-                    if (serviceTypeSelect.options[i].value === selectedService) {
-                        serviceTypeSelect.value = selectedService;
-                        optionExists = true;
-                        break;
-                    }
-                }
-                // If specific option doesn't exist, try to find a broader category
-                if (!optionExists) {
-                    if (selectedService.startsWith('قضايا_احوال_شخصية')) {
-                        serviceTypeSelect.value = 'قضايا_احوال_شخصية'; // General for all personal status sub-categories
-                    } else if (selectedService.includes('قضايا_المحاكم_العامة') || selectedService.includes('قضايا_عقارية') || selectedService.includes('مطالبات_مدنية') || selectedService.includes('تصحي_اوضاع') || selectedService.includes('قضايا_ملكية_فكرية')) {
-                        serviceTypeSelect.value = 'قضايا_المحاكم_العامة';
-                    } else if (selectedService.startsWith('قضايا_المحاكم_التجارية') || selectedService.includes('منازعات_الشركات') || selectedService.includes('عقود_مطالبات_تجارية') || selectedService.includes('منافسة_ممارسات_تجارية') || selectedService.includes('تحكيم_تجاري')) {
-                        serviceTypeSelect.value = 'قضايا_المحاكم_التجارية';
-                    } else if (selectedService.startsWith('قضايا_المحاكم_العمالية') || selectedService.includes('حقوق_العمال') || selectedService.includes('تمثيل_اصحاب_العمل') || selectedService.includes('استشارات_عمالية')) {
-                        serviceTypeSelect.value = 'قضايا_المحاكم_العمالية';
-                    } else if (selectedService.includes('تأسيس_الشركات') || selectedService.includes('تعديل_الشركات') || selectedService.includes('مستثمرين_اجانب')) {
-                        serviceTypeSelect.value = 'تأسيس_شركات_واستثمار';
-                    } else if (selectedService.includes('وزارة_العدل_ناجز') || selectedService.includes('وزارة_التجارة') || selectedService.includes('البلديات') || selectedService.includes('موارد_بشرية_تنمية_اجتماعية')) {
-                        serviceTypeSelect.value = 'تعقيب_معاملات_حكومية';
-                    } else if (selectedService.includes('تراخيص_انشطة_تجارية') || selectedService.includes('تراخيص_دفاع_مدني_صحة') || selectedService.includes('تراخيص_بيئية_سياحية_زراعية')) {
-                        serviceTypeSelect.value = 'استخراج_وتجديد_التراخيص';
-                    } else if (selectedService.includes('منصة_قوى') || selectedService.includes('منصة_ab_jsher') || selectedService.includes('منصة_بلدي') || selectedService.includes('منصات_حكومية_اخرى')) {
-                        serviceTypeSelect.value = 'خدمات_التعقيب_الإلكتروني';
-                    } else if (selectedService.includes('الضمان_الاجتماعي') || selectedService.includes('حساب_المواطن') || selectedService.includes('بنك_التنمية_الاجتماعية') || selectedService.includes('دعم_ريف_للاسر_المنتجة') || selectedService.includes('رخص_العمل_الحر')) {
-                        serviceTypeSelect.value = 'خدمات_Ddm_Ajtm_Wal_Amal_Hr';
-                    }
-                    else {
-                        serviceTypeSelect.value = ''; // Fallback
-                    }
-                }
-
-                // Clear the item from local storage after using it
-                localStorage.removeItem('selectedServiceType');
-            }
-        });
     </script>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن خدماتكم" class="whatsapp-float" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
-<!-- rebuild -->

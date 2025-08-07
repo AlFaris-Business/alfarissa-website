@@ -8,8 +8,6 @@
     <!-- Google Fonts for Noto Kufi Arabic -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         /* Define custom CSS variables for the color palette */
         :root {
@@ -194,11 +192,11 @@
     <header class="bg-[var(--color-primary-text)] text-white py-8 px-4 md:px-8 lg:px-16 shadow-xl">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <h1 class="text-3xl font-amiri font-bold mb-4 md:mb-0">
-                <a href="index.html" class="text-white hover:text-[var(--color-headings-cta)] transition-colors">الفارس للأعمال</a>
+                <a href="homepage-html-v1.html" class="text-white hover:text-[var(--color-headings-cta)] transition-colors">الفارس للأعمال</a>
             </h1>
             <nav>
                 <ul class="flex flex-wrap justify-center gap-6 text-lg font-arabic-text">
-                    <li><a href="index.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الرئيسية</a></li>
+                    <li><a href="homepage-html-v1.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الرئيسية</a></li>
                     <li><a href="our-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors font-semibold border-b-2 border-[var(--color-headings-cta)] pb-1">خدماتنا</a></li>
                     <li><a href="legal-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الخدمات القانونية</a></li>
                     <li><a href="government-transactions-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">تعقيب المعاملات الحكومية</a></li>
@@ -206,6 +204,7 @@
                     <li><a href="zakat-tax-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الإقرارات الزكوية والضريبية</a></li>
                     <li><a href="vision-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">رؤيتنا</a></li>
                     <li><a href="licenses-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">التراخيص</a></li>
+                    <li><a href="team-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الفريق</a></li>
                     <li><a href="faq-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الأسئلة الشائعة</a></li>
                     <li><a href="privacy-policy-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">سياسة الخصوصية</a></li>
                     <li><a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن خدماتكم" class="hover:text-[var(--color-headings-cta)] transition-colors" target="_blank" rel="noopener">اطلب خدمة</a></li>
@@ -295,12 +294,13 @@
                     <li><a href="our-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">خدماتنا</a></li>
                     <li><a href="vision-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">رؤيتنا</a></li>
                     <li><a href="licenses-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">التراخيص</a></li>
+                    <li><a href="team-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الفريق</a></li>
                 </ul>
             </div>
             <div class="footer-col-header">
                 <h3 class="text-xl font-amiri font-bold mb-6" style="color: var(--color-headings-cta);">روابط سريعة</h3>
                 <ul class="space-y-3 text-gray-300 footer-col-content">
-                    <li><a href="index.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الصفحة الرئيسية</a></li>
+                    <li><a href="homepage-html-v1.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الصفحة الرئيسية</a></li>
                     <li><a href="legal-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الخدمات القانونية</a></li>
                     <li><a href="government-transactions-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">تعقيب المعاملات الحكومية</a></li>
                     <li><a href="packages-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الاشتراك بالباقات</a></li>
@@ -408,7 +408,5 @@
     <a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن خدماتكم" class="whatsapp-float" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- Custom JavaScript -->
-    <script src="assets/js/main.js"></script>
 </body>
 </html>

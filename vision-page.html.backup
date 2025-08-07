@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الفارس للأعمال - خدماتنا</title>
+    <title>الفارس للأعمال - رؤيتنا</title>
+    <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts for Noto Kufi Arabic -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         /* Define custom CSS variables for the color palette */
         :root {
@@ -137,8 +137,8 @@
                 right: 15px;
             }
         }
-        /* Service category overview cards */
-        .service-overview-card {
+        /* Custom styles for vision points */
+        .vision-point {
             background-color: white;
             border-radius: 0.75rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -149,158 +149,161 @@
             text-align: center;
             transition: all 0.3s ease;
             border-top: 4px solid var(--color-headings-cta);
-            min-height: 220px; /* Ensure consistent height */
+            min-height: 180px; /* Consistent height */
         }
-        .service-overview-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-        }
-        .service-overview-card .icon {
-            font-size: 3.5rem;
+        .vision-point .icon {
+            font-size: 3rem;
             color: var(--color-primary-text);
             margin-bottom: 0.75rem;
         }
-        .service-overview-card h3 {
+        .vision-point h4 {
             font-size: 1.5rem;
             font-family: 'Noto Kufi Arabic', sans-serif;
             font-weight: 700;
             color: var(--color-primary-text);
             margin-bottom: 0.5rem;
         }
-        .service-overview-card p {
+        .vision-point p {
             font-size: 1rem;
             color: var(--color-secondary-text);
-            flex-grow: 1; /* Allows paragraph to take available space */
-        }
-        .service-overview-card .btn-more-details {
-            background-color: var(--color-primary-text);
-            color: var(--color-headings-cta);
-            padding: 8px 16px;
-            border-radius: 9999px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border: 1px solid var(--color-primary-text);
-        }
-        .service-overview-card .btn-more-details:hover {
-            background-color: var(--color-headings-cta);
-            color: var(--color-primary-text);
         }
     </style>
 </head>
 <body class="text-[var(--color-primary-text)]">
 
+    <!-- Header (similar to homepage for consistency) -->
     <header class="bg-[var(--color-primary-text)] text-white py-8 px-4 md:px-8 lg:px-16 shadow-xl">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <h1 class="text-3xl font-amiri font-bold mb-4 md:mb-0">
-                <a href="index.html" class="text-white hover:text-[var(--color-headings-cta)] transition-colors">الفارس للأعمال</a>
+                <a href="homepage-html-v1.html" class="text-white hover:text-[var(--color-headings-cta)] transition-colors">الفارس للأعمال</a>
             </h1>
             <nav>
                 <ul class="flex flex-wrap justify-center gap-6 text-lg font-arabic-text">
-                    <li><a href="index.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الرئيسية</a></li>
-                    <li><a href="our-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors font-semibold border-b-2 border-[var(--color-headings-cta)] pb-1">خدماتنا</a></li>
+                    <li><a href="homepage-html-v1.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الرئيسية</a></li>
+                    <li><a href="our-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">خدماتنا</a></li>
                     <li><a href="legal-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الخدمات القانونية</a></li>
                     <li><a href="government-transactions-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">تعقيب المعاملات الحكومية</a></li>
                     <li><a href="packages-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الاشتراك بالباقات</a></li>
                     <li><a href="zakat-tax-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الإقرارات الزكوية والضريبية</a></li>
-                    <li><a href="vision-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">رؤيتنا</a></li>
+                    <li><a href="vision-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors font-semibold border-b-2 border-[var(--color-headings-cta)] pb-1">رؤيتنا</a></li>
                     <li><a href="licenses-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">التراخيص</a></li>
+                    <li><a href="team-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الفريق</a></li>
                     <li><a href="faq-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الأسئلة الشائعة</a></li>
                     <li><a href="privacy-policy-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">سياسة الخصوصية</a></li>
-                    <li><a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن خدماتكم" class="hover:text-[var(--color-headings-cta)] transition-colors" target="_blank" rel="noopener">اطلب خدمة</a></li>
+                    <li><a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن رؤيتكم وخدماتكم" class="hover:text-[var(--color-headings-cta)] transition-colors" target="_blank" rel="noopener">اطلب خدمة</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="section-padding-y section-padding-x">
+        <!-- Hero Section - رؤيتنا -->
         <section class="bg-[var(--color-primary-text)] text-white py-16 px-4 md:px-8 lg:px-16 rounded-xl shadow-md text-center section-margin-y section-padding-y relative overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x600/1B2A41/D4C29A?text=خدماتنا'); opacity: 0.2;"></div>
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1200x600/1B2A41/D4C29A?text=رؤيتنا'); opacity: 0.2;"></div>
             <div class="relative z-10">
-                <h2 class="text-4xl md:text-5xl font-amiri font-bold mb-4 hero-section-h2" style="color: var(--color-headings-cta);">خدماتنا</h2>
+                <h2 class="text-4xl md:text-5xl font-amiri font-bold mb-4 hero-section-h2">رؤيتنا</h2>
                 <p class="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto opacity-90 font-arabic-text">
-                    نقدم في الفارس للأعمال مجموعة متكاملة من الخدمات القانونية والإدارية، مصممة لتلبية احتياجات الأفراد والمنشآت على حد سواء.
+                    نسعى لأن نكون الرواد والمثال في تقديم الحلول القانونية والإدارية، لنصنع فارقاً حقيقياً في نجاح عملائنا.
                 </p>
-                <a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن خدماتكم" class="btn-primary text-xl font-arabic-text" target="_blank" rel="noopener">
-                    اطلب خدمتك الآن <i class="fas fa-arrow-left mr-2"></i>
+                <a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن خدماتكم ورؤيتكم" class="btn-primary text-xl font-arabic-text" target="_blank" rel="noopener">
+                    اطلب استشارتك الآن <i class="fas fa-arrow-left mr-2"></i>
                 </a>
             </div>
         </section>
 
+        <!-- قيمنا الأساسية (Core Values) -->
         <section class="bg-white rounded-xl shadow-md mx-4 md:mx-auto max-w-7xl section-margin-y section-padding-y section-padding-x">
             <div class="container mx-auto text-center">
-                <h3 class="text-3xl md:text-4xl font-amiri font-bold mb-12">مجالات خبراتنا الرئيسية</h3>
+                <h3 class="text-3xl md:text-4xl font-amiri font-bold mb-12">قيمنا الأساسية</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-overview-card">
+                    <!-- قيمة 1: الاحترافية -->
+                    <div class="vision-point">
                         <i class="fas fa-gavel icon"></i>
-                        <h3>الخدمات القانونية</h3>
+                        <h4>الاحترافية</h4>
                         <p class="font-arabic-text">
-                            نقدم استشارات قانونية متخصصة وصياغة للعقود والمذكرات، بالإضافة إلى متابعة تنفيذ الأحكام القضائية في جميع المحاكم.
+                            نلتزم بأعلى معايير الجودة والدقة في كل خدمة نقدمها، معتمدين على خبرة وكفاءة فريقنا المتخصص.
                         </p>
-                        <a href="legal-services-page.html" class="btn-more-details font-arabic-text">
-                            اكتشف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
                     </div>
-                    <div class="service-overview-card">
-                        <i class="fas fa-building icon"></i>
-                        <h3>تعقيب المعاملات الحكومية والإدارية</h3>
+                    <!-- قيمة 2: الابتكار -->
+                    <div class="vision-point">
+                        <i class="fas fa-lightbulb icon"></i>
+                        <h4>الابتكار</h4>
                         <p class="font-arabic-text">
-                            نساعدك في تأسيس الشركات واستخراج وتجديد التراخيص، ومتابعة جميع معاملاتك مع الجهات الحكومية إلكترونياً وحضورياً.
+                            نتبنى أساليب عمل مبتكرة وحلولاً إبداعية تتجاوز التوقعات، لتقديم قيمة حقيقية ومستدامة لعملائنا.
                         </p>
-                        <a href="government-transactions-page.html" class="btn-more-details font-arabic-text">
-                            اكتشف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
                     </div>
-                    <div class="service-overview-card">
+                    <!-- قيمة 3: رضا العميل -->
+                    <div class="vision-point">
                         <i class="fas fa-handshake icon"></i>
-                        <h3>الاشتراك بالباقات</h3>
+                        <h4>رضا العميل</h4>
                         <p class="font-arabic-text">
-                            نوفر باقات قانونية وخدمية شاملة للمنشآت والأفراد، لضمان دعم مستمر بأسعار مخصصة وقيمة مضافة.
+                            العميل هو محور اهتمامنا، ونسعى لتحقيق رضاه التام من خلال فهم احتياجاته وتقديم أفضل الحلول.
                         </p>
-                        <a href="packages-page.html" class="btn-more-details font-arabic-text">
-                            اكتشف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
                     </div>
-                    <div class="service-overview-card">
-                        <i class="fas fa-calculator icon"></i>
-                        <h3>الإقرارات الزكوية والضريبية</h3>
+                     <!-- قيمة 4: الشفافية -->
+                     <div class="vision-point">
+                        <i class="fas fa-eye icon"></i>
+                        <h4>الشفافية</h4>
                         <p class="font-arabic-text">
-                            خدمة متخصصة لإعداد وتقديم إقراراتك الزكوية والضريبية بدقة واحترافية، على يد محاسبين قانونيين معتمدين.
+                            نؤمن بالوضوح والصراحة التامة في جميع تعاملاتنا، لبناء علاقات مبنية على الثقة المتبادلة.
                         </p>
-                        <a href="zakat-tax-page.html" class="btn-more-details font-arabic-text">
-                            اكتشف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
                     </div>
-                    <div class="service-overview-card">
-                        <i class="fas fa-hand-holding-usd icon"></i>
-                        <h3>خدمات الدعم الاجتماعي والعمل الحر</h3>
+                    <!-- قيمة 5: المسؤولية الاجتماعية -->
+                    <div class="vision-point">
+                        <i class="fas fa-hands-helping icon"></i>
+                        <h4>المسؤولية الاجتماعية</h4>
                         <p class="font-arabic-text">
-                            متابعة شاملة لخدمات الضمان الاجتماعي، حساب المواطن، بنك التنمية، دعم ريف، وتراخيص العمل الحر.
+                            نلتزم بدورنا تجاه المجتمع من خلال تقديم خدمات قانونية تسهم في تحقيق العدالة والتنمية.
                         </p>
-                        <a href="government-transactions-page.html#socialSupportContent" class="btn-more-details font-arabic-text">
-                            اكتشف المزيد <i class="fas fa-arrow-left mr-2"></i>
-                        </a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- أهدافنا (Our Goals) -->
+        <section class="bg-[var(--color-primary-text)] text-white rounded-xl shadow-md mx-4 md:mx-auto max-w-7xl section-margin-y section-padding-y section-padding-x">
+            <div class="container mx-auto text-center">
+                <h3 class="text-3xl md:text-4xl font-amiri font-bold mb-12" style="color: var(--color-headings-cta);">أهدافنا</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-right">
+                    <p class="flex items-start text-lg font-arabic-text mb-4">
+                        <span class="w-4 h-4 bg-[var(--color-headings-cta)] rounded-full ml-3 mt-2 flex-shrink-0"></span>
+                        توسيع نطاق خدماتنا لتغطية كافة المدن الرئيسية في المملكة، وتوفير حلول قانونية وإدارية شاملة.
+                    </p>
+                    <p class="flex items-start text-lg font-arabic-text mb-4">
+                        <span class="w-4 h-4 bg-[var(--color-headings-cta)] rounded-full ml-3 mt-2 flex-shrink-0"></span>
+                        أن نكون الخيار الأول للعملاء في مجال الخدمات القانونية والتعقيب الإداري، بفضل جودة خدماتنا وثقة عملائنا.
+                    </p>
+                    <p class="flex items-start text-lg font-arabic-text mb-4">
+                        <span class="w-4 h-4 bg-[var(--color-headings-cta)] rounded-full ml-3 mt-2 flex-shrink-0"></span>
+                        تطوير منصاتنا وخدماتنا الرقمية لتواكب أحدث التقنيات، وتوفر تجربة مستخدم عصرية وسهلة.
+                    </p>
+                    <p class="flex items-start text-lg font-arabic-text mb-4">
+                        <span class="w-4 h-4 bg-[var(--color-headings-cta)] rounded-full ml-3 mt-2 flex-shrink-0"></span>
+                        بناء فريق عمل مؤهل ومحترف، يمتلك أحدث المعارف والمهارات، ويسعى باستمرار للتطور.
+                    </p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer (similar to homepage for consistency) -->
     <footer id="footer" class="bg-[var(--color-primary-text)] text-white py-10 px-4 md:px-8 lg:px-16 mt-auto rounded-t-3xl shadow-xl">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 font-arabic-text">
+            <!-- عن الفارس للأعمال -->
             <div class="footer-col-header">
                 <h3 class="text-xl font-amiri font-bold mb-6" style="color: var(--color-headings-cta);">عن الفارس للأعمال</h3>
                 <ul class="space-y-3 text-gray-300 footer-col-content">
                     <li><a href="our-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">خدماتنا</a></li>
                     <li><a href="vision-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">رؤيتنا</a></li>
                     <li><a href="licenses-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">التراخيص</a></li>
+                    <li><a href="team-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الفريق</a></li>
                 </ul>
             </div>
+            <!-- روابط سريعة -->
             <div class="footer-col-header">
                 <h3 class="text-xl font-amiri font-bold mb-6" style="color: var(--color-headings-cta);">روابط سريعة</h3>
                 <ul class="space-y-3 text-gray-300 footer-col-content">
-                    <li><a href="index.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الصفحة الرئيسية</a></li>
+                    <li><a href="homepage-html-v1.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الصفحة الرئيسية</a></li>
                     <li><a href="legal-services-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الخدمات القانونية</a></li>
                     <li><a href="government-transactions-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">تعقيب المعاملات الحكومية</a></li>
                     <li><a href="packages-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">الاشتراك بالباقات</a></li>
@@ -309,6 +312,7 @@
                     <li><a href="privacy-policy-page.html" class="hover:text-[var(--color-headings-cta)] transition-colors">سياسة الخصوصية</a></li>
                 </ul>
             </div>
+            <!-- معلومات التواصل ونموذج الاتصال في عمود خاص جديد -->
             <div id="quick-request-footer" class="md:col-span-2 footer-col-header">
                 <h3 class="text-xl font-amiri font-bold mb-6" style="color: var(--color-headings-cta);">تواصل معنا</h3>
                 <div class="space-y-3 text-gray-300 footer-col-content contact-info mb-8">
@@ -320,6 +324,7 @@
                     <p class="flex items-center justify-center md:justify-end mt-4"><i class="fas fa-map-marker-alt ml-3 text-[var(--color-headings-cta)]"></i>جدة – حي الحمدانية – شارع الحمدانية الفرعي</p>
                 </div>
 
+                <!-- نموذج التواصل السريع داخل الفوتر -->
                 <div class="footer-form-container mt-8 text-center md:text-right">
                     <h4 class="text-lg font-amiri font-semibold mb-4" style="color: var(--color-headings-cta);">أرسل لنا رسالة سريعة</h4>
                     <form>
@@ -338,6 +343,7 @@
                     </form>
                 </div>
             </div>
+            <!-- شريط سفلي لحقوق الملكية -->
             <div class="md:col-span-4 border-t border-gray-700 pt-4 mt-8 text-center text-gray-500 text-sm font-arabic-text">
                 جميع الحقوق محفوظة © الفارس للأعمال 2025
             </div>
@@ -386,11 +392,11 @@
                         serviceTypeSelect.value = 'تأسيس_شركات_واستثمار';
                     } else if (selectedService.includes('وزارة_العدل_ناجز') || selectedService.includes('وزارة_التجارة') || selectedService.includes('البلديات') || selectedService.includes('موارد_بشرية_تنمية_اجتماعية')) {
                         serviceTypeSelect.value = 'تعقيب_معاملات_حكومية';
-                    } else if (selectedService.includes('تراخيص_انشطة_تجارية') || selectedService.includes('تراخيص_d_fa_mdni_sha') || selectedService.includes('تراخيص_بيئية_سياحية_زراعية')) {
+                    } else if (selectedService.includes('تراخيص_انشطة_تجارية') || selectedService.includes('تراخيص_d_fa_mdni_sha') || selectedService.includes('تراخيص_بيئية_s_ya_h_ya_zwra_h')) {
                         serviceTypeSelect.value = 'استخراج_وتجديد_التراخيص';
-                    } else if (selectedService.includes('منصة_قوى') || selectedService.includes('منصة_ab_jsher') || selectedService.includes('منصة_بلدي') || selectedService.includes('منصات_حكومية_اخرى')) {
+                    } else if (selectedService.includes('منصة_قوى') || selectedService.includes('منصة_ab_jsher') || selectedService.includes('منصة_بلدي') || selectedService.includes('منصات_حكومية_a_khr_y')) {
                         serviceTypeSelect.value = 'خدمات_التعقيب_الإلكتروني';
-                    } else if (selectedService.includes('الضمان_الاجتماعي') || selectedService.includes('حساب_المواطن') || selectedService.includes('بنك_التنمية_الاجتماعية') || selectedService.includes('دعم_ريف_للاسر_المنتجة') || selectedService.includes('رخص_العمل_الحر')) {
+                    } else if (selectedService.includes('الضمان_الاجتماعي') || selectedService.includes('حساب_المواطن') || selectedService.includes('بنك_التنمية_الاجتماعية') || selectedService.includes('d_am_rif_ll_as_r_almntja') || selectedService.includes('rk_s_al_aml_al_hr')) {
                         serviceTypeSelect.value = 'خدمات_Ddm_Ajtm_Wal_Amal_Hr';
                     }
                     else {
@@ -405,10 +411,8 @@
     </script>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن خدماتكم" class="whatsapp-float" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+    <a href="https://wa.me/966555490800?text=مرحباً، أود الاستفسار عن رؤيتكم وخدماتكم" class="whatsapp-float" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <!-- Custom JavaScript -->
-    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+{
+  "name": "alfarissa-website",
+  "version": "1.0.0",
+  "description": "AlFaris Business - Arabic business services website with optional build optimization",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "serve": "npx serve -p 8080",
+    "validate": "npx htmlhint *.html",
+    "minify:css": "npx clean-css-cli css/common.css -o css/common.min.css",
+    "minify:js": "npx terser js/common.js -c -m -o js/common.min.js",
+    "minify": "npm run minify:css && npm run minify:js",
+    "build": "npm run validate && npm run minify",
+    "test": "npm run validate && echo 'Testing complete: HTML validation passed'"
+  },
+  "keywords": [
+    "business",
+    "legal-services",
+    "arabic",
+    "rtl",
+    "static-website",
+    "government-transactions"
+  ],
+  "author": "AlFaris Business",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "htmlhint": "^1.6.3",
+    "serve": "^14.2.1",
+    "terser": "^5.43.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -556,6 +556,63 @@ main {
     }
 }
 
+/* Logo Loading Animation */
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+        opacity: 1;
+    }
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Page Loading Overlay */
+.page-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(251, 247, 241, 0.95) 0%, rgba(245, 241, 235, 0.95) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-logo {
+    width: 80px;
+    height: 80px;
+    animation: logoFloat 2s ease-in-out infinite;
+}
+
+.loading-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(212, 194, 154, 0.3));
+}
+
 /* Card and Icon Styles */
 .card-icon {
     color: var(--color-primary-text);
@@ -782,6 +839,20 @@ textarea.form-input {
 .nav-logo:hover i {
     transform: rotate(-5deg) scale(1.1);
     text-shadow: 0 4px 8px rgba(212, 194, 154, 0.5);
+}
+
+/* Navigation Logo Image Styles */
+.nav-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.nav-logo:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(212, 194, 154, 0.4));
 }
 
 .nav-menu {

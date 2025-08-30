@@ -1,5 +1,39 @@
 // الفارس للأعمال - ملف JavaScript مشترك محدث ومحسن
 
+// Page Loading Animation with Logo
+function createLoadingOverlay() {
+    if (document.querySelector('.page-loading-overlay')) return; // Already exists
+    
+    const overlay = document.createElement('div');
+    overlay.className = 'page-loading-overlay';
+    overlay.innerHTML = `
+        <div class="loading-logo">
+            <img src="https://i.postimg.cc/W4NmjPj7/image.png" alt="شعار الفارس للأعمال - جاري التحميل" />
+        </div>
+    `;
+    document.body.appendChild(overlay);
+    
+    // Auto-hide after page loads
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            overlay.classList.add('hidden');
+            setTimeout(() => {
+                if (overlay.parentNode) {
+                    overlay.parentNode.removeChild(overlay);
+                }
+            }, 500);
+        }, 800); // Show for at least 800ms for smooth experience
+    });
+}
+
+// Initialize loading overlay as early as possible
+if (document.readyState === 'loading') {
+    createLoadingOverlay();
+} else {
+    // If DOM is already loaded, create a brief loading effect for navigation
+    setTimeout(createLoadingOverlay, 0);
+}
+
 // Configure Tailwind CSS with error handling
 if (typeof tailwind !== 'undefined') {
     try {

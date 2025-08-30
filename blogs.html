@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<title>الفارس للأعمال — الرئيسية</title>
-<meta name="description" content="الفارس للأعمال — نُقدّم لك الحل القانوني والإداري بثقة واحتراف في المملكة العربية السعودية."/>
+<title>الفارس للأعمال — المدونة</title>
+<meta name="description" content="اطلع على أحدث المقالات والنصائح القانونية والإدارية من فريق الخبراء في الفارس للأعمال."/>
 
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -12,16 +12,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;1000&display=swap" rel="stylesheet">
 
-<!-- SwiperJS for Sliders -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-
 <style>
 :root{
-  --brand:#0EA5E9; --brand-dark:#0284C7;
+  --brand:#2563EB; --brand-dark:#1D4ED8; /* New Professional Blue */
   --dark:#0F172A; --sub:#475569; --bg:#F8FAFC; --border: #E2E8F0;
   --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:24px;
   --shadow-card:0 2px 4px rgba(15,23,42,.05),0 8px 20px rgba(15,23,42,.07);
@@ -35,6 +31,7 @@ body{
   background:var(--bg); color:var(--dark);
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   line-height:1.8;
+  overflow-x: hidden;
 }
 h1,h2,h3,h4{line-height:1.4; font-weight:800; margin:0}
 p{margin:.6em 0}
@@ -50,25 +47,18 @@ a{color:inherit;text-decoration:none; transition: var(--transition);}
 }
 .btn-primary{background:var(--brand);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
 .btn-primary:hover{background:var(--brand-dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
-.btn-ghost{background:#fff; color:var(--dark); border-color:var(--border);}
-.btn-ghost:hover{background:var(--dark); color:#fff; border-color:var(--dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
 .card{
   background:#fff; border:1px solid var(--border);
-  border-radius:var(--r-lg); padding:24px; box-shadow:var(--shadow-card);
-  transition: var(--transition);
-}
-.card:hover{transform:translateY(-4px); box-shadow:var(--shadow-elev);}
-.badge{
-  display:inline-flex; align-items:center; justify-content:center; gap:4px;
-  border-radius:999px; border:1px solid var(--border); background:#F8FAFC;
-  font-size:12px; padding:4px 12px; color:#64748b; font-weight:600;
+  border-radius:var(--r-lg); box-shadow:var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .small{font-size:14px;color:#94A3B8}
-hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 .lead{color:var(--sub); font-size:18px;}
 .grid{display:grid;gap:24px}
 @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
-@media(min-width:992px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:992px){.grid-3{grid-template-columns:repeat(3,1fr)}}
 
 /* --- Header & Navigation --- */
 .topbar{background:var(--dark);color:#94A3B8; font-size:12px;}
@@ -104,27 +94,97 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 .subnav .row{display:flex;gap:24px;font-size:14px;padding:10px 0}
 .subnav a:hover{color:var(--brand)}
 
-/* --- Hero Section --- */
-.hero{position:relative;color:#fff}
-.hero .bg{position:absolute;inset:0;background:url('https://i.postimg.cc/Nf6QqL14/1.png') center/cover no-repeat}
-.hero .overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,23,42,.92),rgba(15,23,42,.7))}
-.hero .inner{position:relative;padding:120px 0; text-align:center;} /* Increased height */
-.hero h1 {font-size:clamp(2.5rem, 5vw, 3.5rem); max-width:800px; margin:0 auto;}
-.hero p {max-width:720px;margin:12px auto 0;color:#e2e8f0; font-size: 1.1rem;}
-.hero .actions {margin-top:24px;display:flex;gap:12px; justify-content:center;}
-
-/* --- Swiper Sliders --- */
-.swiper-container{padding-bottom:40px;}
-.swiper-slide{height:auto;}
-.swiper-pagination-bullet-active{background:var(--brand) !important;}
-.slider-controls{display:flex; gap:8px; position:absolute; bottom:0; left:50%; transform:translateX(-50%);}
-.iconbtn{
-    width:40px;height:40px;border:1px solid var(--border);border-radius:var(--r);
-    display:grid;place-items:center;background:#fff; cursor:pointer;
-    transition:var(--transition);
+/* --- Page Header --- */
+.page-header{
+    padding: 120px 0;
+    background: url('https://i.postimg.cc/Kcdfh0RT/Chat-GPT-Image-27-2025-07-07-48.png') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.iconbtn:hover{background:var(--brand); color:#fff; border-color:var(--brand);}
-.iconbtn.swiper-button-disabled{opacity:0.5; cursor:not-allowed;}
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.5));
+}
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+.page-header h1 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+}
+.page-header p {
+    max-width: 600px;
+    margin: 8px auto 0;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+/* --- Blog Page Specifics --- */
+.blog-card {
+    transition: var(--transition);
+}
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05), 0 0 0 1px var(--brand);
+}
+.blog-card .card-image {
+    height: 200px;
+    background-color: #e2e8f0;
+    background-size: cover;
+    background-position: center;
+}
+.blog-card .card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.blog-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.blog-card h3 a:hover {
+    color: var(--brand);
+}
+.blog-card .author {
+    font-size: 14px;
+    color: var(--sub);
+    margin-bottom: 12px;
+}
+.blog-card .excerpt {
+    font-size: 15px;
+    color: var(--sub);
+    flex-grow: 1;
+}
+.blog-card .card-footer {
+    padding-top: 12px;
+    margin-top: 16px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #94a3b8;
+}
+.blog-card .card-footer .read-more {
+    color: var(--brand);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.blog-card .card-footer .read-more i {
+    transition: transform 0.3s;
+}
+.blog-card:hover .card-footer .read-more i {
+    transform: translateX(-4px);
+}
 
 /* --- Footer & FAB --- */
 footer{
@@ -195,8 +255,17 @@ footer a:hover{color:var(--brand);}
 .backtotop:hover{background:var(--brand-dark); transform:scale(1.1);}
 
 /* --- Animation --- */
-.fade-in{opacity:0; transform:translateY(20px); transition:opacity 0.6s ease-out, transform 0.6s ease-out;}
-.fade-in.visible{opacity:1; transform:translateY(0);}
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-pop-in {
+    transform: scale(0.9) translateY(20px);
+}
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
 </style>
 </head>
 <body>
@@ -227,11 +296,11 @@ footer a:hover{color:var(--brand);}
       </div>
     </a>
     <nav class="nav">
-      <a href="index.html" class="active">الرئيسية</a>
+      <a href="index.html">الرئيسية</a>
       <a href="about.html">من نحن</a>
       <a href="services.html">الخدمات</a>
       <a href="packages.html">الباقات</a>
-      <a href="blogs.html">المدونة</a>
+      <a href="blogs.html" class="active">المدونة</a>
       <a href="help.html">اتصل بنا</a>
       <a href="faq.html">الأسئلة الشائعة</a>
     </nav>
@@ -246,100 +315,91 @@ footer a:hover{color:var(--brand);}
   </div>
 </div>
 
-<section class="hero">
-  <div class="bg"></div><div class="overlay"></div>
-  <div class="container inner">
-    <h1 class="fade-in">نُقدّم لك الحل القانوني والإداري بثقة واحتراف</h1>
-    <p class="fade-in">"الفارس للأعمال" مكتب معتمد يقدّم خدمات قانونية وتعقيب إلكتروني باحترافية عالية. نُمكّن الأفراد والمنشآت من إنجاز معاملاتهم وحماية مصالحهم بكفاءة والتزام.</p>
-    <div class="actions fade-in">
-      <a class="btn btn-primary" href="help.html"><i data-lucide="file-text"></i> طلب استشارة قانونية</a>
-      <a class="btn btn-ghost" href="help.html"><i data-lucide="phone"></i> تواصل معنا الآن</a>
-    </div>
-  </div>
-</section>
-
-<section id="services-highlights" class="section container">
-    <div class="fade-in" style="position:relative;">
-      <h2 style="font-size:32px;text-align:center;">خدماتنا الرئيسية</h2>
-      <p class="lead" style="margin:8px auto 24px; text-align:center; max-width:600px;">نقدم باقة متكاملة من الخدمات لتلبية كافة احتياجاتك القانونية والإدارية.</p>
-      <div class="swiper-container swiper-offer" style="margin-top:24px;">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">⚖️ استشارات قانونية</div><p class="lead" style="font-size:16px;">دعم مكتوب أو صوتي بمختلف فروع القانون.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">📄 صياغة العقود</div><p class="lead" style="font-size:16px;">عقود شراكة، توريد، عمل، عقارات، استثمار...</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">🧾 مذكرات قانونية</div><p class="lead" style="font-size:16px;">دفاع، ردود، ومرافعات في جميع درجات التقاضي.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">🧑‍⚖️ تنفيذ الأحكام</div><p class="lead" style="font-size:16px;">متابعة الإجراءات حتى التنفيذ الكامل.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">🏢 تأسيس الشركات</div><p class="lead" style="font-size:16px;">تأسيس الكيانات واستخراج التراخيص.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">💼 الباقة القانونية</div><p class="lead" style="font-size:16px;">دعم شهري مستمر للمنشآت بأسعار مخصصة.</p></div></div>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="animate-on-scroll animate-pop-in">مدونة الفارس</h1>
+            <p class="animate-on-scroll animate-pop-in" style="transition-delay: 100ms;">أحدث المقالات والنصائح والتحليلات في مجالات القانون والأعمال والأنظمة السعودية.</p>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-</section>
+    </section>
 
-<section class="section-tight container">
-    <div class="card fade-in" style="background: var(--dark); color: #fff;">
-        <div class="grid grid-2" style="align-items: center;">
-            <div>
-                <h2 style="color: #fff;">من نحن؟</h2>
-                <p class="lead" style="color: #cbd5e1; margin-top: 8px;">شركة "الفارس للأعمال" مرخّصة رسميًا لتقديم الخدمات القانونية والتعقيب الإداري. نعمل بفريق متخصص يقوده محامٍ مرخّص، ونعتمد على أسلوب احترافي يجمع بين المعرفة النظامية، والدقة التنفيذية، ورضا العميل.</p>
-                <a href="about.html" class="btn btn-primary" style="margin-top: 16px;">اعرف المزيد عنا</a>
-            </div>
-            <div style="text-align:center;">
-                <i data-lucide="shield-check" style="width:100px; height:100px; color:var(--brand);"></i>
-            </div>
+    <section class="section container">
+        <div class="grid grid-3 stagger-children">
+            <a href="blog-post-paid-leave.html" class="card blog-card animate-on-scroll animate-pop-in">
+                <div class="card-image" style="background-image: url('https://i.postimg.cc/qRD1V6qS/ajazat-mdfw-t-alajr-fy-t-dylat-nzam-al-ml-lthqyq-altwazn-byn-alhyat-alajtma-yt-wal-ml-ll-aml.webp')"></div>
+                <div class="card-content">
+                    <h3>الإجازات الجديدة في نظام العمل السعودي: كل ما تريد معرفته</h3>
+                    <div class="author">بواسطة: القسم القانوني</div>
+                    <p class="excerpt">تعرف على التحديثات الأخيرة في نظام العمل السعودي بخصوص الإجازات مدفوعة الأجر، وكيف توازن بين حقوق العامل والتزامات صاحب العمل.</p>
+                    <div class="card-footer">
+                        <span class="read-more">اقرأ المزيد <i data-lucide="arrow-left" size="16"></i></span>
+                        <span>15 سبتمبر 2024</span>
+                    </div>
+                </div>
+            </a>
+            <a href="blog-post-seamless-2024.html" class="card blog-card animate-on-scroll animate-pop-in">
+                <div class="card-image" style="background-image: url('https://i.postimg.cc/q7ZgHpcg/www.jpg')"></div>
+                <div class="card-content">
+                    <h3>فرص استثمارية واعدة في التجارة الرقمية بعد مؤتمر "سيملس 2024"</h3>
+                    <div class="author">بواسطة: فريق الفارس</div>
+                    <p class="excerpt">نظرة على أبرز مخرجات مؤتمر سيملس السعودية 2024، وكيف تفتح الاتفاقيات الجديدة أبوابًا واسعة للاستثمار في التقنية المالية والتجارة الإلكترونية.</p>
+                    <div class="card-footer">
+                        <span class="read-more">اقرأ المزيد <i data-lucide="arrow-left" size="16"></i></span>
+                        <span>06 سبتمبر 2024</span>
+                    </div>
+                </div>
+            </a>
+             <a href="blog-post.html" class="card blog-card animate-on-scroll animate-pop-in">
+                <div class="card-image" style="background-image: url('https://i.postimg.cc/053VVSLJ/saudi-arabia-950x500.jpg')"></div>
+                <div class="card-content">
+                    <h3>5 خطوات أساسية لتأسيس شركتك في السعودية: دليلك لعام 2025</h3>
+                    <div class="author">بواسطة: محمد الفارس</div>
+                    <p class="excerpt">دليل مبسط وعملي يوضح لك الخطوات الخمس الرئيسية لتأسيس شركتك الجديدة في المملكة، بدءًا من حجز الاسم التجاري وحتى فتح ملف المنشأة.</p>
+                    <div class="card-footer">
+                        <span class="read-more">اقرأ المزيد <i data-lucide="arrow-left" size="16"></i></span>
+                        <span>29 أغسطس 2025</span>
+                    </div>
+                </div>
+            </a>
+            <a href="blog-post-company-conversion.html" class="card blog-card animate-on-scroll animate-pop-in">
+                <div class="card-image" style="background-image: url('https://i.postimg.cc/Qd0B8Qg6/image.png')"></div>
+                <div class="card-content">
+                    <h3>تحويل شركة مساهمة إلى ذات مسؤولية محدودة — الإجراءات والأوراق</h3>
+                    <div class="author">بواسطة: فريق الفارس</div>
+                    <p class="excerpt">ملخص قصير ومفيد حول الخطوات النظامية والمستندات المطلوبة لتحويل الشكل القانوني للشركات وفقًا للأنظمة السعودية.</p>
+                    <div class="card-footer">
+                        <span class="read-more">اقرأ المزيد <i data-lucide="arrow-left" size="16"></i></span>
+                        <span>22 ديسمبر 2024</span>
+                    </div>
+                </div>
+            </a>
+            <a href="blog-post-work-injury.html" class="card blog-card animate-on-scroll animate-pop-in">
+                <div class="card-image" style="background-image: url('https://i.postimg.cc/nr4rZSnL/1.png')"></div>
+                <div class="card-content">
+                    <h3>التزام صاحب العمل تجاه إصابات العمل والظروف المهنية</h3>
+                    <div class="author">بواسطة: القسم القانوني</div>
+                    <p class="excerpt">نستعرض مسؤوليات صاحب العمل النظامية عند وقوع إصابة عمل، وحقوق العامل في التعويض والعلاج حسب نظام العمل السعودي.</p>
+                    <div class="card-footer">
+                        <span class="read-more">اقرأ المزيد <i data-lucide="arrow-left" size="16"></i></span>
+                        <span>15 يوليو 2024</span>
+                    </div>
+                </div>
+            </a>
+            <a href="blog-post-training-programs.html" class="card blog-card animate-on-scroll animate-pop-in">
+                <div class="card-image" style="background-image: url('https://i.postimg.cc/Qxjx1bXp/1741884301594.jpg')"></div>
+                <div class="card-content">
+                    <h3>أسس برامج التدريب في العمل — المادة 44 من نظام العمل</h3>
+                    <div class="author">بواسطة: محمد عبدالعزيز</div>
+                    <p class="excerpt">تحليل للمادة 44 من نظام العمل التي تنظم عقود التدريب والتأهيل، وشرح لأهميتها في تطوير الكوادر الوطنية.</p>
+                    <div class="card-footer">
+                        <span class="read-more">اقرأ المزيد <i data-lucide="arrow-left" size="16"></i></span>
+                        <span>11 فبراير 2024</span>
+                    </div>
+                </div>
+            </a>
         </div>
-    </div>
-</section>
-
-<section id="testimonials" class="section container">
-    <div class="fade-in" style="position:relative;">
-        <h2 style="font-size:32px;text-align:center;">شهادات نعتز بها</h2>
-        <p class="lead" style="margin:8px auto 24px; text-align:center; max-width:600px;">آراء عملائنا هي الدافع الأكبر لنا لتقديم الأفضل دائمًا.</p>
-        <div class="swiper-container swiper-testimonials">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"من أفضل المكاتب اللي تعاملت معهم.. دقة وسرعة، خصوصًا في تنفيذ الحكم اللي كان لي أكثر من سنة أركض وراه."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— خالد الحربي</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"سجّلت الشركة وعقود الشراكة وكل شي من خلالهم. وفّروا علي وقت وجهد كثير."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— سارة الغامدي</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"اللي يميّزهم صدق المتابعة، ما تتصل إلا وهم قد خلّصوا الإجراء، حتى لو من منصات معقدة مثل ناجز أو بلدي."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— شركة البناء العصري</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"استشارة قانونية في وقتها! تحليلهم للقضية كان دقيق وساعدني أتخذ القرار الصحيح. شكرًا لكم."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— عبدالمجيد المطيري</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"فريق محترف ومتعاون، أنهوا لنا إجراءات تسجيل العلامة التجارية بسرعة وبدون أي تعقيدات. أنصح بهم بشدة."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— متجر ركن الهدايا</div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-controls">
-                <button class="iconbtn testimonials-prev"><i data-lucide="arrow-right"></i></button>
-                <button class="iconbtn testimonials-next"><i data-lucide="arrow-left"></i></button>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</main>
 
 <footer id="contact">
   <div class="container">
@@ -394,49 +454,8 @@ footer a:hover{color:var(--brand);}
 </div>
 <a href="#" class="backtotop" title="العودة للأعلى"><i data-lucide="arrow-up"></i></a>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
 function ready(fn){document.readyState!='loading'?fn():document.addEventListener('DOMContentLoaded',fn)}
-
-function setupSliders(){
-  const offerSwiper = new Swiper('.swiper-offer', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 24,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      576: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      1200: { slidesPerView: 4 },
-    }
-  });
-
-  const testimonialsSwiper = new Swiper('.swiper-testimonials', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 24,
-    navigation: {
-      nextEl: '.testimonials-next',
-      prevEl: '.testimonials-prev',
-    },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 },
-      1200: { slidesPerView: 3 },
-    }
-  });
-}
-
 function setupBackToTop(){
   const btt = document.querySelector('.backtotop');
   if(!btt) return;
@@ -444,26 +463,30 @@ function setupBackToTop(){
     if(window.scrollY > 600){btt.classList.add('show')}else{btt.classList.remove('show')}
   });
 }
-
 function setupScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                 if (entry.target.classList.contains('stagger-children')) {
+                    const children = entry.target.querySelectorAll('.animate-on-scroll');
+                    children.forEach((child, index) => {
+                        child.style.transitionDelay = `${index * 120}ms`;
+                        child.classList.add('is-visible');
+                    });
+                } else {
+                    entry.target.classList.add('is-visible');
+                }
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
-
-    animatedElements.forEach(el => {
+    
+    document.querySelectorAll('.animate-on-scroll:not(.stagger-children .animate-on-scroll), .stagger-children').forEach(el => {
         observer.observe(el);
     });
 }
-
 ready(()=>{
   lucide.createIcons();
-  setupSliders();
   setupBackToTop();
   setupScrollAnimations();
 });

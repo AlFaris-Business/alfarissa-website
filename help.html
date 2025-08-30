@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<title>الفارس للأعمال — الرئيسية</title>
-<meta name="description" content="الفارس للأعمال — نُقدّم لك الحل القانوني والإداري بثقة واحتراف في المملكة العربية السعودية."/>
+<title>الفارس للأعمال — اتصل بنا</title>
+<meta name="description" content="تواصل مع فريق الفارس للأعمال. تجد هنا معلومات الاتصال الكاملة ونموذجًا لإرسال استفساراتك مباشرة."/>
 
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -12,16 +12,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;1000&display=swap" rel="stylesheet">
 
-<!-- SwiperJS for Sliders -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-
 <style>
 :root{
-  --brand:#0EA5E9; --brand-dark:#0284C7;
+  --brand:#2563EB; --brand-dark:#1D4ED8; /* New Professional Blue */
   --dark:#0F172A; --sub:#475569; --bg:#F8FAFC; --border: #E2E8F0;
   --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:24px;
   --shadow-card:0 2px 4px rgba(15,23,42,.05),0 8px 20px rgba(15,23,42,.07);
@@ -35,6 +31,7 @@ body{
   background:var(--bg); color:var(--dark);
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
   line-height:1.8;
+  overflow-x: hidden;
 }
 h1,h2,h3,h4{line-height:1.4; font-weight:800; margin:0}
 p{margin:.6em 0}
@@ -50,25 +47,14 @@ a{color:inherit;text-decoration:none; transition: var(--transition);}
 }
 .btn-primary{background:var(--brand);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
 .btn-primary:hover{background:var(--brand-dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
-.btn-ghost{background:#fff; color:var(--dark); border-color:var(--border);}
-.btn-ghost:hover{background:var(--dark); color:#fff; border-color:var(--dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
 .card{
   background:#fff; border:1px solid var(--border);
   border-radius:var(--r-lg); padding:24px; box-shadow:var(--shadow-card);
-  transition: var(--transition);
-}
-.card:hover{transform:translateY(-4px); box-shadow:var(--shadow-elev);}
-.badge{
-  display:inline-flex; align-items:center; justify-content:center; gap:4px;
-  border-radius:999px; border:1px solid var(--border); background:#F8FAFC;
-  font-size:12px; padding:4px 12px; color:#64748b; font-weight:600;
 }
 .small{font-size:14px;color:#94A3B8}
-hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 .lead{color:var(--sub); font-size:18px;}
 .grid{display:grid;gap:24px}
-@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
-@media(min-width:992px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:992px){.grid-2{grid-template-columns:1fr 1fr}}
 
 /* --- Header & Navigation --- */
 .topbar{background:var(--dark);color:#94A3B8; font-size:12px;}
@@ -104,27 +90,112 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 .subnav .row{display:flex;gap:24px;font-size:14px;padding:10px 0}
 .subnav a:hover{color:var(--brand)}
 
-/* --- Hero Section --- */
-.hero{position:relative;color:#fff}
-.hero .bg{position:absolute;inset:0;background:url('https://i.postimg.cc/Nf6QqL14/1.png') center/cover no-repeat}
-.hero .overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,23,42,.92),rgba(15,23,42,.7))}
-.hero .inner{position:relative;padding:120px 0; text-align:center;} /* Increased height */
-.hero h1 {font-size:clamp(2.5rem, 5vw, 3.5rem); max-width:800px; margin:0 auto;}
-.hero p {max-width:720px;margin:12px auto 0;color:#e2e8f0; font-size: 1.1rem;}
-.hero .actions {margin-top:24px;display:flex;gap:12px; justify-content:center;}
-
-/* --- Swiper Sliders --- */
-.swiper-container{padding-bottom:40px;}
-.swiper-slide{height:auto;}
-.swiper-pagination-bullet-active{background:var(--brand) !important;}
-.slider-controls{display:flex; gap:8px; position:absolute; bottom:0; left:50%; transform:translateX(-50%);}
-.iconbtn{
-    width:40px;height:40px;border:1px solid var(--border);border-radius:var(--r);
-    display:grid;place-items:center;background:#fff; cursor:pointer;
-    transition:var(--transition);
+/* --- Page Header --- */
+.page-header{
+    padding: 120px 0;
+    background: url('https://i.postimg.cc/qRNs9KrQ/Chat-GPT-Image-27-2025-07-10-47.png') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.iconbtn:hover{background:var(--brand); color:#fff; border-color:var(--brand);}
-.iconbtn.swiper-button-disabled{opacity:0.5; cursor:not-allowed;}
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.6));
+}
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+.page-header h1 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+}
+.page-header p {
+    max-width: 600px;
+    margin: 8px auto 0;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+/* --- Contact Page Specifics --- */
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.contact-info-item .icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--r);
+    background-color: #F1F5F9;
+    color: var(--brand);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+.contact-form .form-grid {
+    display: grid;
+    gap: 16px;
+}
+@media(min-width:768px){.contact-form .form-grid{grid-template-columns:1fr 1fr;}}
+.contact-form .full-width {
+    grid-column: 1 / -1;
+}
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: #fff;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    transition: var(--transition);
+}
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+.contact-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+/* File input styling */
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    background: #fff;
+    cursor: pointer;
+}
+.file-input-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.file-input-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    color: var(--sub);
+    cursor: pointer;
+}
+.file-input-wrapper:hover {
+    border-color: var(--brand);
+}
 
 /* --- Footer & FAB --- */
 footer{
@@ -195,8 +266,20 @@ footer a:hover{color:var(--brand);}
 .backtotop:hover{background:var(--brand-dark); transform:scale(1.1);}
 
 /* --- Animation --- */
-.fade-in{opacity:0; transform:translateY(20px); transition:opacity 0.6s ease-out, transform 0.6s ease-out;}
-.fade-in.visible{opacity:1; transform:translateY(0);}
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-pop-in {
+    transform: scale(0.9) translateY(20px);
+}
+.animate-fade-right { transform: translateX(-40px); }
+.animate-fade-left { transform: translateX(40px); }
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+}
 </style>
 </head>
 <body>
@@ -227,12 +310,12 @@ footer a:hover{color:var(--brand);}
       </div>
     </a>
     <nav class="nav">
-      <a href="index.html" class="active">الرئيسية</a>
+      <a href="index.html">الرئيسية</a>
       <a href="about.html">من نحن</a>
       <a href="services.html">الخدمات</a>
       <a href="packages.html">الباقات</a>
       <a href="blogs.html">المدونة</a>
-      <a href="help.html">اتصل بنا</a>
+      <a href="help.html" class="active">اتصل بنا</a>
       <a href="faq.html">الأسئلة الشائعة</a>
     </nav>
     <div><a class="btn btn-primary" href="help.html">اطلب استشارة</a></div>
@@ -246,100 +329,78 @@ footer a:hover{color:var(--brand);}
   </div>
 </div>
 
-<section class="hero">
-  <div class="bg"></div><div class="overlay"></div>
-  <div class="container inner">
-    <h1 class="fade-in">نُقدّم لك الحل القانوني والإداري بثقة واحتراف</h1>
-    <p class="fade-in">"الفارس للأعمال" مكتب معتمد يقدّم خدمات قانونية وتعقيب إلكتروني باحترافية عالية. نُمكّن الأفراد والمنشآت من إنجاز معاملاتهم وحماية مصالحهم بكفاءة والتزام.</p>
-    <div class="actions fade-in">
-      <a class="btn btn-primary" href="help.html"><i data-lucide="file-text"></i> طلب استشارة قانونية</a>
-      <a class="btn btn-ghost" href="help.html"><i data-lucide="phone"></i> تواصل معنا الآن</a>
-    </div>
-  </div>
-</section>
-
-<section id="services-highlights" class="section container">
-    <div class="fade-in" style="position:relative;">
-      <h2 style="font-size:32px;text-align:center;">خدماتنا الرئيسية</h2>
-      <p class="lead" style="margin:8px auto 24px; text-align:center; max-width:600px;">نقدم باقة متكاملة من الخدمات لتلبية كافة احتياجاتك القانونية والإدارية.</p>
-      <div class="swiper-container swiper-offer" style="margin-top:24px;">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">⚖️ استشارات قانونية</div><p class="lead" style="font-size:16px;">دعم مكتوب أو صوتي بمختلف فروع القانون.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">📄 صياغة العقود</div><p class="lead" style="font-size:16px;">عقود شراكة، توريد، عمل، عقارات، استثمار...</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">🧾 مذكرات قانونية</div><p class="lead" style="font-size:16px;">دفاع، ردود، ومرافعات في جميع درجات التقاضي.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">🧑‍⚖️ تنفيذ الأحكام</div><p class="lead" style="font-size:16px;">متابعة الإجراءات حتى التنفيذ الكامل.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">🏢 تأسيس الشركات</div><p class="lead" style="font-size:16px;">تأسيس الكيانات واستخراج التراخيص.</p></div></div>
-          <div class="swiper-slide"><div class="card" style="text-align:center; height:100%;"><div class="badge" style="background:var(--brand);color:#fff;border-color:var(--brand);margin:0 auto 12px">💼 الباقة القانونية</div><p class="lead" style="font-size:16px;">دعم شهري مستمر للمنشآت بأسعار مخصصة.</p></div></div>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1 class="animate-on-scroll animate-pop-in">تواصل معنا</h1>
+            <p class="animate-on-scroll animate-pop-in" style="transition-delay: 100ms;">فريقنا جاهز للرد على استفساراتك وتقديم الدعم اللازم. نسعد بتواصلك معنا.</p>
         </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-</section>
+    </section>
 
-<section class="section-tight container">
-    <div class="card fade-in" style="background: var(--dark); color: #fff;">
-        <div class="grid grid-2" style="align-items: center;">
-            <div>
-                <h2 style="color: #fff;">من نحن؟</h2>
-                <p class="lead" style="color: #cbd5e1; margin-top: 8px;">شركة "الفارس للأعمال" مرخّصة رسميًا لتقديم الخدمات القانونية والتعقيب الإداري. نعمل بفريق متخصص يقوده محامٍ مرخّص، ونعتمد على أسلوب احترافي يجمع بين المعرفة النظامية، والدقة التنفيذية، ورضا العميل.</p>
-                <a href="about.html" class="btn btn-primary" style="margin-top: 16px;">اعرف المزيد عنا</a>
+    <section class="section container">
+        <div class="grid grid-2">
+            <div class="animate-on-scroll animate-fade-right">
+                <h2>معلومات التواصل</h2>
+                <p class="lead">يمكنك التواصل معنا مباشرة عبر القنوات التالية خلال أوقات العمل الرسمية.</p>
+                
+                <div class="contact-info-item">
+                    <div class="icon-wrap"><i data-lucide="phone"></i></div>
+                    <div>
+                        <h4 style="font-size: 16px;">الهاتف والواتساب</h4>
+                        <p style="margin:0; color:var(--dark);">0555490800 | 0555648602</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="icon-wrap"><i data-lucide="mail"></i></div>
+                    <div>
+                        <h4 style="font-size: 16px;">البريد الإلكتروني</h4>
+                        <p style="margin:0; color:var(--dark);">info@alfarissa.org</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="icon-wrap"><i data-lucide="map-pin"></i></div>
+                    <div>
+                        <h4 style="font-size: 16px;">العنوان الوطني</h4>
+                        <p style="margin:0; color:var(--dark); font-size: 14px;">جدة – حي الحمدانية – شارع الحمدانية الفرعي – مبنى 6551 – الرمز البريدي 23761</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="icon-wrap"><i data-lucide="clock"></i></div>
+                    <div>
+                        <h4 style="font-size: 16px;">أوقات العمل</h4>
+                        <p style="margin:0; color:var(--dark);">الأحد - الخميس: 9:00 صباحًا - 6:00 مساءً</p>
+                    </div>
+                </div>
             </div>
-            <div style="text-align:center;">
-                <i data-lucide="shield-check" style="width:100px; height:100px; color:var(--brand);"></i>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="testimonials" class="section container">
-    <div class="fade-in" style="position:relative;">
-        <h2 style="font-size:32px;text-align:center;">شهادات نعتز بها</h2>
-        <p class="lead" style="margin:8px auto 24px; text-align:center; max-width:600px;">آراء عملائنا هي الدافع الأكبر لنا لتقديم الأفضل دائمًا.</p>
-        <div class="swiper-container swiper-testimonials">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"من أفضل المكاتب اللي تعاملت معهم.. دقة وسرعة، خصوصًا في تنفيذ الحكم اللي كان لي أكثر من سنة أركض وراه."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— خالد الحربي</div>
+            <div class="card contact-form animate-on-scroll animate-fade-left" style="padding: 32px; transition-delay: 150ms;">
+                <h2 style="margin-bottom: 16px;">أرسل استفسارك</h2>
+                <div class="form-grid">
+                    <input type="text" placeholder="الاسم الكامل" class="full-width"/>
+                    <input type="email" placeholder="البريد الإلكتروني"/>
+                    <input type="tel" placeholder="رقم الجوال"/>
+                    <select class="full-width">
+                        <option>اختر سبب التواصل</option>
+                        <option>استشارة قانونية</option>
+                        <option>خدمة حكومية للأعمال</option>
+                        <option>خدمة حكومية للأفراد</option>
+                        <option>استفسار عام</option>
+                    </select>
+                    <textarea rows="5" placeholder="اكتب رسالتك..." class="full-width"></textarea>
+                    <div class="file-input-wrapper full-width">
+                        <input type="file" id="fileUpload" onchange="document.getElementById('fileName').textContent = this.files[0] ? this.files[0].name : 'لم يتم اختيار ملف'">
+                        <label for="fileUpload" class="file-input-label">
+                            <i data-lucide="paperclip"></i>
+                            <span id="fileName">إرفاق ملف (اختياري)</span>
+                        </label>
                     </div>
+                    <button class="btn btn-primary full-width">إرسال الرسالة</button>
                 </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"سجّلت الشركة وعقود الشراكة وكل شي من خلالهم. وفّروا علي وقت وجهد كثير."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— سارة الغامدي</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"اللي يميّزهم صدق المتابعة، ما تتصل إلا وهم قد خلّصوا الإجراء، حتى لو من منصات معقدة مثل ناجز أو بلدي."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— شركة البناء العصري</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"استشارة قانونية في وقتها! تحليلهم للقضية كان دقيق وساعدني أتخذ القرار الصحيح. شكرًا لكم."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— عبدالمجيد المطيري</div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card">
-                        <p class="lead">"فريق محترف ومتعاون، أنهوا لنا إجراءات تسجيل العلامة التجارية بسرعة وبدون أي تعقيدات. أنصح بهم بشدة."</p>
-                        <hr>
-                        <div class="small" style="color:#64748b; font-weight:600;">— متجر ركن الهدايا</div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-controls">
-                <button class="iconbtn testimonials-prev"><i data-lucide="arrow-right"></i></button>
-                <button class="iconbtn testimonials-next"><i data-lucide="arrow-left"></i></button>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+</main>
 
 <footer id="contact">
   <div class="container">
@@ -394,48 +455,8 @@ footer a:hover{color:var(--brand);}
 </div>
 <a href="#" class="backtotop" title="العودة للأعلى"><i data-lucide="arrow-up"></i></a>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
 function ready(fn){document.readyState!='loading'?fn():document.addEventListener('DOMContentLoaded',fn)}
-
-function setupSliders(){
-  const offerSwiper = new Swiper('.swiper-offer', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 24,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      576: { slidesPerView: 2 },
-      768: { slidesPerView: 3 },
-      1200: { slidesPerView: 4 },
-    }
-  });
-
-  const testimonialsSwiper = new Swiper('.swiper-testimonials', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 24,
-    navigation: {
-      nextEl: '.testimonials-next',
-      prevEl: '.testimonials-prev',
-    },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 },
-      1200: { slidesPerView: 3 },
-    }
-  });
-}
 
 function setupBackToTop(){
   const btt = document.querySelector('.backtotop');
@@ -446,24 +467,22 @@ function setupBackToTop(){
 }
 
 function setupScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.1 });
 
-    animatedElements.forEach(el => {
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
 }
 
 ready(()=>{
   lucide.createIcons();
-  setupSliders();
   setupBackToTop();
   setupScrollAnimations();
 });

@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<title>الفارس للأعمال — تفاصيل المقال</title>
+<meta name="description" content="اطلع على تفاصيل المقال من مدونة الفارس للأعمال."/>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;1000&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<style>
+:root{
+  --brand:#2563EB; --brand-dark:#1D4ED8; /* New Professional Blue */
+  --dark:#0F172A; --sub:#475569; --bg:#F8FAFC; --border: #E2E8F0;
+  --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:24px;
+  --shadow-card:0 2px 4px rgba(15,23,42,.05),0 8px 20px rgba(15,23,42,.07);
+  --shadow-elev:0 4px 8px rgba(15,23,42,.06),0 16px 40px rgba(15,23,42,.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+*{box-sizing:border-box}
+html{direction:rtl;scroll-behavior:smooth}
+body{
+  margin:0; font-family:"Cairo", system-ui, -apple-system, sans-serif;
+  background:var(--bg); color:var(--dark);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  line-height:1.8;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4{line-height:1.4; font-weight:800; margin:0}
+p{margin:.6em 0}
+a{color:inherit;text-decoration:none; transition: var(--transition);}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+.section{padding:80px 0} .section-tight{padding:60px 0}
+
+/* --- Components --- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  border-radius:var(--r); padding:10px 20px; font-size:15px; font-weight:600;
+  border:1px solid transparent; transition:var(--transition); white-space:nowrap;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary:hover{background:var(--brand-dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
+.btn-ghost{background:#fff; color:var(--dark); border-color:var(--border);}
+.btn-ghost:hover{background:var(--dark); color:#fff; border-color:var(--dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
+.card{
+  background:#fff; border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:24px; box-shadow:var(--shadow-card);
+  transition: var(--transition);
+}
+.card:hover{transform:translateY(-4px); box-shadow:var(--shadow-elev);}
+.small{font-size:14px;color:#94A3B8}
+.lead{color:var(--sub); font-size:18px;}
+.grid{display:grid;gap:24px}
+.grid-2{grid-template-columns:1fr; gap:32px}
+.grid-3{grid-template-columns:1fr; gap:32px}
+.grid.stagger-children > *{opacity:0;transform:translateY(20px)}
+.grid.stagger-children > *.visible{opacity:1;transform:translateY(0)}
+.row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+@media(min-width:992px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+
+/* --- Header & Navigation --- */
+.topbar{background:var(--dark);color:#94A3B8; font-size:12px;}
+.topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+.topbar-socials{display:flex; gap:12px;}
+.topbar-socials a:hover{color:var(--brand);}
+.header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(15,23,42,.85); backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.1); color:#fff;
+}
+.header .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{
+  width:48px; height:48px;
+  display:grid; place-items:center;
+}
+.brand .logo img {
+    max-width: 100%;
+    height: auto;
+}
+.nav{display:none;gap:28px;font-size:15px}
+.nav a{color:#cbd5e1; position:relative; padding:4px 0;}
+.nav a:after{
+    content:''; position:absolute; bottom:0; right:0;
+    width:0; height:2px; background:var(--brand); transition:var(--transition);
+}
+.nav a:hover{color:#fff}
+.nav a.active:after, .nav a:hover:after{width:100%;}
+@media(min-width:992px){.nav{display:flex}}
+.subnav{background:#fff;color:var(--dark);border-bottom:1px solid var(--border); display:none;}
+@media(min-width:992px){.subnav{display:block}}
+.subnav .row{display:flex;gap:24px;font-size:14px;padding:10px 0}
+.subnav a:hover{color:var(--brand)}
+
+/* --- Page Header --- */
+.page-header{
+    padding: 120px 0;
+    background: url('https://i.postimg.cc/9MNnrDks/2.png') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.5));
+}
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+.page-header h1 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+}
+.page-header p {
+    max-width: 600px;
+    margin: 8px auto 0;
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+/* --- Blog Detail Specifics --- */
+.blog-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.blog-detail .blog-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--r-lg);
+    margin-bottom: 32px;
+}
+.blog-detail .blog-meta {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+.blog-detail .blog-author {
+    color: var(--sub);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.blog-detail .blog-date {
+    color: #94a3b8;
+    font-size: 14px;
+}
+.blog-detail .blog-content {
+    font-size: 16px;
+    line-height: 1.8;
+}
+.blog-detail .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--brand);
+    font-weight: 600;
+    margin-bottom: 32px;
+    transition: var(--transition);
+}
+.blog-detail .back-link:hover {
+    color: var(--brand-dark);
+    transform: translateX(4px);
+}
+.error-message {
+    text-align: center;
+    color: var(--sub);
+    font-size: 18px;
+    padding: 48px 24px;
+}
+
+/* --- Footer & FAB --- */
+footer{
+    background: var(--dark) url('https://i.postimg.cc/528wJJZd/Chat-GPT-Image-27-2025-07-04-32.png') center/cover no-repeat;
+    color:#fff; margin-top:48px; padding:72px 0 24px;
+    position: relative;
+}
+footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+}
+footer > .container {
+    position: relative;
+    z-index: 2;
+}
+.footer-grid{display:grid;gap:32px;margin-bottom:48px}
+@media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.small{color:#cbd5e1}
+
+/* --- Responsive Design --- */
+@media(max-width:991px){
+    .page-header{padding:80px 0}
+    .section{padding:60px 0}
+    .blog-detail .blog-image{height:250px}
+}
+
+/* --- Animations --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.animate-pop-in {
+    transform: scale(0.9) translateY(20px);
+}
+.animate-pop-in.visible {
+    transform: scale(1) translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="container row">
+    <div class="row">
+        <span><i data-lucide="mail" style="width:14px; vertical-align:middle; margin-left:4px;"></i> info@alfarissa.org</span>
+        <span><i data-lucide="phone" style="width:14px; vertical-align:middle; margin-left:4px;"></i> 0555490800</span>
+    </div>
+    <div class="topbar-socials">
+      <a href="#" title="Twitter"><i data-lucide="twitter" style="width:16px;"></i></a>
+      <a href="#" title="Instagram"><i data-lucide="instagram" style="width:16px;"></i></a>
+      <a href="#" title="LinkedIn"><i data-lucide="linkedin" style="width:16px;"></i></a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <div class="logo">
+        <img src="https://i.postimg.cc/jj9rwth9/image.png" alt="شعار الفارس للأعمال">
+      </div>
+      <div>
+        <div style="font-weight:800; font-size:18px;">الفارس للأعمال</div>
+        <div style="font-size:12px; color:#94A3B8;">شريكك الموثوق</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="services.html">الخدمات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="about.html">من نحن</a>
+      <a href="blogs.html" class="active">المدونة</a>
+      <a href="faq.html">الأسئلة الشائعة</a>
+    </nav>
+    <div><a class="btn btn-primary" href="help.html">اطلب استشارة</a></div>
+  </div>
+</header>
+
+<div class="subnav">
+  <div class="container row">
+    <a href="services.html#legal-services-tab">الخدمات القانونية</a>
+    <a href="services.html#gov-business-tab">الخدمات الحكومية للأعمال</a>
+    <a href="services.html#gov-individuals-tab">الخدمات الحكومية للأفراد</a>
+  </div>
+</div>
+
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1 id="blog-title" class="animate-on-scroll animate-pop-in">تفاصيل المقال</h1>
+            <p class="animate-on-scroll animate-pop-in" style="transition-delay: 100ms;">اطلع على التفاصيل الكاملة للمقال</p>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="blog-detail">
+            <a href="blogs.html" class="back-link">
+                <i data-lucide="arrow-right" size="16"></i>
+                العودة للمدونة
+            </a>
+            
+            <div id="blog-content">
+                <!-- Content will be loaded here by JavaScript -->
+            </div>
+            
+            <div id="error-content" class="error-message" style="display: none;">
+                <h3>المقال غير موجود</h3>
+                <p>عذراً، المقال المطلوب غير موجود أو تم حذفه.</p>
+                <a href="blogs.html" class="btn btn-primary">العودة للمدونة</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;">
+            <div class="logo">
+                <img src="https://i.postimg.cc/jj9rwth9/image.png" alt="شعار الفارس للأعمال">
+            </div>
+            <div style="font-weight:800; font-size:18px;">الفارس للأعمال</div>
+        </a>
+        <p class="small" style="color:#cbd5e1;max-width:300px;">ننجز معاملاتك الحكومية والقانونية باحترافية ووقتٍ قياسي، لنكون شريكك الموثوق نحو النجاح.</p>
+      </div>
+      <div>
+        <h4 style="font-weight:700;margin-bottom:12px; font-size:18px;">روابط سريعة</h4>
+        <div class="small" style="display:grid;gap:8px; color:#cbd5e1;">
+          <a href="index.html">الرئيسية</a>
+          <a href="services.html">الخدمات</a>
+          <a href="packages.html">الباقات</a>
+          <a href="blogs.html">المدونة</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-weight:700;margin-bottom:12px; font-size:18px;">معلومات التواصل</h4>
+        <div class="small" style="display:grid;gap:8px; color:#cbd5e1;">
+          <div><i data-lucide="phone" style="width:14px; vertical-align:middle; margin-left:4px;"></i> 0555490800 | 0555648602</div>
+          <div><i data-lucide="mail" style="width:14px; vertical-align:middle; margin-left:4px;"></i> info@alfarissa.org</div>
+          <div><i data-lucide="map-pin" style="width:14px; vertical-align:middle; margin-left:4px;"></i> الرياض، المملكة العربية السعودية</div>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-weight:700;margin-bottom:12px; font-size:18px;">تابعنا</h4>
+        <div class="row" style="gap:8px;">
+          <a href="#" style="background:#374151; color:#D1D5DB; padding:8px; border-radius:var(--r);"><i data-lucide="twitter" style="width:18px;"></i></a>
+          <a href="#" style="background:#374151; color:#D1D5DB; padding:8px; border-radius:var(--r);"><i data-lucide="instagram" style="width:18px;"></i></a>
+          <a href="#" style="background:#374151; color:#D1D5DB; padding:8px; border-radius:var(--r);"><i data-lucide="linkedin" style="width:18px;"></i></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; padding-top:24px; border-top:1px solid rgba(255,255,255,.1);">
+      <p class="small">&copy; 2025 الفارس للأعمال. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/common.js"></script>
+
+<script>
+// Blog posts data - extracted from blogs.html
+const blogPosts = {
+    'paid-leave': {
+        title: 'الإجازات الجديدة في نظام العمل السعودي: كل ما تريد معرفته',
+        image: 'https://i.postimg.cc/qRD1V6qS/ajazat-mdfw-t-alajr-fy-t-dylat-nzam-al-ml-lthqyq-altwazn-byn-alhyat-alajtma-yt-wal-ml-ll-aml.webp',
+        author: 'القسم القانوني',
+        date: '15 سبتمبر 2024',
+        excerpt: 'تعرف على التحديثات الأخيرة في نظام العمل السعودي بخصوص الإجازات مدفوعة الأجر، وكيف توازن بين حقوق العامل والتزامات صاحب العمل.',
+        content: `
+            <p>يشهد نظام العمل السعودي تطورات مستمرة تهدف إلى تحقيق التوازن بين حقوق العاملين ومتطلبات أصحاب العمل. ومن أهم هذه التطورات التحديثات الجديدة على نظام الإجازات مدفوعة الأجر.</p>
+            
+            <h3>أنواع الإجازات الجديدة</h3>
+            <p>تتضمن التحديثات الجديدة عدة أنواع من الإجازات:</p>
+            <ul>
+                <li><strong>إجازة الوالدين:</strong> حق العامل في إجازة لرعاية الوالدين في حالات المرض</li>
+                <li><strong>إجازة التطوع:</strong> إجازة مدفوعة للمشاركة في الأعمال التطوعية المعتمدة</li>
+                <li><strong>إجازة التطوير المهني:</strong> إجازة لحضور الدورات التدريبية والمؤتمرات</li>
+            </ul>
+            
+            <h3>الشروط والضوابط</h3>
+            <p>وضع النظام عدة شروط لضمان عدم التلاعب في هذه الإجازات:</p>
+            <ul>
+                <li>تقديم طلب مسبق قبل 30 يوماً على الأقل</li>
+                <li>تقديم المستندات المطلوبة حسب نوع الإجازة</li>
+                <li>عدم تجاوز الحد الأقصى المسموح سنوياً</li>
+            </ul>
+            
+            <h3>حقوق العامل</h3>
+            <p>يحق للعامل الحصول على راتبه كاملاً خلال فترة الإجازة، مع ضمان عودته لنفس المنصب أو منصب مماثل.</p>
+            
+            <h3>التزامات صاحب العمل</h3>
+            <p>على صاحب العمل الالتزام بمنح الإجازات وفقاً للنظام، وعدم اتخاذ أي إجراءات تأديبية ضد العامل لطلب إجازته المستحقة.</p>
+        `
+    },
+    'seamless-2024': {
+        title: 'فرص استثمارية واعدة في التجارة الرقمية بعد مؤتمر "سيملس 2024"',
+        image: 'https://i.postimg.cc/q7ZgHpcg/www.jpg',
+        author: 'فريق الفارس',
+        date: '06 سبتمبر 2024',
+        excerpt: 'نظرة على أبرز مخرجات مؤتمر سيملس السعودية 2024، وكيف تفتح الاتفاقيات الجديدة أبوابًا واسعة للاستثمار في التقنية المالية والتجارة الإلكترونية.',
+        content: `
+            <p>أقيم مؤتمر سيملس السعودية 2024 كأحد أهم المؤتمرات التقنية في المنطقة، وقد خرج بعدة اتفاقيات ومبادرات تفتح آفاقاً جديدة للاستثمار في التجارة الرقمية.</p>
+            
+            <h3>أبرز مخرجات المؤتمر</h3>
+            <ul>
+                <li><strong>منصة مدفوعات موحدة:</strong> إطلاق منصة وطنية موحدة للمدفوعات الرقمية</li>
+                <li><strong>تسهيلات للشركات الناشئة:</strong> حوافز وتسهيلات خاصة للشركات التقنية الناشئة</li>
+                <li><strong>شراكات دولية:</strong> اتفاقيات مع شركات تقنية عالمية لنقل التقنية</li>
+            </ul>
+            
+            <h3>الفرص الاستثمارية الجديدة</h3>
+            <p>تتيح هذه المبادرات فرصاً استثمارية متنوعة:</p>
+            <ul>
+                <li>تطوير حلول الدفع الرقمي</li>
+                <li>منصات التجارة الإلكترونية المتخصصة</li>
+                <li>خدمات التقنية المالية</li>
+                <li>حلول الذكاء الاصطناعي للتجارة</li>
+            </ul>
+            
+            <h3>التحديات والحلول</h3>
+            <p>رغم الفرص الواعدة، هناك تحديات يجب التعامل معها:</p>
+            <ul>
+                <li><strong>التحدي التنظيمي:</strong> الحاجة لتطوير أطر تنظيمية مرنة</li>
+                <li><strong>المواهب المتخصصة:</strong> نقص في الكوادر التقنية المتخصصة</li>
+                <li><strong>الأمن السيبراني:</strong> ضرورة تعزيز الحماية الرقمية</li>
+            </ul>
+            
+            <h3>نصائح للمستثمرين</h3>
+            <p>ننصح المستثمرين بما يلي:</p>
+            <ul>
+                <li>دراسة السوق والمنافسين بعناية</li>
+                <li>التركيز على الحلول المبتكرة</li>
+                <li>بناء شراكات استراتيجية</li>
+                <li>الاستفادة من برامج الدعم الحكومية</li>
+            </ul>
+        `
+    },
+    'company-setup': {
+        title: '5 خطوات أساسية لتأسيس شركتك في السعودية: دليلك لعام 2025',
+        image: 'https://i.postimg.cc/053VVSLJ/saudi-arabia-950x500.jpg',
+        author: 'محمد الفارس',
+        date: '29 أغسطس 2025',
+        excerpt: 'دليل مبسط وعملي يوضح لك الخطوات الخمس الرئيسية لتأسيس شركتك الجديدة في المملكة، بدءًا من حجز الاسم التجاري وحتى فتح ملف المنشأة.',
+        content: `
+            <p>تأسيس شركة في المملكة العربية السعودية أصبح أسهل من أي وقت مضى، بفضل المبادرات الحكومية وتطوير الخدمات الرقمية. إليك الخطوات الخمس الأساسية:</p>
+            
+            <h3>الخطوة الأولى: حجز الاسم التجاري</h3>
+            <p>ابدأ بحجز اسم تجاري مميز لشركتك:</p>
+            <ul>
+                <li>تأكد من عدم وجود اسم مشابه</li>
+                <li>اختر اسماً يعكس نشاط شركتك</li>
+                <li>قم بالحجز عبر منصة "بلدي الأعمال"</li>
+                <li>المدة: يوم واحد</li>
+                <li>الرسوم: 200 ريال</li>
+            </ul>
+            
+            <h3>الخطوة الثانية: إعداد عقد التأسيس</h3>
+            <p>حضر عقد التأسيس وفقاً لنوع الشركة:</p>
+            <ul>
+                <li>حدد نوع الشركة (محدودة، مساهمة، تضامن)</li>
+                <li>حدد رأس المال</li>
+                <li>وزع الحصص بين الشركاء</li>
+                <li>حدد أغراض الشركة</li>
+            </ul>
+            
+            <h3>الخطوة الثالثة: الحصول على السجل التجاري</h3>
+            <p>استخرج السجل التجاري من وزارة التجارة:</p>
+            <ul>
+                <li>قدم الطلب عبر منصة "معروف"</li>
+                <li>أرفق المستندات المطلوبة</li>
+                <li>ادفع الرسوم المستحقة</li>
+                <li>المدة: 1-3 أيام عمل</li>
+            </ul>
+            
+            <h3>الخطوة الرابعة: التسجيل في الزكاة والضريبة</h3>
+            <p>سجل شركتك لدى هيئة الزكاة والضريبة:</p>
+            <ul>
+                <li>قدم طلب التسجيل عبر منصة "فاتورة"</li>
+                <li>احصل على الرقم الضريبي</li>
+                <li>فعل نظام الفوترة الإلكترونية</li>
+            </ul>
+            
+            <h3>الخطوة الخامسة: فتح ملف المنشأة</h3>
+            <p>أكمل إجراءات التشغيل:</p>
+            <ul>
+                <li>افتح حساباً بنكياً للشركة</li>
+                <li>سجل في التأمينات الاجتماعية</li>
+                <li>احصل على التراخيص المهنية إن لزم الأمر</li>
+                <li>فعل منصة "قوى" لإدارة الموظفين</li>
+            </ul>
+            
+            <h3>نصائح مهمة</h3>
+            <ul>
+                <li>استعن بمكتب خدمات أعمال موثوق</li>
+                <li>تأكد من مطابقة جميع الأوراق</li>
+                <li>احتفظ بنسخ من جميع المستندات</li>
+                <li>تابع التحديثات القانونية باستمرار</li>
+            </ul>
+        `
+    },
+    'company-conversion': {
+        title: 'تحويل شركة مساهمة إلى ذات مسؤولية محدودة — الإجراءات والأوراق',
+        image: 'https://i.postimg.cc/Qd0B8Qg6/image.png',
+        author: 'فريق الفارس',
+        date: '22 ديسمبر 2024',
+        excerpt: 'ملخص قصير ومفيد حول الخطوات النظامية والمستندات المطلوبة لتحويل الشكل القانوني للشركات وفقًا للأنظمة السعودية.',
+        content: `
+            <p>قد تحتاج الشركات المساهمة أحياناً إلى تحويل شكلها القانوني إلى شركة ذات مسؤولية محدودة لأسباب إدارية أو تجارية. إليك الدليل الكامل للإجراءات:</p>
+            
+            <h3>شروط التحويل الأساسية</h3>
+            <ul>
+                <li>موافقة ما لا يقل عن 75% من المساهمين</li>
+                <li>عدم وجود التزامات مالية معلقة</li>
+                <li>سداد جميع الديون والالتزامات</li>
+                <li>إجراء تقييم مالي للشركة</li>
+            </ul>
+            
+            <h3>المستندات المطلوبة</h3>
+            <p>يجب تحضير المستندات التالية:</p>
+            <ul>
+                <li><strong>قرار الجمعية العمومية:</strong> بالموافقة على التحويل</li>
+                <li><strong>تقرير مالي محدث:</strong> من محاسب قانوني معتمد</li>
+                <li><strong>عقد التأسيس الجديد:</strong> وفقاً لشكل الشركة المحدودة</li>
+                <li><strong>تقييم الأصول:</strong> من مقيم معتمد</li>
+                <li><strong>براءة ذمة ضريبية:</strong> من هيئة الزكاة والضريبة</li>
+            </ul>
+            
+            <h3>خطوات التحويل</h3>
+            
+            <h4>1. المرحلة التحضيرية</h4>
+            <ul>
+                <li>دراسة الجدوى من التحويل</li>
+                <li>إعداد التقارير المالية</li>
+                <li>تحديد قيمة حصص الشركاء الجدد</li>
+            </ul>
+            
+            <h4>2. مرحلة الموافقات</h4>
+            <ul>
+                <li>دعوة الجمعية العمومية غير العادية</li>
+                <li>التصويت على قرار التحويل</li>
+                <li>توثيق القرار رسمياً</li>
+            </ul>
+            
+            <h4>3. مرحلة التنفيذ</h4>
+            <ul>
+                <li>إعداد عقد التأسيس الجديد</li>
+                <li>تقديم الطلب لوزارة التجارة</li>
+                <li>الحصول على السجل التجاري الجديد</li>
+                <li>تحديث البيانات في الجهات المختلفة</li>
+            </ul>
+            
+            <h3>الاعتبارات الضريبية</h3>
+            <p>يجب مراعاة الجوانب الضريبية التالية:</p>
+            <ul>
+                <li>قد تترتب ضرائب على التحويل</li>
+                <li>ضرورة إبلاغ هيئة الزكاة والضريبة</li>
+                <li>تحديث نظام الفوترة الإلكترونية</li>
+            </ul>
+            
+            <h3>المدة الزمنية والتكاليف</h3>
+            <ul>
+                <li><strong>المدة:</strong> 4-8 أسابيع من تاريخ تقديم الطلب</li>
+                <li><strong>الرسوم الحكومية:</strong> 2,000 - 5,000 ريال</li>
+                <li><strong>أتعاب المكاتب:</strong> 15,000 - 30,000 ريال</li>
+            </ul>
+            
+            <h3>نصائح مهمة</h3>
+            <ul>
+                <li>استشر محامياً متخصصاً في قانون الشركات</li>
+                <li>تأكد من سلامة جميع الإجراءات المالية</li>
+                <li>احتفظ بنسخ من جميع المستندات</li>
+                <li>أبلغ جميع الأطراف ذات العلاقة</li>
+            </ul>
+        `
+    },
+    'work-injury': {
+        title: 'التزام صاحب العمل تجاه إصابات العمل والظروف المهنية',
+        image: 'https://i.postimg.cc/nr4rZSnL/1.png',
+        author: 'القسم القانوني',
+        date: '15 يوليو 2024',
+        excerpt: 'نستعرض مسؤوليات صاحب العمل النظامية عند وقوع إصابة عمل، وحقوق العامل في التعويض والعلاج حسب نظام العمل السعودي.',
+        content: `
+            <p>ينظم نظام العمل السعودي التزامات صاحب العمل تجاه العامل في حالة تعرضه لإصابة عمل أو مرض مهني، ويضع قواعد واضحة لحماية حقوق الطرفين.</p>
+            
+            <h3>تعريف إصابة العمل</h3>
+            <p>تشمل إصابة العمل:</p>
+            <ul>
+                <li>الإصابات التي تحدث أثناء العمل أو بسببه</li>
+                <li>الإصابات أثناء الانتقال من وإلى مكان العمل</li>
+                <li>الأمراض المهنية الناتجة عن طبيعة العمل</li>
+                <li>الإصابات أثناء تأدية مهام رسمية خارج مكان العمل</li>
+            </ul>
+            
+            <h3>التزامات صاحب العمل الفورية</h3>
+            <p>عند وقوع إصابة عمل، يجب على صاحب العمل:</p>
+            <ul>
+                <li><strong>الإسعافات الأولية:</strong> تقديم الإسعافات الأولية فوراً</li>
+                <li><strong>النقل للمستشفى:</strong> نقل المصاب لأقرب مركز طبي</li>
+                <li><strong>الإبلاغ:</strong> إبلاغ التأمينات الاجتماعية خلال 48 ساعة</li>
+                <li><strong>التوثيق:</strong> توثيق الحادث وظروفه</li>
+            </ul>
+            
+            <h3>التزامات العلاج والتعويض</h3>
+            
+            <h4>1. التكاليف الطبية</h4>
+            <ul>
+                <li>تحمل جميع تكاليف العلاج</li>
+                <li>توفير العلاج الطبيعي إن لزم</li>
+                <li>تكاليف الأجهزة التعويضية</li>
+                <li>تكاليف النقل للعلاج</li>
+            </ul>
+            
+            <h4>2. تعويض الأجر</h4>
+            <ul>
+                <li>دفع الراتب كاملاً خلال فترة العلاج</li>
+                <li>استمرار الرواتب حتى الشفاء أو تحديد نسبة العجز</li>
+                <li>عدم خصم أيام المرض من رصيد الإجازات</li>
+            </ul>
+            
+            <h3>حقوق العامل</h3>
+            <p>للعامل المصاب الحقوق التالية:</p>
+            <ul>
+                <li><strong>العلاج المجاني:</strong> العلاج على نفقة صاحب العمل</li>
+                <li><strong>حفظ المنصب:</strong> الاحتفاظ بمنصبه أثناء العلاج</li>
+                <li><strong>التعويض:</strong> تعويض مناسب حسب نسبة العجز</li>
+                <li><strong>إعادة التأهيل:</strong> برامج إعادة التأهيل المهني</li>
+            </ul>
+            
+            <h3>تعويض العجز الدائم</h3>
+            <p>في حالة العجز الدائم:</p>
+            <ul>
+                <li><strong>العجز الكلي:</strong> تعويض يعادل 84 شهراً من الراتب</li>
+                <li><strong>العجز الجزئي:</strong> تعويض بنسبة العجز المحددة طبياً</li>
+                <li><strong>معاش دوري:</strong> إمكانية الحصول على معاش شهري</li>
+            </ul>
+            
+            <h3>إجراءات الوقاية</h3>
+            <p>على صاحب العمل اتخاذ إجراءات وقائية:</p>
+            <ul>
+                <li>توفير بيئة عمل آمنة</li>
+                <li>تدريب العمال على السلامة المهنية</li>
+                <li>توفير أدوات الحماية الشخصية</li>
+                <li>إجراء فحوصات دورية لمعدات العمل</li>
+            </ul>
+            
+            <h3>العواقب القانونية</h3>
+            <p>عدم الالتزام بهذه المسؤوليات قد يؤدي إلى:</p>
+            <ul>
+                <li>غرامات مالية كبيرة</li>
+                <li>مسؤولية جنائية في حالة الإهمال</li>
+                <li>تعويضات إضافية للعامل</li>
+                <li>إغلاق المنشأة في الحالات الخطيرة</li>
+            </ul>
+        `
+    },
+    'training-programs': {
+        title: 'أسس برامج التدريب في العمل — المادة 44 من نظام العمل',
+        image: 'https://i.postimg.cc/Qxjx1bXp/1741884301594.jpg',
+        author: 'محمد عبدالعزيز',
+        date: '11 فبراير 2024',
+        excerpt: 'تحليل للمادة 44 من نظام العمل التي تنظم عقود التدريب والتأهيل، وشرح لأهميتها في تطوير الكوادر الوطنية.',
+        content: `
+            <p>تُعد المادة 44 من نظام العمل السعودي أحد أهم النصوص التي تنظم برامج التدريب والتأهيل في بيئة العمل، وتهدف لتطوير الكوادر الوطنية وتعزيز قدراتها.</p>
+            
+            <h3>نص المادة 44</h3>
+            <p>تنص المادة على حق صاحب العمل في إبرام عقود تدريب وتأهيل مع الأشخاص الراغبين في تعلم مهنة أو حرفة، وتحدد شروط وضوابط هذه العقود.</p>
+            
+            <h3>أنواع برامج التدريب</h3>
+            
+            <h4>1. التدريب المهني</h4>
+            <ul>
+                <li>تعلم مهارات تقنية محددة</li>
+                <li>التدريب على استخدام الآلات والمعدات</li>
+                <li>تطوير المهارات اليدوية والحرفية</li>
+            </ul>
+            
+            <h4>2. التدريب الإداري</h4>
+            <ul>
+                <li>تطوير مهارات القيادة والإدارة</li>
+                <li>تعلم أنظمة العمل والإجراءات</li>
+                <li>تطوير مهارات التواصل والعمل الجماعي</li>
+            </ul>
+            
+            <h4>3. التدريب التخصصي</h4>
+            <ul>
+                <li>التدريب في مجالات متخصصة</li>
+                <li>تطوير الخبرات المهنية المتقدمة</li>
+                <li>التدريب على التقنيات الحديثة</li>
+            </ul>
+            
+            <h3>شروط عقد التدريب</h3>
+            <p>يجب أن يشتمل عقد التدريب على:</p>
+            <ul>
+                <li><strong>مدة التدريب:</strong> يجب تحديدها بوضوح (عادة 6-24 شهراً)</li>
+                <li><strong>طبيعة المهنة:</strong> تحديد المهارات التي سيتم تعلمها</li>
+                <li><strong>مكافأة التدريب:</strong> المبلغ الذي سيحصل عليه المتدرب</li>
+                <li><strong>ساعات التدريب:</strong> عدد ساعات التدريب اليومية/الأسبوعية</li>
+                <li><strong>التزامات الطرفين:</strong> واجبات كل من المدرب والمتدرب</li>
+            </ul>
+            
+            <h3>حقوق المتدرب</h3>
+            <p>للمتدرب الحقوق التالية:</p>
+            <ul>
+                <li><strong>مكافأة التدريب:</strong> مبلغ شهري لا يقل عن 50% من الحد الأدنى للأجور</li>
+                <li><strong>بيئة تدريب آمنة:</strong> توفير ظروف عمل صحية وآمنة</li>
+                <li><strong>التدريب المناسب:</strong> الحصول على تدريب فعال ومفيد</li>
+                <li><strong>شهادة التدريب:</strong> الحصول على شهادة معتمدة عند إنهاء التدريب</li>
+                <li><strong>الحماية القانونية:</strong> الحماية من الاستغلال أو سوء المعاملة</li>
+            </ul>
+            
+            <h3>التزامات صاحب العمل</h3>
+            <p>على صاحب العمل الالتزام بما يلي:</p>
+            <ul>
+                <li>توفير التدريب المناسب والفعال</li>
+                <li>دفع مكافأة التدريب في مواعيدها</li>
+                <li>توفير المواد والأدوات اللازمة للتدريب</li>
+                <li>تخصيص مدربين مؤهلين ومختصين</li>
+                <li>منح شهادة تدريب معتمدة</li>
+            </ul>
+            
+            <h3>فوائد برامج التدريب</h3>
+            
+            <h4>للمتدرب:</h4>
+            <ul>
+                <li>اكتساب مهارات جديدة قابلة للتسويق</li>
+                <li>تحسين فرص الحصول على عمل</li>
+                <li>زيادة الدخل المستقبلي</li>
+                <li>التطوير المهني والشخصي</li>
+            </ul>
+            
+            <h4>لصاحب العمل:</h4>
+            <ul>
+                <li>إعداد كوادر مدربة ومؤهلة</li>
+                <li>تقليل تكاليف التوظيف</li>
+                <li>ضمان الولاء والانتماء للمؤسسة</li>
+                <li>المساهمة في التنمية المجتمعية</li>
+            </ul>
+            
+            <h3>الرقابة والمتابعة</h3>
+            <p>تخضع برامج التدريب لرقابة وزارة الموارد البشرية والتنمية الاجتماعية من خلال:</p>
+            <ul>
+                <li>الزيارات التفتيشية الدورية</li>
+                <li>مراجعة عقود التدريب</li>
+                <li>التأكد من جودة البرامج التدريبية</li>
+                <li>متابعة مخرجات التدريب</li>
+            </ul>
+            
+            <h3>التحديات والحلول</h3>
+            <p>تواجه برامج التدريب عدة تحديات:</p>
+            <ul>
+                <li><strong>نقص المدربين المؤهلين:</strong> الحل: برامج تدريب المدربين</li>
+                <li><strong>عدم ملاءمة البرامج لسوق العمل:</strong> الحل: ربط التدريب بمتطلبات السوق</li>
+                <li><strong>ضعف الحوافز:</strong> الحل: تحسين مكافآت التدريب</li>
+            </ul>
+        `
+    }
+};
+
+// Function to get URL parameter
+function getUrlParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
+
+// Function to load blog content
+function loadBlogContent() {
+    const postId = getUrlParameter('post');
+    const blogContent = document.getElementById('blog-content');
+    const errorContent = document.getElementById('error-content');
+    const blogTitle = document.getElementById('blog-title');
+    
+    if (postId && blogPosts[postId]) {
+        const post = blogPosts[postId];
+        
+        // Update page title
+        document.title = `${post.title} — الفارس للأعمال`;
+        blogTitle.textContent = post.title;
+        
+        // Show blog content
+        blogContent.innerHTML = `
+            <div class="blog-image" style="background-image: url('${post.image}')"></div>
+            <div class="blog-meta">
+                <div class="blog-author">${post.author}</div>
+                <div class="blog-date">${post.date}</div>
+            </div>
+            <div class="blog-content">
+                ${post.content}
+            </div>
+        `;
+        
+        blogContent.style.display = 'block';
+        errorContent.style.display = 'none';
+    } else {
+        // Show error message
+        blogContent.style.display = 'none';
+        errorContent.style.display = 'block';
+        blogTitle.textContent = 'المقال غير موجود';
+    }
+}
+
+// Function to setup scroll animations (copied from common.js pattern)
+function setupScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -10% 0px'
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    loadBlogContent();
+    setupScrollAnimations();
+    
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+});
+</script>
+
+</body>
+</html>

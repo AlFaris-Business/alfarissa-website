@@ -353,8 +353,136 @@ footer a:hover{color:var(--brand);}
             </a>
         </div>
     </div>
-
     <script>
+        // Service Data Object - All 42 services with detailed information
+        const serviceData = {
+            // Legal Services (12 services)
+            'legal_consultation': {
+                icon: 'message-square',
+                title: 'استشارات قانونية',
+                description: 'تحليل دقيق وتقديم استشارة متكاملة لمساعدتك على اتخاذ قرارات مستنيرة في جميع المسائل القانونية.',
+                category: 'الخدمات القانونية',
+                features: [
+                    'استشارة شخصية مع محامين متخصصين ومرخصين',
+                    'تحليل شامل للحالة القانونية وتقييم المخاطر',
+                    'توضيح الحقوق والواجبات وفقاً للأنظمة السعودية',
+                    'تقديم خيارات قانونية متعددة مع شرح الإيجابيات والسلبيات',
+                    'متابعة مستمرة وإجابة على الاستفسارات اللاحقة',
+                    'توثيق الاستشارة كتابياً مع التوصيات القانونية'
+                ]
+            },
+            'contract_drafting': {
+                icon: 'file-text',
+                title: 'صياغة العقود',
+                description: 'صياغة ومراجعة كافة أنواع العقود لضمان حماية حقوقك القانونية وتجنب النزاعات المستقبلية.',
+                category: 'الخدمات القانونية',
+                features: [
+                    'صياغة العقود التجارية والمدنية والعمالية',
+                    'مراجعة العقود الموجودة وتعديلها قانونياً',
+                    'ضمان التوافق مع الأنظمة واللوائح السعودية',
+                    'إضافة بنود حماية للحقوق والمصالح',
+                    'صياغة اتفاقيات الشراكة والاستثمار',
+                    'عقود الخدمات والتوريد والمقاولات'
+                ]
+            }
+                            <a href="service-detail.html?service=memo_drafting" class="service-card"><div class="icon-wrap"><i data-lucide="pencil-ruler"></i></div><h4>صياغة المذكرات</h4><p>كتابة المذكرات القانونية (دعاوى، ردود، استئناف) باحترافية ودقة.</p></a>
+                            <a href="service-detail.html?service=judgment_execution" class="service-card"><div class="icon-wrap"><i data-lucide="hammer"></i></div><h4>تنفيذ الأحكام</h4><p>متابعة فعّالة لإجراءات تنفيذ الأحكام والسندات التنفيذية الصادرة لصالحك.</p></a>
+                            <a href="service-detail.html?service=labor_cases" class="service-card"><div class="icon-wrap"><i data-lucide="users"></i></div><h4>القضايا العمالية</h4><p>تمثيل العمال وأصحاب العمل في النزاعات العمالية أمام المحاكم المختصة.</p></a>
+                            <a href="service-detail.html?service=commercial_cases" class="service-card"><div class="icon-wrap"><i data-lucide="landmark"></i></div><h4>القضايا التجارية</h4><p>التمثيل في المنازعات التجارية بين الشركات والمؤسسات بكل احترافية.</p></a>
+                            <a href="service-detail.html?service=real_estate_cases" class="service-card"><div class="icon-wrap"><i data-lucide="home"></i></div><h4>القضايا العقارية</h4><p>التعامل مع النزاعات العقارية، الإفراغ، وقضايا الإيجار المختلفة.</p></a>
+                            <a href="service-detail.html?service=personal_status_cases" class="service-card"><div class="icon-wrap"><i data-lucide="heart-handshake"></i></div><h4>قضايا الأحوال الشخصية</h4><p>التمثيل في قضايا الزواج، الطلاق، الحضانة، والتركات والمواريث.</p></a>
+                            <a href="service-detail.html?service=criminal_cases" class="service-card"><div class="icon-wrap"><i data-lucide="shield"></i></div><h4>القضايا الجنائية</h4><p>الدفاع والمرافعة في مختلف القضايا الجنائية أمام الجهات المختصة.</p></a>
+                            <a href="service-detail.html?service=debt_collection" class="service-card"><div class="icon-wrap"><i data-lucide="banknote"></i></div><h4>تحصيل الديون</h4><p>اتخاذ الإجراءات النظامية لتحصيل الديون المستحقة للأفراد والشركات.</p></a>
+                            <a href="service-detail.html?service=internal_regulations" class="service-card"><div class="icon-wrap"><i data-lucide="file-bar-chart-2"></i></div><h4>إعداد اللوائح الداخلية</h4><p>صياغة لوائح تنظيم العمل والسياسات الداخلية للمنشآت بما يوافق النظام.</p></a>
+                            <a href="service-detail.html?service=legal_package" class="service-card"><div class="icon-wrap"><i data-lucide="package-check"></i></div><h4>الباقة القانونية الشاملة</h4><p>تقديم دعم قانوني مستمر للمنشآت بعقد سنوي لتلبية كافة الاحتياجات.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 2: Business Gov Services -->
+            <div class="accordion-item" id="gov-business-tab">
+                <button class="tab-button" data-tab="gov-business">
+                    <h3><span><i data-lucide="briefcase" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> الخدمات الحكومية للأعمال</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="gov-business">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=company_formation" class="service-card"><div class="icon-wrap"><i data-lucide="building-2"></i></div><h4>تأسيس الشركات</h4><p>إصدار السجل التجاري وعقد التأسيس للمؤسسات والشركات بكافة أنواعها.</p></a>
+                            <a href="service-detail.html?service=trademark_registration" class="service-card"><div class="icon-wrap"><i data-lucide="shield-check"></i></div><h4>تسجيل العلامات التجارية</h4><p>حماية علامتك التجارية رسميًا لدى هيئة الملكية الفكرية لضمان حقوقك.</p></a>
+                            <a href="service-detail.html?service=qiwa_services" class="service-card"><div class="icon-wrap"><i data-lucide="briefcase"></i></div><h4>خدمات منصة قوى</h4><p>إدارة شاملة: نقل موظفين، إصدار تأشيرات، وتوثيق عقود العمل.</p></a>
+                            <a href="service-detail.html?service=misa_services" class="service-card"><div class="icon-wrap"><i data-lucide="trending-up"></i></div><h4>خدمات المستثمرين (MISA)</h4><p>إصدار وتجديد تراخيص الاستثمار الأجنبي وتعديل بياناتها بكل يسر.</p></a>
+                            <a href="service-detail.html?service=gosi_services" class="service-card"><div class="icon-wrap"><i data-lucide="shield-plus"></i></div><h4>التأمينات الاجتماعية</h4><p>تسجيل المنشأة والموظفين (سعوديين وأجانب) وإدارة الاشتراكات.</p></a>
+                            <a href="service-detail.html?service=zakat_tax" class="service-card"><div class="icon-wrap"><i data-lucide="percent"></i></div><h4>الزكاة والضريبة والجمارك</h4><p>التسجيل وإصدار الشهادات وتقديم الإقرارات الزكوية والضريبية.</p></a>
+                            <a href="service-detail.html?service=balady_licenses" class="service-card"><div class="icon-wrap"><i data-lucide="clipboard-list"></i></div><h4>تراخيص بلدية (بلدي)</h4><p>إصدار وتجديد رخص الأنشطة التجارية والمهنية واللوحات الإعلانية.</p></a>
+                            <a href="service-detail.html?service=muqeem_services" class="service-card"><div class="icon-wrap"><i data-lucide="user-check"></i></div><h4>خدمات مقيم</h4><p>إصدار وتجديد الإقامات، وتأشيرات الخروج والعودة للعمالة الخاصة بك.</p></a>
+                            <a href="service-detail.html?service=chamber_of_commerce" class="service-card"><div class="icon-wrap"><i data-lucide="handshake"></i></div><h4>الغرفة التجارية</h4><p>تجديد الاشتراكات، تصديق الوثائق، وإصدار شهادات المنشأ للمصدرين.</p></a>
+                            <a href="service-detail.html?service=cr_cancellation" class="service-card"><div class="icon-wrap"><i data-lucide="file-x-2"></i></div><h4>شطب السجل التجاري</h4><p>تنفيذ إجراءات إغلاق المنشأة وشطب السجل التجاري نهائيًا بشكل نظامي.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 3: Individual Gov Services -->
+            <div class="accordion-item" id="gov-individuals-tab">
+                <button class="tab-button" data-tab="gov-individuals">
+                    <h3><span><i data-lucide="user" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> الخدمات الحكومية للأفراد</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="gov-individuals">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=absher_individuals" class="service-card"><div class="icon-wrap"><i data-lucide="user-check"></i></div><h4>خدمات أبشر أفراد</h4><p>تنفيذ كافة خدماتك: تجديد وثائق، إصدار تصاريح، وتنفيذ التفاويض.</p></a>
+                            <a href="service-detail.html?service=traffic_services" class="service-card"><div class="icon-wrap"><i data-lucide="car"></i></div><h4>خدمات المرور</h4><p>نقل ملكية، تجديد رخص، إسقاط مركبات، والاعتراض على المخالفات.</p></a>
+                            <a href="service-detail.html?service=real_estate_services" class="service-card"><div class="icon-wrap"><i data-lucide="home"></i></div><h4>الخدمات العقارية</h4><p>إفراغ عقاري، تسجيل عقود إيجار، فرز الوحدات، وإصدار رخص البناء.</p></a>
+                            <a href="service-detail.html?service=passports_services" class="service-card"><div class="icon-wrap"><i data-lucide="passport"></i></div><h4>الجوازات</h4><p>إصدار وتجديد جواز السفر السعودي، وإصدار تصاريح السفر اللازمة.</p></a>
+                            <a href="service-detail.html?service=domestic_workers" class="service-card"><div class="icon-wrap"><i data-lucide="users-2"></i></div><h4>خدمات العمالة المنزلية</h4><p>إصدار الإقامة، تأشيرة خروج وعودة، نقل خدمات، وبلاغات الهروب.</p></a>
+                            <a href="service-detail.html?service=power_of_attorney" class="service-card"><div class="icon-wrap"><i data-lucide="file-lock-2"></i></div><h4>إصدار الوكالات</h4><p>إصدار وفسخ الوكالات الشرعية عبر منصة 'ناجز' بكل سهولة.</p></a>
+                            <a href="service-detail.html?service=stop_services_lifting" class="service-card"><div class="icon-wrap"><i data-lucide="shield-off"></i></div><h4>رفع إيقاف الخدمات</h4><p>متابعة الإجراءات النظامية لرفع إيقاف الخدمات بعد معالجة المديونيات.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4: Gov Support -->
+            <div class="accordion-item" id="gov-support-tab">
+                <button class="tab-button" data-tab="gov-support">
+                    <h3><span><i data-lucide="sprout" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> خدمات الدعم الحكومي والعمل الحر</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="gov-support">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=social_security" class="service-card"><div class="icon-wrap"><i data-lucide="shield-half"></i></div><h4>الضمان الاجتماعي المطور</h4><p>التسجيل والمتابعة للحصول على معاش الضمان للأسر والأفراد المستحقين.</p></a>
+                            <a href="service-detail.html?service=citizen_account_reg" class="service-card"><div class="icon-wrap"><i data-lucide="users-2"></i></div><h4>حساب المواطن</h4><p>التسجيل وتحديث البيانات وإدارة الطلبات لبرنامج الدعم المالي.</p></a>
+                            <a href="service-detail.html?service=reef_support" class="service-card"><div class="icon-wrap"><i data-lucide="tractor"></i></div><h4>دعم ريف</h4><p>مساعدة الأسر المنتجة في القطاع الزراعي للحصول على الدعم المخصص.</p></a>
+                            <a href="service-detail.html?service=freelance_doc_issue" class="service-card"><div class="icon-wrap"><i data-lucide="file-badge-2"></i></div><h4>وثيقة العمل الحر</h4><p>إصدار وتجديد وثيقة العمل الحر لممارسة الأنشطة المهنية المختلفة.</p></a>
+                            <a href="service-detail.html?service=freelance_loan" class="service-card"><div class="icon-wrap"><i data-lucide="banknote"></i></div><h4>قرض العمل الحر</h4><p>المساعدة في التقديم على تمويل من بنك التنمية الاجتماعية لدعم مشروعك.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 5: Petitions -->
+            <div class="accordion-item" id="petitions-tab">
+                <button class="tab-button" data-tab="petitions">
+                    <h3><span><i data-lucide="pencil-line" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> المعاريض والبرقيات</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="petitions">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=job_application" class="service-card"><div class="icon-wrap"><i data-lucide="briefcase"></i></div><h4>معروض طلب وظيفة</h4><p>صياغة خطاب احترافي ومقنع لتقديمه للجهات الحكومية أو الخاصة.</p></a>
+                            <a href="service-detail.html?service=financial_aid" class="service-card"><div class="icon-wrap"><i data-lucide="coins"></i></div><h4>معروض طلب مساعدة مالية</h4><p>كتابة طلب مؤثر لتقديمه للديوان الملكي أو الجمعيات الخيرية.</p></a>
+                            <a href="service-detail.html?service=complaint_letter" class="service-card"><div class="icon-wrap"><i data-lucide="megaphone"></i></div><h4>معروض شكوى</h4><p>صياغة شكوى رسمية ضد جهة أو شخص مع ذكر التفاصيل والأدلة.</p></a>
+                            <a href="service-detail.html?service=royal_court_telegram" class="service-card"><div class="icon-wrap"><i data-lucide="crown"></i></div><h4>برقية للديوان الملكي</h4><p>كتابة وإرسال البرقيات العاجلة للديوان الملكي لمختلف الأغراض.</p></a>
+                            <a href="service-detail.html?service=mercy_plea" class="service-card"><div class="icon-wrap"><i data-lucide="shield-alert"></i></div><h4>معروض استرحام</h4><p>صياغة طلب استرحام وتخفيف العقوبة لتقديمه لإمارة المنطقة.</p></a>
+                            <a href="service-detail.html?service=medical_treatment_request" class="service-card"><div class="icon-wrap"><i data-lucide="heart-pulse"></i></div><h4>معروض طلب علاج</h4><p>كتابة طلب للمقام السامي أو وزارة الصحة للعلاج بالداخل أو الخارج.</p></a>
+                            <a href="service-detail.html?service=reconsideration_request" class="service-card"><div class="icon-wrap"><i data-lucide="search"></i></div><h4>معروض التماس إعادة نظر</h4><p>صياغة طلب التماس إعادة النظر في حكم قضائي وفق الأصول النظامية.</p></a>
+                            <a href="service-detail.html?service=official_letters" class="service-card"><div class="icon-wrap"><i data-lucide="mail"></i></div><h4>صياغة الخطابات الرسمية</h4><p>كتابة كافة أنواع الخطابات الموجهة للجهات الحكومية والخاصة.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer id="contact">
@@ -468,292 +596,3 @@ ready(()=>{
 
 </body></html>
 
-// Complete service data for all 42 services
-const serviceData = {
-    // Legal Services (12 services)
-    'legal_consultation': {
-        icon: 'message-square',
-        title: 'استشارات قانونية',
-        description: 'تحليل دقيق وتقديم استشارة متكاملة لمساعدتك على اتخاذ قرارات مستنيرة في جميع المسائل القانونية.',
-        category: 'الخدمات القانونية',
-        features: [
-            'استشارة شخصية مع محامين متخصصين ومرخصين',
-            'تحليل شامل للحالة القانونية وتقييم المخاطر',
-            'توضيح الحقوق والواجبات وفقاً للأنظمة السعودية',
-            'تقديم خيارات قانونية متعددة مع شرح الإيجابيات والسلبيات',
-            'متابعة مستمرة وإجابة على الاستفسارات اللاحقة',
-            'توثيق الاستشارة كتابياً مع التوصيات القانونية'
-        ]
-    },
-    'contract_drafting': {
-        icon: 'file-text',
-        title: 'صياغة العقود',
-        description: 'صياغة ومراجعة كافة أنواع العقود لضمان حماية حقوقك القانونية وتجنب النزاعات المستقبلية.',
-        category: 'الخدمات القانونية',
-        features: [
-            'صياغة العقود التجارية والمدنية والعمالية',
-            'مراجعة العقود الموجودة وتعديلها قانونياً',
-            'ضمان التوافق مع الأنظمة واللوائح السعودية',
-            'إضافة بنود حماية للحقوق والمصالح',
-            'صياغة اتفاقيات الشراكة والاستثمار',
-            'عقود الخدمات والتوريد والمقاولات'
-        ]
-    },
-    'memo_drafting': {
-        icon: 'pencil-ruler',
-        title: 'صياغة المذكرات',
-        description: 'كتابة المذكرات القانونية (دعاوى، ردود، استئناف) باحترافية ودقة عالية للمحاكم المختصة.',
-        category: 'الخدمات القانونية',
-        features: [
-            'صياغة مذكرات الدعاوى بجميع أنواعها',
-            'كتابة مذكرات الرد والدفع بعدم القبول',
-            'إعداد مذكرات الاستئناف والاعتراض',
-            'صياغة المذكرات التفسيرية والتوضيحية',
-            'مراجعة قانونية شاملة قبل التقديم',
-            'متابعة أصول المرافعات والإجراءات القضائية'
-        ]
-    },
-    'judgment_execution': {
-        icon: 'hammer',
-        title: 'تنفيذ الأحكام',
-        description: 'متابعة فعّالة لإجراءات تنفيذ الأحكام والسندات التنفيذية الصادرة لصالحك من المحاكم.',
-        category: 'الخدمات القانونية',
-        features: [
-            'تنفيذ الأحكام القضائية النهائية',
-            'تنفيذ السندات التنفيذية والكمبيالات',
-            'متابعة إجراءات الحجز والتنفيذ على الأموال',
-            'التعامل مع دائرة التنفيذ والجهات المختصة',
-            'استخراج شهادات عدم الاعتراض والمخالصات',
-            'متابعة قضايا التعثر والإعسار'
-        ]
-    },
-    'labor_cases': {
-        icon: 'users',
-        title: 'القضايا العمالية',
-        description: 'تمثيل العمال وأصحاب العمل في النزاعات العمالية أمام المحاكم العمالية المختصة.',
-        category: 'الخدمات القانونية',
-        features: [
-            'قضايا المطالبة بالأجور والمكافآت المستحقة',
-            'دعاوى الفصل التعسفي وتعويضات الضرر',
-            'قضايا إصابات العمل والتأمينات الاجتماعية',
-            'نزاعات عقود العمل وتفسير بنودها',
-            'التمثيل أمام المحاكم العمالية ومكاتب العمل',
-            'تسوية النزاعات العمالية ودياً'
-        ]
-    },
-    
-    // Continue with remaining Legal Services
-    'memo_drafting': {
-        icon: 'pencil-ruler',
-        title: 'صياغة المذكرات',
-        description: 'كتابة المذكرات القانونية (دعاوى، ردود، استئناف) باحترافية ودقة عالية للمحاكم المختصة.',
-        category: 'الخدمات القانونية',
-        features: [
-            'صياغة مذكرات الدعاوى بجميع أنواعها',
-            'كتابة مذكرات الرد والدفع بعدم القبول',
-            'إعداد مذكرات الاستئناف والاعتراض',
-            'صياغة المذكرات التفسيرية والتوضيحية',
-            'مراجعة قانونية شاملة قبل التقديم',
-            'متابعة أصول المرافعات والإجراءات القضائية'
-        ]
-    },
-    'judgment_execution': {
-        icon: 'hammer',
-        title: 'تنفيذ الأحكام',
-        description: 'متابعة فعّالة لإجراءات تنفيذ الأحكام والسندات التنفيذية الصادرة لصالحك من المحاكم.',
-        category: 'الخدمات القانونية',
-        features: [
-            'تنفيذ الأحكام القضائية النهائية',
-            'تنفيذ السندات التنفيذية والكمبيالات',
-            'متابعة إجراءات الحجز والتنفيذ على الأموال',
-            'التعامل مع دائرة التنفيذ والجهات المختصة',
-            'استخراج شهادات عدم الاعتراض والمخالصات',
-            'متابعة قضايا التعثر والإعسار'
-        ]
-    },
-    'commercial_cases': {
-        icon: 'landmark',
-        title: 'القضايا التجارية',
-        description: 'التمثيل في المنازعات التجارية بين الشركات والمؤسسات بكل احترافية وخبرة.',
-        category: 'الخدمات القانونية',
-        features: [
-            'نزاعات الشركات والشراكات التجارية',
-            'قضايا الإفلاس والتصفية والحراسة',
-            'دعاوى المطالبة بقيمة البضائع والخدمات',
-            'نزاعات العلامات التجارية والملكية الفكرية',
-            'قضايا عقود التوريد والمقاولات',
-            'التحكيم التجاري والوساطة'
-        ]
-    },
-    'real_estate_cases': {
-        icon: 'home',
-        title: 'القضايا العقارية',
-        description: 'التعامل مع النزاعات العقارية، الإفراغ، وقضايا الإيجار المختلفة بخبرة واحترافية.',
-        category: 'الخدمات القانونية',
-        features: [
-            'قضايا الإفراغ العقاري للمؤجرين والمستأجرين',
-            'دعاوى المطالبة بأجور الإيجار المتأخرة',
-            'نزاعات ملكية الأراضي والعقارات',
-            'قضايا تقسيم التركات العقارية',
-            'دعاوى الشفعة والاستحقاق العقاري',
-            'تسوية منازعات المقاولات والبناء'
-        ]
-    },
-    'personal_status_cases': {
-        icon: 'heart-handshake',
-        title: 'قضايا الأحوال الشخصية',
-        description: 'التمثيل في قضايا الزواج، الطلاق، الحضانة، والتركات والمواريث بحساسية واحترافية.',
-        category: 'الخدمات القانونية',
-        features: [
-            'قضايا الطلاق والخلع والمباراة',
-            'دعاوى الحضانة ورؤية الأطفال',
-            'قضايا النفقة للزوجة والأطفال',
-            'تقسيم التركات وتصفية الإرث',
-            'إثبات الزواج والطلاق والوفاة',
-            'قضايا النسب والولاية'
-        ]
-    },
-    'criminal_cases': {
-        icon: 'shield',
-        title: 'القضايا الجنائية',
-        description: 'الدفاع والمرافعة في مختلف القضايا الجنائية أمام الجهات القضائية المختصة.',
-        category: 'الخدمات القانونية',
-        features: [
-            'الدفاع في قضايا الحقوق العامة',
-            'تمثيل المتهمين أمام المحاكم الجزائية',
-            'قضايا الحقوق المالية والاختلاس',
-            'الدفاع في قضايا المخدرات والمسكرات',
-            'قضايا العنف والاعتداء',
-            'الطعن في الأحكام الجنائية'
-        ]
-    },
-    'debt_collection': {
-        icon: 'banknote',
-        title: 'تحصيل الديون',
-        description: 'اتخاذ الإجراءات النظامية لتحصيل الديون المستحقة للأفراد والشركات بطريقة فعالة.',
-        category: 'الخدمات القانونية',
-        features: [
-            'إرسال إنذارات وإشعارات قانونية للمدينين',
-            'رفع دعاوى قضائية لاستحقاق الديون',
-            'تنفيذ الأحكام والحجز على أموال المدين',
-            'التفاوض والتسوية الودية لاسترداد الحقوق',
-            'متابعة إجراءات الإفلاس والإعسار',
-            'تحصيل الشيكات المرتدة والكمبيالات'
-        ]
-    },
-    'internal_regulations': {
-        icon: 'file-bar-chart-2',
-        title: 'إعداد اللوائح الداخلية',
-        description: 'صياغة لوائح تنظيم العمل والسياسات الداخلية للمنشآت بما يوافق النظام السعودي.',
-        category: 'الخدمات القانونية',
-        features: [
-            'إعداد لائحة تنظيم العمل الداخلية',
-            'صياغة سياسات الموارد البشرية',
-            'لوائح الانضباط والجزاءات الوظيفية',
-            'سياسات الأمن والسلامة المهنية',
-            'لوائح الحوافز والمكافآت',
-            'ضمان التوافق مع نظام العمل السعودي'
-        ]
-    },
-    'legal_package': {
-        icon: 'package-check',
-        title: 'الباقة القانونية الشاملة',
-        description: 'تقديم دعم قانوني مستمر للمنشآت بعقد سنوي لتلبية كافة الاحتياجات القانونية.',
-        category: 'الخدمات القانونية',
-        features: [
-            'استشارات قانونية مفتوحة طوال السنة',
-            'مراجعة وصياغة العقود بدون حدود',
-            'التمثيل القانوني في القضايا البسيطة',
-            'إعداد المذكرات والمراسلات القانونية',
-            'متابعة الامتثال القانوني للأنظمة',
-            'خصومات خاصة على الخدمات الإضافية'
-        ]
-    }
-};
-
-// URL Parameter Parser
-function getServiceFromUrl() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('service');
-}
-
-// Display Service Details
-function displayServiceDetails(serviceKey) {
-    const service = serviceData[serviceKey];
-    
-    if (!service) {
-        showError();
-        return;
-    }
-
-    // Update page title
-    document.title = `${service.title} — الفارس للأعمال`;
-    
-    // Update service icon
-    const serviceIcon = document.getElementById('serviceIcon');
-    serviceIcon.setAttribute('data-lucide', service.icon);
-    
-    // Update service title and description
-    document.getElementById('serviceTitle').textContent = service.title;
-    document.getElementById('serviceDescription').textContent = service.description;
-    
-    // Update features list
-    const featuresList = document.getElementById('featuresList');
-    featuresList.innerHTML = '';
-    
-    service.features.forEach(feature => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <i data-lucide="check-circle"></i>
-            <span class="feature-text">${feature}</span>
-        `;
-        featuresList.appendChild(li);
-    });
-    
-    // Update CTA button
-    const ctaButton = document.getElementById('ctaButton');
-    ctaButton.onclick = function() {
-        const whatsappNumber = '966555490800';
-        const message = `السلام عليكم، أرغب في الاستفسار عن خدمة: ${service.title}`;
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-    };
-    
-    // Show content and hide loading
-    document.getElementById('serviceContent').style.display = 'block';
-    
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-}
-
-// Show Error State
-function showError() {
-    document.getElementById('serviceTitle').textContent = 'الخدمة غير موجودة';
-    document.getElementById('serviceDescription').textContent = 'عذراً، لم نتمكن من العثور على الخدمة المطلوبة.';
-    document.getElementById('errorContainer').style.display = 'block';
-    
-    // Initialize Lucide icons for error state
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-}
-
-// Initialize page
-document.addEventListener('DOMContentLoaded', function() {
-    const serviceKey = getServiceFromUrl();
-    
-    if (serviceKey) {
-        displayServiceDetails(serviceKey);
-    } else {
-        showError();
-    }
-    
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-    }
-});
-    </script>
-</main>

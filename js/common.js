@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Essential functions that must run immediately
         highlightActiveNavigation();
         initializeMobileNavigation();
+        initializeBackToTop();
         
         // Defer less critical operations
         deferredOperations.push(
@@ -104,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Try to run essential functions individually
         try { highlightActiveNavigation(); } catch (e) { console.warn('Navigation highlighting failed:', e); }
         try { initializeMobileNavigation(); } catch (e) { console.warn('Mobile navigation failed:', e); }
+        try { initializeBackToTop(); } catch (e) { console.warn('Back to top failed:', e); }
     }
 });
 
@@ -265,6 +267,43 @@ function initializeMobileNavigation() {
                 icon.classList.add('fa-bars');
             });
         });
+    }
+}
+
+// Function to initialize back to top button
+function initializeBackToTop() {
+    try {
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        if (backToTopButton) {
+            // Show/hide button based on scroll position
+            function toggleBackToTop() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+            }
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', toggleBackToTop);
+            
+            // Add click event listener
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Initial check
+            toggleBackToTop();
+            
+            console.log('✅ Back to top button initialized');
+        }
+    } catch (error) {
+        console.warn('⚠️ Back to top initialization failed (non-critical):', error);
     }
 }
 

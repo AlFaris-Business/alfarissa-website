@@ -3162,3 +3162,68 @@ body, p, h1, h2, h3, h4, h5, h6, span, div {
     animation-delay: 0.3s;
 }
 }
+
+/* Floating Action Buttons (FAB) System */
+.fab {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    display: grid;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.fab a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--color-secondary-text);
+}
+
+.fab a:hover {
+    background: var(--color-headings-cta);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.fab a[href^="tel:"] {
+    background: #007bff;
+    color: #fff;
+}
+
+.fab a[href^="tel:"]:hover {
+    background: #0056b3;
+}
+
+.fab a[href*="wa.me"] {
+    background: #25D366;
+    color: #fff;
+}
+
+.fab a[href*="wa.me"]:hover {
+    background: #128C7E;
+}
+
+@media (max-width: 768px) {
+    .fab {
+        left: 12px;
+        bottom: 12px;
+        gap: 10px;
+    }
+    
+    .fab a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}

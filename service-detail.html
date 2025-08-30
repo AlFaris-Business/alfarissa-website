@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<title>تفاصيل الخدمة — الفارس للأعمال</title>
+<meta name="description" content="اطلع على تفاصيل الخدمة المطلوبة من الفارس للأعمال مع قائمة كاملة بالمميزات والفوائد المقدمة."/>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;1000&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<style>
+:root{
+  --brand:#2563EB; --brand-dark:#1D4ED8; /* New Professional Blue */
+  --dark:#0F172A; --sub:#475569; --bg:#F8FAFC; --border: #E2E8F0;
+  --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:24px;
+  --shadow-card:0 2px 4px rgba(15,23,42,.05),0 8px 20px rgba(15,23,42,.07);
+  --shadow-elev:0 4px 8px rgba(15,23,42,.06),0 16px 40px rgba(15,23,42,.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+*{box-sizing:border-box}
+html{direction:rtl;scroll-behavior:smooth}
+body{
+  margin:0; font-family:"Cairo", system-ui, -apple-system, sans-serif;
+  background:var(--bg); color:var(--dark);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  line-height:1.8;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5{line-height:1.4; font-weight:700; margin:0}
+p{margin:.6em 0}
+a{color:inherit;text-decoration:none; transition: var(--transition);}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+.section{padding:80px 0}
+
+/* --- Components --- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  border-radius:var(--r); padding:10px 20px; font-size:15px; font-weight:600;
+  border:1px solid transparent; transition:var(--transition); white-space:nowrap;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary:hover{background:var(--brand-dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
+.small{font-size:14px;color:#94A3B8}
+
+/* --- Header & Navigation --- */
+.topbar{background:var(--dark);color:#94A3B8; font-size:12px;}
+.topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+.topbar-socials{display:flex; gap:12px;}
+.topbar-socials a:hover{color:var(--brand);}
+.header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(15,23,42,.85); backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.1); color:#fff;
+}
+.header .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{
+  width:48px; height:48px;
+  display:grid; place-items:center;
+}
+.brand .logo img {
+    max-width: 100%;
+    height: auto;
+}
+.nav{display:none;gap:28px;font-size:15px}
+.nav a{color:#cbd5e1; position:relative; padding:4px 0;}
+.nav a:after{
+    content:''; position:absolute; bottom:0; right:0;
+    width:0; height:2px; background:var(--brand); transition:var(--transition);
+}
+.nav a:hover{color:#fff}
+.nav a.active:after, .nav a:hover:after{width:100%;}
+@media(min-width:992px){.nav{display:flex}}
+.subnav{background:#fff;color:var(--dark);border-bottom:1px solid var(--border); display:none;}
+@media(min-width:992px){.subnav{display:block}}
+.subnav .row{display:flex;gap:24px;font-size:14px;padding:10px 0}
+.subnav a:hover{color:var(--brand)}
+
+/* --- Page Header --- */
+.page-header{
+    padding: 0;
+    background: url('https://i.postimg.cc/j5JQ4pTb/image.png') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4));
+}
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+.page-header h1 { font-size: clamp(2.2rem, 4vw, 2.8rem); }
+.page-header p { max-width: 600px; margin: 8px auto 0; color: #e2e8f0; font-size: 1.1rem; }
+
+/* --- ENHANCED Service Accordion --- */
+.service-accordion { display: flex; flex-direction: column; gap: 16px; }
+.tab-button {
+    background: #fff; border: 1px solid var(--border); border-radius: var(--r);
+    padding: 16px 24px; cursor: pointer; transition: var(--transition);
+    width: 100%; text-align: right; box-shadow: var(--shadow-card);
+}
+.tab-button:hover { transform: translateY(-4px); box-shadow: var(--shadow-elev); }
+.tab-button.active { background: var(--dark); color: #fff; border-color: var(--dark); transform: scale(1.02); }
+.tab-button h3 { font-size: 18px; margin: 0; display: flex; align-items: center; justify-content: space-between; }
+.tab-button h3 .icon { transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.tab-button.active h3 .icon { transform: rotate(180deg); }
+.tab-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.tab-content.active { grid-template-rows: 1fr; }
+.tab-content > div { overflow: hidden; } /* This is the key for the animation */
+
+/* --- Service Card --- */
+.services-grid { 
+    display: grid; gap: 16px; 
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+    padding: 24px 0;
+}
+.service-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: var(--r); padding: 16px;
+    box-shadow: var(--shadow-card);
+    text-align: center; display: block;
+    /* Animation base styles */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+.service-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: var(--shadow-elev);
+    border-color: var(--brand);
+}
+.tab-content.active .service-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-card .icon-wrap {
+    width: 40px; height: 40px; border-radius: var(--r-sm);
+    background-color: var(--brand); color: #fff;
+    display: grid; place-items: center; margin: 0 auto 12px;
+}
+.service-card h4 { font-size: 15px; margin-bottom: 4px; }
+.service-card p { color: var(--sub); font-size: 13px; line-height: 1.6; margin: 0; }
+
+/* --- Footer & FAB --- */
+footer{
+    background: var(--dark) url('https://i.postimg.cc/528wJJZd/Chat-GPT-Image-27-2025-07-04-32.png') center/cover no-repeat;
+    color:#fff; margin-top:48px; padding:72px 0 24px;
+    position: relative;
+}
+footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.9);
+}
+footer .container {
+    position: relative;
+    z-index: 2;
+}
+footer a:hover{color:var(--brand);}
+.footer-grid{display:grid;gap:40px}
+@media(min-width:992px){.footer-grid{grid-template-columns: 2fr 1fr 1.5fr;}}
+
+/* --- Footer Partners --- */
+.footer-partners {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+}
+.footer-partners .logos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.footer-partners .logo-item {
+    background: #fff;
+    border-radius: var(--r-sm);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+.footer-partners .logo-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elev);
+}
+.footer-partners .logo-item img {
+    height: 45px;
+    max-width: 130px;
+}
+
+.footer-bottom{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);color:#94a3b8;font-size:14px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between; gap:12px;}
+.fab{position:fixed;left:16px;bottom:16px;display:grid;gap:12px;z-index:40}
+.fab a{
+    width:48px;height:48px;border-radius:999px;display:grid;place-items:center;
+    background:#fff; border:1px solid var(--border);box-shadow:var(--shadow-elev);
+    transition:var(--transition);
+}
+.fab a:hover{background:var(--brand); color:#fff; transform:scale(1.1);}
+.backtotop{
+    position:fixed;right:16px;bottom:16px;width:44px;height:44px;border-radius:999px;
+    background:var(--brand);color:#fff;display:grid;place-items:center;
+    box-shadow:var(--shadow-elev);opacity:0;visibility:hidden;transition:var(--transition);
+}
+.backtotop.show{opacity:1;visibility:visible}
+.backtotop:hover{background:var(--brand-dark); transform:scale(1.1);}
+
+/* Service Detail Styles */
+.service-detail-container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+.service-hero { text-align: center; padding: 40px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.service-icon { font-size: 48px; color: var(--brand); margin-bottom: 16px; display: block; }
+.service-title { font-size: 32px; color: var(--dark); margin-bottom: 16px; line-height: 1.3; }
+.service-description { font-size: 18px; color: var(--sub); line-height: 1.6; max-width: 600px; margin: 0 auto; }
+.service-content { display: grid; gap: 32px; }
+.features-section, .details-section { background: #fff; padding: 32px; border-radius: var(--r-lg); box-shadow: var(--shadow-card); }
+.section-title { font-size: 24px; color: var(--dark); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+.section-title i { color: var(--brand); font-size: 20px; }
+.features-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.features-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+.features-list li:last-child { border-bottom: none; }
+.features-list li i { color: var(--brand); font-size: 16px; margin-top: 2px; flex-shrink: 0; }
+.feature-text { color: var(--dark); line-height: 1.6; }
+.cta-section { text-align: center; padding: 40px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: var(--r-lg); margin-top: 32px; }
+.cta-title { font-size: 24px; color: var(--dark); margin-bottom: 12px; }
+.cta-subtitle { color: var(--sub); margin-bottom: 24px; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; background: var(--brand); color: #fff; padding: 14px 32px; border-radius: var(--r); text-decoration: none; font-weight: 600; transition: var(--transition); border: none; font-size: 16px; }
+.cta-button:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: var(--shadow-elev); }
+.error-container { text-align: center; padding: 80px 20px; }
+.error-icon { font-size: 64px; color: #e2e8f0; margin-bottom: 24px; }
+.error-title { font-size: 28px; color: var(--dark); margin-bottom: 16px; }
+.error-message { color: var(--sub); font-size: 18px; margin-bottom: 32px; }
+.back-button { display: inline-flex; align-items: center; gap: 8px; background: var(--brand); color: #fff; padding: 12px 24px; border-radius: var(--r); text-decoration: none; font-weight: 500; transition: var(--transition); }
+.back-button:hover { background: var(--brand-dark); transform: translateY(-2px); }
+@media (max-width: 768px) {
+  .service-detail-container { padding: 16px; }
+  .service-title { font-size: 24px; }
+  .service-description { font-size: 16px; }
+  .features-section, .details-section { padding: 20px; }
+  .section-title { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container row">
+    <div class="small" style="display:flex; align-items:center; gap:16px;">
+        <span><i data-lucide="mail" style="width:14px; vertical-align:middle; margin-left:4px;"></i> info@alfarissa.org</span>
+        <span><i data-lucide="phone" style="width:14px; vertical-align:middle; margin-left:4px;"></i> 0555490800</span>
+    </div>
+    <div class="topbar-socials">
+      <a href="#" title="Twitter"><i data-lucide="twitter" style="width:16px;"></i></a>
+      <a href="#" title="Instagram"><i data-lucide="instagram" style="width:16px;"></i></a>
+      <a href="#" title="LinkedIn"><i data-lucide="linkedin" style="width:16px;"></i></a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <div class="logo">
+        <img src="https://i.postimg.cc/jj9rwth9/image.png" alt="شعار الفارس للأعمال">
+      </div>
+      <div>
+        <div style="font-weight:800;line-height:1; font-size:18px;">الفارس للأعمال</div>
+        <div class="small" style="color:#cbd5e1; font-size:12px;">تحت إشراف شركة المحامي محمد الفارس</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="services.html">الخدمات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="blogs.html">المدونة</a>
+      <a href="help.html">اتصل بنا</a>
+      <a href="faq.html">الأسئلة الشائعة</a>
+    </nav>
+    <div><a class="btn btn-primary" href="help.html">اطلب استشارة</a></div>
+  </div>
+</header>
+<div class="subnav">
+  <div class="container row">
+    <a href="services.html" style="color: var(--brand);">← العودة للخدمات</a>
+  </div>
+</div>
+
+<main>
+    <div class="service-detail-container">
+        <!-- Service Hero Section -->
+        <div class="service-hero" id="serviceHero">
+            <i class="service-icon" id="serviceIcon" data-lucide="help-circle"></i>
+            <h1 class="service-title" id="serviceTitle">جاري التحميل...</h1>
+            <p class="service-description" id="serviceDescription">جاري تحميل تفاصيل الخدمة...</p>
+        </div>
+
+        <!-- Service Content -->
+        <div class="service-content" id="serviceContent" style="display: none;">
+            <!-- Features Section -->
+            <div class="features-section">
+                <h2 class="section-title">
+                    <i data-lucide="check-circle"></i>
+                    مميزات الخدمة
+                </h2>
+                <ul class="features-list" id="featuresList">
+                    <!-- Features will be dynamically populated -->
+                </ul>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h3 class="cta-title">جاهز لطلب الخدمة؟</h3>
+                <p class="cta-subtitle">تواصل معنا الآن للحصول على استشارة مجانية وبدء تنفيذ الخدمة</p>
+                <a href="help.html" class="cta-button" id="ctaButton">
+                    <i data-lucide="phone"></i>
+                    اطلب الخدمة الآن
+                </a>
+            </div>
+        </div>
+
+        <!-- Error Container -->
+        <div class="error-container" id="errorContainer" style="display: none;">
+            <i class="error-icon" data-lucide="search-x"></i>
+            <h2 class="error-title">الخدمة غير موجودة</h2>
+            <p class="error-message">عذراً، لم نتمكن من العثور على الخدمة المطلوبة. تأكد من صحة الرابط أو اختر خدمة من قائمة خدماتنا.</p>
+            <a href="services.html" class="back-button">
+                <i data-lucide="arrow-right"></i>
+                عودة للخدمات
+            </a>
+        </div>
+    </div>
+
+    <script>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;">
+            <div class="logo">
+                <img src="https://i.postimg.cc/jj9rwth9/image.png" alt="شعار الفارس للأعمال">
+            </div>
+            <div style="font-weight:800; font-size:18px;">الفارس للأعمال</div>
+        </a>
+        <p class="small" style="color:#cbd5e1;max-width:300px;">ننجز معاملاتك الحكومية والقانونية باحترافية ووقتٍ قياسي، لنكون شريكك الموثوق نحو النجاح.</p>
+      </div>
+      <div>
+        <h4 style="font-weight:700;margin-bottom:12px; font-size:18px;">روابط سريعة</h4>
+        <div class="small" style="display:grid;gap:8px; color:#cbd5e1;">
+          <a href="index.html">الرئيسية</a>
+          <a href="services.html">الخدمات</a>
+          <a href="packages.html">الباقات</a>
+          <a href="blogs.html">المدونة</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-weight:700;margin-bottom:12px; font-size:18px;">معلومات التواصل</h4>
+        <div class="small" style="display:grid;gap:8px; color:#cbd5e1;">
+          <div><i data-lucide="phone" style="width:14px; vertical-align:middle; margin-left:4px;"></i> 0555490800 | 0555648602</div>
+          <div><i data-lucide="mail" style="width:14px; vertical-align:middle; margin-left:4px;"></i> info@alfarissa.org</div>
+          <div style="display:flex;"><i data-lucide="map-pin" style="width:14px; vertical-align:top; margin-left:4px; flex-shrink:0;"></i><span>جدة – حي الحمدانية – شارع الحمدانية الفرعي – مبنى 6551 – الرمز البريدي 23761</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-partners">
+        <div class="logos-grid">
+            <a href="#" class="logo-item" title="المركز السعودي للأعمال"><img src="https://i.postimg.cc/Qt3RqJzZ/Saudi-Business-Center-01.png" alt="Saudi Business Center Logo"></a>
+            <a href="#" class="logo-item" title="وزارة التجارة"><img src="https://i.postimg.cc/K85q2hqw/Ministry-of-Commerce-01-1.png" alt="Ministry of Commerce Logo"></a>
+            <a href="#" class="logo-item" title="وزارة الموارد البشرية والتنمية الاجتماعية"><img src="https://i.postimg.cc/Xv72N1tJ/Ministry-of-Human-Resources-and-Social-Development.png" alt="Ministry of Human Resources Logo"></a>
+            <a href="#" class="logo-item" title="هيئة الزكاة والضريبة والجمارك"><img src="https://i.postimg.cc/vmq04Ldv/VAT.png" alt="ZATCA VAT Logo"></a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>جميع الحقوق محفوظة © الفارس للأعمال 2025</div>
+      <div style="display:flex; gap:16px;"><a href="privacy-policy.html">سياسة الخصوصية</a> • <a href="terms-of-use.html">شروط الاستخدام</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="fab">
+  <a href="tel:0555490800" title="اتصال"><i data-lucide="phone"></i></a>
+  <a href="https://wa.me/966555648602" target="_blank" title="واتساب"><i data-lucide="message-circle"></i></a>
+</div>
+<a href="#" class="backtotop" title="العودة للأعلى"><i data-lucide="arrow-up"></i></a>
+
+<script>
+function ready(fn){document.readyState!='loading'?fn():document.addEventListener('DOMContentLoaded',fn)}
+
+function setupAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+        const button = item.querySelector('.tab-button');
+        button.addEventListener('click', () => {
+            const wasActive = button.classList.contains('active');
+            
+            // Close all tabs first
+            accordionItems.forEach(i => {
+                i.querySelector('.tab-button').classList.remove('active');
+                i.querySelector('.tab-content').classList.remove('active');
+            });
+
+            if (!wasActive) {
+                button.classList.add('active');
+                const content = item.querySelector('.tab-content');
+                content.classList.add('active');
+                
+                // Stagger animation for cards inside the opened tab
+                const cards = content.querySelectorAll('.service-card');
+                cards.forEach((card, index) => {
+                    card.style.transitionDelay = `${index * 60}ms`;
+                });
+            }
+        });
+    });
+
+    // Animate the initially active tab on page load
+    const initiallyActiveTab = document.querySelector('.tab-content.active');
+    if (initiallyActiveTab) {
+        const cards = initiallyActiveTab.querySelectorAll('.service-card');
+        cards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 60}ms`;
+        });
+    }
+}
+
+
+function setupBackToTop(){
+  const btt = document.querySelector('.backtotop');
+  if(!btt) return;
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY > 600){btt.classList.add('show')}else{btt.classList.remove('show')}
+  });
+}
+
+ready(()=>{
+  lucide.createIcons();
+  setupAccordion();
+  setupBackToTop();
+});
+</script>
+
+</body></html>
+
+<script>
+// Complete service data for all 42 services
+const serviceData = {
+    // Legal Services (12 services)
+    'legal_consultation': {
+        icon: 'message-square',
+        title: 'استشارات قانونية',
+        description: 'تحليل دقيق وتقديم استشارة متكاملة لمساعدتك على اتخاذ قرارات مستنيرة في جميع المسائل القانونية.',
+        category: 'الخدمات القانونية',
+        features: [
+            'استشارة شخصية مع محامين متخصصين ومرخصين',
+            'تحليل شامل للحالة القانونية وتقييم المخاطر',
+            'توضيح الحقوق والواجبات وفقاً للأنظمة السعودية',
+            'تقديم خيارات قانونية متعددة مع شرح الإيجابيات والسلبيات',
+            'متابعة مستمرة وإجابة على الاستفسارات اللاحقة',
+            'توثيق الاستشارة كتابياً مع التوصيات القانونية'
+        ]
+    },
+    'contract_drafting': {
+        icon: 'file-text',
+        title: 'صياغة العقود',
+        description: 'صياغة ومراجعة كافة أنواع العقود لضمان حماية حقوقك القانونية وتجنب النزاعات المستقبلية.',
+        category: 'الخدمات القانونية',
+        features: [
+            'صياغة العقود التجارية والمدنية والعمالية',
+            'مراجعة العقود الموجودة وتعديلها قانونياً',
+            'ضمان التوافق مع الأنظمة واللوائح السعودية',
+            'إضافة بنود حماية للحقوق والمصالح',
+            'صياغة اتفاقيات الشراكة والاستثمار',
+            'عقود الخدمات والتوريد والمقاولات'
+        ]
+    },
+    'memo_drafting': {
+        icon: 'pencil-ruler',
+        title: 'صياغة المذكرات',
+        description: 'كتابة المذكرات القانونية (دعاوى، ردود، استئناف) باحترافية ودقة عالية للمحاكم المختصة.',
+        category: 'الخدمات القانونية',
+        features: [
+            'صياغة مذكرات الدعاوى بجميع أنواعها',
+            'كتابة مذكرات الرد والدفع بعدم القبول',
+            'إعداد مذكرات الاستئناف والاعتراض',
+            'صياغة المذكرات التفسيرية والتوضيحية',
+            'مراجعة قانونية شاملة قبل التقديم',
+            'متابعة أصول المرافعات والإجراءات القضائية'
+        ]
+    },
+    'judgment_execution': {
+        icon: 'hammer',
+        title: 'تنفيذ الأحكام',
+        description: 'متابعة فعّالة لإجراءات تنفيذ الأحكام والسندات التنفيذية الصادرة لصالحك من المحاكم.',
+        category: 'الخدمات القانونية',
+        features: [
+            'تنفيذ الأحكام القضائية النهائية',
+            'تنفيذ السندات التنفيذية والكمبيالات',
+            'متابعة إجراءات الحجز والتنفيذ على الأموال',
+            'التعامل مع دائرة التنفيذ والجهات المختصة',
+            'استخراج شهادات عدم الاعتراض والمخالصات',
+            'متابعة قضايا التعثر والإعسار'
+        ]
+    },
+    'labor_cases': {
+        icon: 'users',
+        title: 'القضايا العمالية',
+        description: 'تمثيل العمال وأصحاب العمل في النزاعات العمالية أمام المحاكم العمالية المختصة.',
+        category: 'الخدمات القانونية',
+        features: [
+            'قضايا المطالبة بالأجور والمكافآت المستحقة',
+            'دعاوى الفصل التعسفي وتعويضات الضرر',
+            'قضايا إصابات العمل والتأمينات الاجتماعية',
+            'نزاعات عقود العمل وتفسير بنودها',
+            'التمثيل أمام المحاكم العمالية ومكاتب العمل',
+            'تسوية النزاعات العمالية ودياً'
+        ]
+    },
+    'memo_drafting': {
+        icon: 'pencil-ruler',
+        title: 'صياغة المذكرات',
+        description: 'كتابة المذكرات القانونية (دعاوى، ردود، استئناف) باحترافية ودقة عالية للمحاكم المختصة.',
+        category: 'الخدمات القانونية',
+        features: [
+            'صياغة مذكرات الدعاوى بجميع أنواعها',
+            'كتابة مذكرات الرد والدفع بعدم القبول',
+            'إعداد مذكرات الاستئناف والاعتراض',
+            'صياغة المذكرات التفسيرية والتوضيحية',
+            'مراجعة قانونية شاملة قبل التقديم',
+            'متابعة أصول المرافعات والإجراءات القضائية'
+        ]
+    },
+    'judgment_execution': {
+        icon: 'hammer',
+        title: 'تنفيذ الأحكام',
+        description: 'متابعة فعّالة لإجراءات تنفيذ الأحكام والسندات التنفيذية الصادرة لصالحك من المحاكم.',
+        category: 'الخدمات القانونية',
+        features: [
+            'تنفيذ الأحكام القضائية النهائية',
+            'تنفيذ السندات التنفيذية والكمبيالات',
+            'متابعة إجراءات الحجز والتنفيذ على الأموال',
+            'التعامل مع دائرة التنفيذ والجهات المختصة',
+            'استخراج شهادات عدم الاعتراض والمخالصات',
+            'متابعة قضايا التعثر والإعسار'
+        ]
+    },
+    'commercial_cases': {
+        icon: 'landmark',
+        title: 'القضايا التجارية',
+        description: 'التمثيل في المنازعات التجارية بين الشركات والمؤسسات بكل احترافية وخبرة.',
+        category: 'الخدمات القانونية',
+        features: [
+            'نزاعات الشركات والشراكات التجارية',
+            'قضايا الإفلاس والتصفية والحراسة',
+            'دعاوى المطالبة بقيمة البضائع والخدمات',
+            'نزاعات العلامات التجارية والملكية الفكرية',
+            'قضايا عقود التوريد والمقاولات',
+            'التحكيم التجاري والوساطة'
+        ]
+    },
+    'real_estate_cases': {
+        icon: 'home',
+        title: 'القضايا العقارية',
+        description: 'التعامل مع النزاعات العقارية، الإفراغ، وقضايا الإيجار المختلفة بخبرة واحترافية.',
+        category: 'الخدمات القانونية',
+        features: [
+            'قضايا الإفراغ العقاري للمؤجرين والمستأجرين',
+            'دعاوى المطالبة بأجور الإيجار المتأخرة',
+            'نزاعات ملكية الأراضي والعقارات',
+            'قضايا تقسيم التركات العقارية',
+            'دعاوى الشفعة والاستحقاق العقاري',
+            'تسوية منازعات المقاولات والبناء'
+        ]
+    },
+    'personal_status_cases': {
+        icon: 'heart-handshake',
+        title: 'قضايا الأحوال الشخصية',
+        description: 'التمثيل في قضايا الزواج، الطلاق، الحضانة، والتركات والمواريث بحساسية واحترافية.',
+        category: 'الخدمات القانونية',
+        features: [
+            'قضايا الطلاق والخلع والمباراة',
+            'دعاوى الحضانة ورؤية الأطفال',
+            'قضايا النفقة للزوجة والأطفال',
+            'تقسيم التركات وتصفية الإرث',
+            'إثبات الزواج والطلاق والوفاة',
+            'قضايا النسب والولاية'
+        ]
+    },
+    'criminal_cases': {
+        icon: 'shield',
+        title: 'القضايا الجنائية',
+        description: 'الدفاع والمرافعة في مختلف القضايا الجنائية أمام الجهات القضائية المختصة.',
+        category: 'الخدمات القانونية',
+        features: [
+            'الدفاع في قضايا الحقوق العامة',
+            'تمثيل المتهمين أمام المحاكم الجزائية',
+            'قضايا الحقوق المالية والاختلاس',
+            'الدفاع في قضايا المخدرات والمسكرات',
+            'قضايا العنف والاعتداء',
+            'الطعن في الأحكام الجنائية'
+        ]
+    },
+    'debt_collection': {
+        icon: 'banknote',
+        title: 'تحصيل الديون',
+        description: 'اتخاذ الإجراءات النظامية لتحصيل الديون المستحقة للأفراد والشركات بطريقة فعالة.',
+        category: 'الخدمات القانونية',
+        features: [
+            'إرسال إنذارات وإشعارات قانونية للمدينين',
+            'رفع دعاوى قضائية لاستحقاق الديون',
+            'تنفيذ الأحكام والحجز على أموال المدين',
+            'التفاوض والتسوية الودية لاسترداد الحقوق',
+            'متابعة إجراءات الإفلاس والإعسار',
+            'تحصيل الشيكات المرتدة والكمبيالات'
+        ]
+    },
+    'internal_regulations': {
+        icon: 'file-bar-chart-2',
+        title: 'إعداد اللوائح الداخلية',
+        description: 'صياغة لوائح تنظيم العمل والسياسات الداخلية للمنشآت بما يوافق النظام السعودي.',
+        category: 'الخدمات القانونية',
+        features: [
+            'إعداد لائحة تنظيم العمل الداخلية',
+            'صياغة سياسات الموارد البشرية',
+            'لوائح الانضباط والجزاءات الوظيفية',
+            'سياسات الأمن والسلامة المهنية',
+            'لوائح الحوافز والمكافآت',
+            'ضمان التوافق مع نظام العمل السعودي'
+        ]
+    },
+    'legal_package': {
+        icon: 'package-check',
+        title: 'الباقة القانونية الشاملة',
+        description: 'تقديم دعم قانوني مستمر للمنشآت بعقد سنوي لتلبية كافة الاحتياجات القانونية.',
+        category: 'الخدمات القانونية',
+        features: [
+            'استشارات قانونية مفتوحة طوال السنة',
+            'مراجعة وصياغة العقود بدون حدود',
+            'التمثيل القانوني في القضايا البسيطة',
+            'إعداد المذكرات والمراسلات القانونية',
+            'متابعة الامتثال القانوني للأنظمة',
+            'خصومات خاصة على الخدمات الإضافية'
+        ]
+    },
+
+    // Government Business Services (10 services)
+    'company_formation': {
+        icon: 'building-2',
+        title: 'تأسيس الشركات',
+        description: 'إصدار السجل التجاري وعقد التأسيس للمؤسسات والشركات بكافة أنواعها مع ضمان سرعة الإنجاز.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'تأسيس الشركات ذات المسؤولية المحدودة',
+            'إصدار السجل التجاري للمؤسسات الفردية',
+            'تأسيس الشركات المساهمة والتضامنية',
+            'حجز الاسم التجاري والتحقق من توفره',
+            'إعداد عقد التأسيس والنظام الأساسي',
+            'استخراج التراخيص التجارية المطلوبة'
+        ]
+    },
+    'trademark_registration': {
+        icon: 'shield-check',
+        title: 'تسجيل العلامات التجارية',
+        description: 'حماية علامتك التجارية رسمياً لدى هيئة الملكية الفكرية لضمان حقوقك وحماية استثمارك.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'البحث المبدئي عن العلامات المشابهة',
+            'تسجيل العلامات التجارية والخدمية',
+            'حماية الأسماء والشعارات والعبارات',
+            'تجديد تسجيل العلامات التجارية',
+            'متابعة إجراءات الاعتراض والرد عليها',
+            'الحماية القانونية من التعدي على العلامة'
+        ]
+    },
+    'qiwa_services': {
+        icon: 'briefcase',
+        title: 'خدمات منصة قوى',
+        description: 'إدارة شاملة لجميع خدمات منصة قوى: نقل موظفين، إصدار تأشيرات، وتوثيق عقود العمل.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'إصدار تأشيرات العمل للعمالة الوافدة',
+            'نقل كفالة الموظفين بين الشركات',
+            'تجديد تأشيرات العمل والإقامات',
+            'إلغاء تأشيرات العمل وتسوية الأوضاع',
+            'توثيق عقود العمل في منصة قوى',
+            'متابعة طلبات التأشيرات وحل المشاكل'
+        ]
+    },
+    'misa_services': {
+        icon: 'trending-up',
+        title: 'خدمات المستثمرين (MISA)',
+        description: 'إصدار وتجديد تراخيص الاستثمار الأجنبي وتعديل بياناتها عبر منصة MISA بكل يسر.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'إصدار تراخيص الاستثمار الأجنبي',
+            'تجديد تراخيص الاستثمار المنتهية الصلاحية',
+            'تعديل بيانات الاستثمار والأنشطة',
+            'إضافة شركاء أجانب للشركات الموجودة',
+            'تحويل ملكية الاستثمارات الأجنبية',
+            'استخراج شهادات الاستثمار المطلوبة'
+        ]
+    },
+    'gosi_services': {
+        icon: 'shield-plus',
+        title: 'التأمينات الاجتماعية',
+        description: 'تسجيل المنشأة والموظفين (سعوديين وأجانب) في التأمينات الاجتماعية وإدارة الاشتراكات.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'تسجيل المنشأة لدى التأمينات الاجتماعية',
+            'تسجيل الموظفين السعوديين والأجانب',
+            'تحديث بيانات المشتركين والرواتب',
+            'إنهاء خدمات المشتركين عند ترك العمل',
+            'استخراج شهادات التأمينات للموظفين',
+            'متابعة مطالبات التأمين ضد إصابات العمل'
+        ]
+    },
+    'zakat_tax': {
+        icon: 'percent',
+        title: 'الزكاة والضريبة والجمارك',
+        description: 'التسجيل وإصدار الشهادات وتقديم الإقرارات الزكوية والضريبية للشركات والمؤسسات.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'التسجيل في الزكاة والضريبة للشركات',
+            'تقديم الإقرارات الزكوية السنوية',
+            'إقرارات ضريبة القيمة المضافة الشهرية والربعية',
+            'استخراج شهادات الزكاة والضريبة',
+            'التسجيل في ضريبة الاستقطاع',
+            'متابعة الفحوص الضريبية والردود عليها'
+        ]
+    },
+    'balady_licenses': {
+        icon: 'clipboard-list',
+        title: 'تراخيص بلدية (بلدي)',
+        description: 'إصدار وتجديد رخص الأنشطة التجارية والمهنية واللوحات الإعلانية من البلديات.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'إصدار رخص الأنشطة التجارية والمهنية',
+            'تجديد الرخص التجارية المنتهية الصلاحية',
+            'ترخيص اللوحات الإعلانية والدعاية',
+            'رخص البناء والترميم والهدم',
+            'تراخيص الأنشطة الغذائية والمطاعم',
+            'متابعة اشتراطات البلدية والموافقات'
+        ]
+    },
+    'muqeem_services': {
+        icon: 'user-check',
+        title: 'خدمات مقيم',
+        description: 'إصدار وتجديد الإقامات، وتأشيرات الخروج والعودة للعمالة الخاصة بك عبر منصة مقيم.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'إصدار الإقامات للعمالة الوافدة',
+            'تجديد الإقامات المنتهية الصلاحية',
+            'إصدار تأشيرات الخروج والعودة',
+            'إصدار تأشيرات الخروج النهائي',
+            'تعديل بيانات الإقامة والمهنة',
+            'إلغاء الإقامات وتسوية الأوضاع'
+        ]
+    },
+    'chamber_of_commerce': {
+        icon: 'handshake',
+        title: 'الغرفة التجارية',
+        description: 'تجديد الاشتراكات، تصديق الوثائق، وإصدار شهادات المنشأ للمصدرين والمستوردين.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'تجديد عضوية الغرفة التجارية سنوياً',
+            'تصديق الوثائق والعقود التجارية',
+            'إصدار شهادات المنشأ للبضائع المصدرة',
+            'الحصول على شهادات العضوية والسمعة التجارية',
+            'تصديق الفواتير للصادرات والواردات',
+            'خدمات التحكيم التجاري والوساطة'
+        ]
+    },
+    'cr_cancellation': {
+        icon: 'file-x-2',
+        title: 'شطب السجل التجاري',
+        description: 'تنفيذ إجراءات إغلاق المنشأة وشطب السجل التجاري نهائياً بشكل نظامي وقانوني.',
+        category: 'الخدمات الحكومية للأعمال',
+        features: [
+            'تصفية المنشأة وتسوية جميع الالتزامات',
+            'الحصول على موافقات الجهات الحكومية للشطب',
+            'سداد المستحقات الحكومية والضريبية',
+            'إنهاء عقود الموظفين وتسوية حقوقهم',
+            'شطب السجل التجاري نهائياً',
+            'استلام وثائق إنهاء النشاط التجاري'
+        ]
+    },
+
+    // Government Individual Services (7 services)
+    'absher_individuals': {
+        icon: 'user-check',
+        title: 'خدمات أبشر أفراد',
+        description: 'تنفيذ كافة خدماتك الحكومية: تجديد وثائق، إصدار تصاريح، وتنفيذ التفاويض عبر أبشر.',
+        category: 'الخدمات الحكومية للأفراد',
+        features: [
+            'تجديد الهوية الوطنية ووثائق الأحوال المدنية',
+            'إصدار جوازات السفر وتجديدها',
+            'استخراج تصاريح السفر للأطفال والنساء',
+            'خدمات الحج والعمرة والتصاريح',
+            'إصدار شهادات الميلاد والوفاة والطلاق',
+            'تحديث البيانات الشخصية والعنوان الوطني'
+        ]
+    },
+    'traffic_services': {
+        icon: 'car',
+        title: 'خدمات المرور',
+        description: 'نقل ملكية المركبات، تجديد رخص القيادة، إسقاط مركبات، والاعتراض على المخالفات.',
+        category: 'الخدمات الحكومية للأفراد',
+        features: [
+            'نقل ملكية المركبات بين الأشخاص',
+            'تجديد رخص القيادة المنتهية الصلاحية',
+            'استخراج رخص قيادة جديدة للمبتدئين',
+            'إسقاط المركبات التالفة أو المستهلكة',
+            'الاعتراض على مخالفات المرور',
+            'تسجيل المركبات الجديدة والمستعملة'
+        ]
+    },
+    'real_estate_services': {
+        icon: 'home',
+        title: 'الخدمات العقارية',
+        description: 'إفراغ عقاري، تسجيل عقود إيجار، فرز الوحدات، وإصدار رخص البناء للمواطنين.',
+        category: 'الخدمات الحكومية للأفراد',
+        features: [
+            'إفراغ الصكوك العقارية ونقل الملكية',
+            'تسجيل عقود الإيجار في منصة إيجار',
+            'فرز الأراضي والوحدات السكنية',
+            'إصدار رخص البناء للمنازل الشخصية',
+            'تحديث صكوك الملكية وتصحيح البيانات',
+            'استخراج شهادات عدم التعارض العقاري'
+        ]
+    },
+    'passports_services': {
+        icon: 'passport',
+        title: 'الجوازات',
+        description: 'إصدار وتجديد جواز السفر السعودي، وإصدار تصاريح السفر اللازمة للمواطنين.',
+        category: 'الخدمات الحكومية للأفراد',
+        features: [
+            'إصدار جوازات سفر جديدة للمواطنين',
+            'تجديد جوازات السفر المنتهية الصلاحية',
+            'إصدار جوازات سفر للأطفال والقُصر',
+            'استخراج تصاريح سفر للنساء والأطفال',
+            'تعديل بيانات جواز السفر عند الحاجة',
+            'إصدار بدل تالف أو مفقود لجواز السفر'
+        ]
+    },
+    'domestic_workers': {
+        icon: 'users-2',
+        title: 'خدمات العمالة المنزلية',
+        description: 'إصدار الإقامة، تأشيرة خروج وعودة، نقل خدمات، وبلاغات الهروب للعمالة المنزلية.',
+        category: 'الخدمات الحكومية للأفراد',
+        features: [
+            'إصدار الإقامة للعمالة المنزلية الجديدة',
+            'تجديد إقامات العمالة المنزلية',
+            'إصدار تأشيرة خروج وعودة للعمالة',
+            'نقل خدمات العمالة المنزلية بين الكفلاء',
+            'تقديم بلاغات هروب العمالة المنزلية',
+            'إلغاء الإقامة والخروج النهائي للعمالة'
+        ]
+    },
+    'power_of_attorney': {
+        icon: 'file-lock-2',
+        title: 'إصدار الوكالات',
+        description: 'إصدار وفسخ الوكالات الشرعية عبر منصة ناجز بكل سهولة وسرعة للمواطنين.',
+        category: 'الخدمات الحكومية للأفراد',
+        features: [
+            'إصدار الوكالات العامة والخاصة',
+            'وكالات عقارية لبيع وشراء العقارات',
+            'وكالات مالية وبنكية ومصرفية',
+            'وكالات تجارية وإدارة الأعمال',
+            'فسخ الوكالات المعمول بها',
+            'تحديث وتعديل بيانات الوكالات'
+        ]
+    },
+    'stop_services_lifting': {
+        icon: 'shield-off',
+        title: 'رفع إيقاف الخدمات',
+        description: 'متابعة الإجراءات النظامية لرفع إيقاف الخدمات بعد تسوية المديونيات والمستحقات.',
+        category: 'الخدمات الحكومية للأفراد',
+        features: [
+            'تسوية المديونيات المتراكمة مع الجهات الحكومية',
+            'سداد مخالفات المرور والرسوم المستحقة',
+            'تسوية مستحقات الزكاة والضريبة',
+            'سداد فواتير الكهرباء والمياه المتأخرة',
+            'رفع إيقاف الخدمات من جميع الجهات',
+            'استكمال إجراءات إعادة تفعيل الحساب'
+        ]
+    },
+
+    // Government Support & Freelance Services (5 services)
+    'social_security': {
+        icon: 'shield-half',
+        title: 'الضمان الاجتماعي المطور',
+        description: 'التسجيل والمتابعة للحصول على معاش الضمان للأسر والأفراد المستحقين وفق المعايير.',
+        category: 'خدمات الدعم الحكومي والعمل الحر',
+        features: [
+            'التقديم على برنامج الضمان الاجتماعي المطور',
+            'تحديث البيانات المالية والاجتماعية',
+            'متابعة حالة طلب الضمان الاجتماعي',
+            'الرد على استفسارات الضمان الاجتماعي',
+            'إضافة أو حذف الأفراد من الطلب',
+            'تجديد طلب الضمان عند انتهاء المدة'
+        ]
+    },
+    'citizen_account_reg': {
+        icon: 'users-2',
+        title: 'حساب المواطن',
+        description: 'التسجيل وتحديث البيانات وإدارة الطلبات لبرنامج الدعم المالي لحساب المواطن.',
+        category: 'خدمات الدعم الحكومي والعمل الحر',
+        features: [
+            'التسجيل في برنامج حساب المواطن',
+            'تحديث البيانات الشخصية والمالية',
+            'إضافة التابعين والأطفال للحساب',
+            'متابعة حالة الأهلية واستحقاق الدعم',
+            'تحديث بيانات الحساب البنكي لاستلام الدعم',
+            'حل مشاكل تأخير أو عدم وصول الدعم'
+        ]
+    },
+    'reef_support': {
+        icon: 'tractor',
+        title: 'دعم ريف',
+        description: 'مساعدة الأسر المنتجة في القطاع الزراعي للحصول على الدعم المخصص من البرنامج.',
+        category: 'خدمات الدعم الحكومي والعمل الحر',
+        features: [
+            'التقديم على دعم الأسر المنتجة الزراعية',
+            'دعم مشاريع الإنتاج النباتي والحيواني',
+            'تمويل معدات وأدوات الإنتاج الزراعي',
+            'دعم مشاريع تربية المواشي والدواجن',
+            'تمويل مشاريع النحل وإنتاج العسل',
+            'متابعة طلبات الدعم وصرف المبالغ'
+        ]
+    },
+    'freelance_doc_issue': {
+        icon: 'file-badge-2',
+        title: 'وثيقة العمل الحر',
+        description: 'إصدار وتجديد وثيقة العمل الحر لممارسة الأنشطة المهنية المختلفة بصورة قانونية.',
+        category: 'خدمات الدعم الحكومي والعمل الحر',
+        features: [
+            'إصدار وثيقة العمل الحر للأنشطة المهنية',
+            'تجديد وثيقة العمل الحر المنتهية',
+            'إضافة أنشطة مهنية جديدة للوثيقة',
+            'تعديل بيانات وثيقة العمل الحر',
+            'إيقاف وثيقة العمل الحر مؤقتاً',
+            'إلغاء وثيقة العمل الحر نهائياً'
+        ]
+    },
+    'freelance_loan': {
+        icon: 'banknote',
+        title: 'قرض العمل الحر',
+        description: 'المساعدة في التقديم على تمويل من بنك التنمية الاجتماعية لدعم مشروعك ونشاطك الحر.',
+        category: 'خدمات الدعم الحكومي والعمل الحر',
+        features: [
+            'التقديم على قروض العمل الحر',
+            'إعداد دراسة الجدوى للمشروع',
+            'تجهيز المستندات المطلوبة للقرض',
+            'متابعة طلب القرض مع البنك',
+            'المساعدة في جدولة أقساط القرض',
+            'تقديم طلبات تأجيل أو إعادة جدولة الأقساط'
+        ]
+    },
+
+    // Petitions & Telegrams Services (8 services)
+    'job_application': {
+        icon: 'briefcase',
+        title: 'معروض طلب وظيفة',
+        description: 'صياغة خطاب احترافي ومقنع لطلب الوظيفة لتقديمه للجهات الحكومية أو الخاصة.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة معروض طلب وظيفة احترافي',
+            'تخصيص المعروض حسب نوع الوظيفة المطلوبة',
+            'إبراز المؤهلات والخبرات بطريقة مؤثرة',
+            'استخدام اللغة الرسمية المناسبة',
+            'تنسيق المعروض بشكل جذاب ومقروء',
+            'مراجعة وتدقيق المعروض قبل التسليم'
+        ]
+    },
+    'financial_aid': {
+        icon: 'coins',
+        title: 'معروض طلب مساعدة مالية',
+        description: 'كتابة طلب مؤثر ومقنع لطلب المساعدة المالية لتقديمه للديوان الملكي أو الجمعيات الخيرية.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة معروض طلب مساعدة مالية مؤثر',
+            'عرض الحالة الاجتماعية والمالية بوضوح',
+            'إرفاق المستندات المطلوبة والداعمة',
+            'التأكيد على الحاجة الماسة للمساعدة',
+            'اختيار الجهة المناسبة لتقديم الطلب',
+            'متابعة الطلب مع الجهات المختصة'
+        ]
+    },
+    'complaint_letter': {
+        icon: 'megaphone',
+        title: 'معروض شكوى',
+        description: 'صياغة شكوى رسمية ضد جهة أو شخص مع ذكر التفاصيل والأدلة بطريقة قانونية سليمة.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة معروض شكوى قانوني واضح',
+            'ذكر تفاصيل الواقعة والأضرار المترتبة',
+            'تجميع الأدلة والمستندات الداعمة',
+            'تحديد الجهة المختصة لتقديم الشكوى',
+            'صياغة المطالب والحقوق المطلوبة',
+            'متابعة الشكوى والرد عليها من الجهات'
+        ]
+    },
+    'royal_court_telegram': {
+        icon: 'crown',
+        title: 'برقية للديوان الملكي',
+        description: 'كتابة وإرسال البرقيات العاجلة للديوان الملكي لمختلف الأغراض بأسلوب رسمي مناسب.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة برقيات رسمية للديوان الملكي',
+            'استخدام الأسلوب المناسب والمحترم',
+            'تحديد نوع البرقية حسب الغرض',
+            'مراعاة البروتوكول الملكي في الكتابة',
+            'تقديم البرقية عبر القنوات الرسمية',
+            'متابعة وصول البرقية والرد عليها'
+        ]
+    },
+    'mercy_plea': {
+        icon: 'shield-alert',
+        title: 'معروض استرحام',
+        description: 'صياغة طلب استرحام وتخفيف العقوبة لتقديمه لإمارة المنطقة أو الجهات المختصة.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة معروض استرحام مؤثر ومقنع',
+            'عرض الظروف المخففة والأسباب الداعية',
+            'إبراز التوبة والندم على ما حدث',
+            'طلب تخفيف العقوبة أو العفو',
+            'تقديم الضمانات اللازمة لعدم التكرار',
+            'متابعة معروض الاسترحام مع الجهات'
+        ]
+    },
+    'medical_treatment_request': {
+        icon: 'heart-pulse',
+        title: 'معروض طلب علاج',
+        description: 'كتابة طلب للمقام السامي أو وزارة الصحة لطلب العلاج بالداخل أو الخارج.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة معروض طلب علاج طبي متخصص',
+            'إرفاق التقارير الطبية والتشخيص',
+            'طلب العلاج داخل المملكة أو خارجها',
+            'تبرير الحاجة للعلاج المتخصص',
+            'طلب تحمل تكاليف العلاج',
+            'متابعة الطلب مع وزارة الصحة'
+        ]
+    },
+    'reconsideration_request': {
+        icon: 'search',
+        title: 'معروض التماس إعادة نظر',
+        description: 'صياغة طلب التماس إعادة النظر في حكم قضائي وفق الأصول النظامية والقانونية.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة التماس إعادة النظر القانوني',
+            'تحديد أسباب طلب إعادة النظر',
+            'إرفاق الأدلة والمستندات الجديدة',
+            'مراعاة المواعيد النظامية للطعن',
+            'صياغة الأسباب القانونية بدقة',
+            'تقديم الالتماس للمحكمة المختصة'
+        ]
+    },
+    'official_letters': {
+        icon: 'mail',
+        title: 'صياغة الخطابات الرسمية',
+        description: 'كتابة كافة أنواع الخطابات الرسمية الموجهة للجهات الحكومية والخاصة بأسلوب مهني.',
+        category: 'المعاريض والبرقيات',
+        features: [
+            'صياغة خطابات رسمية للجهات الحكومية',
+            'كتابة خطابات تجارية ومهنية',
+            'خطابات طلب معلومات أو استفسارات',
+            'خطابات شكر وتقدير واعتذار',
+            'خطابات دعوة ومراسلات رسمية',
+            'مراجعة وتدقيق الخطابات لغوياً'
+        ]
+    }
+};
+
+// URL Parameter Parser
+function getServiceFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('service');
+}
+
+// Display Service Details
+function displayServiceDetails(serviceKey) {
+    const service = serviceData[serviceKey];
+    
+    if (!service) {
+        showError();
+        return;
+    }
+
+    // Update page title
+    document.title = `${service.title} — الفارس للأعمال`;
+    
+    // Update service icon
+    const serviceIcon = document.getElementById('serviceIcon');
+    serviceIcon.setAttribute('data-lucide', service.icon);
+    
+    // Update service title and description
+    document.getElementById('serviceTitle').textContent = service.title;
+    document.getElementById('serviceDescription').textContent = service.description;
+    
+    // Update features list
+    const featuresList = document.getElementById('featuresList');
+    featuresList.innerHTML = '';
+    
+    service.features.forEach(feature => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <i data-lucide="check-circle"></i>
+            <span class="feature-text">${feature}</span>
+        `;
+        featuresList.appendChild(li);
+    });
+    
+    // Update CTA button
+    const ctaButton = document.getElementById('ctaButton');
+    ctaButton.onclick = function() {
+        const whatsappNumber = '966555490800';
+        const message = `السلام عليكم، أرغب في الاستفسار عن خدمة: ${service.title}`;
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    };
+    
+    // Show content and hide loading
+    document.getElementById('serviceContent').style.display = 'block';
+    
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+}
+
+// Show Error State
+function showError() {
+    document.getElementById('serviceTitle').textContent = 'الخدمة غير موجودة';
+    document.getElementById('serviceDescription').textContent = 'عذراً، لم نتمكن من العثور على الخدمة المطلوبة.';
+    document.getElementById('errorContainer').style.display = 'block';
+    
+    // Initialize Lucide icons for error state
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+}
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceKey = getServiceFromUrl();
+    
+    if (serviceKey) {
+        displayServiceDetails(serviceKey);
+    } else {
+        showError();
+    }
+    
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+});
+    </script>
+</main>

@@ -1,0 +1,27 @@
+{
+  "name": "alfarissa-website",
+  "version": "1.0.0",
+  "description": "الفارس للأعمال - موقع خدمات الأعمال والاستشارات القانونية",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp watch",
+    "serve": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "arabic",
+    "business",
+    "legal-services",
+    "government-transactions",
+    "static-website"
+  ],
+  "author": "AlFaris Business",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^2.0.0"
+  }
+}

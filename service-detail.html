@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<title>تفاصيل الخدمة — الفارس للأعمال</title>
+<meta name="description" content="اطلع على تفاصيل الخدمة المطلوبة من الفارس للأعمال مع قائمة كاملة بالمميزات والفوائد المقدمة."/>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;1000&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<style>
+:root{
+  --brand:#2563EB; --brand-dark:#1D4ED8; /* New Professional Blue */
+  --dark:#0F172A; --sub:#475569; --bg:#F8FAFC; --border: #E2E8F0;
+  --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:24px;
+  --shadow-card:0 2px 4px rgba(15,23,42,.05),0 8px 20px rgba(15,23,42,.07);
+  --shadow-elev:0 4px 8px rgba(15,23,42,.06),0 16px 40px rgba(15,23,42,.1);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+*{box-sizing:border-box}
+html{direction:rtl;scroll-behavior:smooth}
+body{
+  margin:0; font-family:"Cairo", system-ui, -apple-system, sans-serif;
+  background:var(--bg); color:var(--dark);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  line-height:1.8;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5{line-height:1.4; font-weight:700; margin:0}
+p{margin:.6em 0}
+a{color:inherit;text-decoration:none; transition: var(--transition);}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+.section{padding:80px 0}
+
+/* --- Components --- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  border-radius:var(--r); padding:10px 20px; font-size:15px; font-weight:600;
+  border:1px solid transparent; transition:var(--transition); white-space:nowrap;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)}
+.btn-primary:hover{background:var(--brand-dark); transform:translateY(-2px); box-shadow:var(--shadow-card);}
+.small{font-size:14px;color:#94A3B8}
+
+/* --- Header & Navigation --- */
+.topbar{background:var(--dark);color:#94A3B8; font-size:12px;}
+.topbar .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+.topbar-socials{display:flex; gap:12px;}
+.topbar-socials a:hover{color:var(--brand);}
+.header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(15,23,42,.85); backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.1); color:#fff;
+}
+.header .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{
+  width:48px; height:48px;
+  display:grid; place-items:center;
+}
+.brand .logo img {
+    max-width: 100%;
+    height: auto;
+}
+.nav{display:none;gap:28px;font-size:15px}
+.nav a{color:#cbd5e1; position:relative; padding:4px 0;}
+.nav a:after{
+    content:''; position:absolute; bottom:0; right:0;
+    width:0; height:2px; background:var(--brand); transition:var(--transition);
+}
+.nav a:hover{color:#fff}
+.nav a.active:after, .nav a:hover:after{width:100%;}
+@media(min-width:992px){.nav{display:flex}}
+.subnav{background:#fff;color:var(--dark);border-bottom:1px solid var(--border); display:none;}
+@media(min-width:992px){.subnav{display:block}}
+.subnav .row{display:flex;gap:24px;font-size:14px;padding:10px 0}
+.subnav a:hover{color:var(--brand)}
+
+/* --- Page Header --- */
+.page-header{
+    padding: 0;
+    background: url('https://i.postimg.cc/j5JQ4pTb/image.png') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4));
+}
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+.page-header h1 { font-size: clamp(2.2rem, 4vw, 2.8rem); }
+.page-header p { max-width: 600px; margin: 8px auto 0; color: #e2e8f0; font-size: 1.1rem; }
+
+/* --- ENHANCED Service Accordion --- */
+.service-accordion { display: flex; flex-direction: column; gap: 16px; }
+.tab-button {
+    background: #fff; border: 1px solid var(--border); border-radius: var(--r);
+    padding: 16px 24px; cursor: pointer; transition: var(--transition);
+    width: 100%; text-align: right; box-shadow: var(--shadow-card);
+}
+.tab-button:hover { transform: translateY(-4px); box-shadow: var(--shadow-elev); }
+.tab-button.active { background: var(--dark); color: #fff; border-color: var(--dark); transform: scale(1.02); }
+.tab-button h3 { font-size: 18px; margin: 0; display: flex; align-items: center; justify-content: space-between; }
+.tab-button h3 .icon { transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.tab-button.active h3 .icon { transform: rotate(180deg); }
+.tab-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.tab-content.active { grid-template-rows: 1fr; }
+.tab-content > div { overflow: hidden; } /* This is the key for the animation */
+
+/* --- Service Card --- */
+.services-grid { 
+    display: grid; gap: 16px; 
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+    padding: 24px 0;
+}
+.service-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: var(--r); padding: 16px;
+    box-shadow: var(--shadow-card);
+    text-align: center; display: block;
+    /* Animation base styles */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+.service-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: var(--shadow-elev);
+    border-color: var(--brand);
+}
+.tab-content.active .service-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-card .icon-wrap {
+    width: 40px; height: 40px; border-radius: var(--r-sm);
+    background-color: var(--brand); color: #fff;
+    display: grid; place-items: center; margin: 0 auto 12px;
+}
+.service-card h4 { font-size: 15px; margin-bottom: 4px; }
+.service-card p { color: var(--sub); font-size: 13px; line-height: 1.6; margin: 0; }
+
+/* --- Footer & FAB --- */
+footer{
+    background: var(--dark) url('https://i.postimg.cc/528wJJZd/Chat-GPT-Image-27-2025-07-04-32.png') center/cover no-repeat;
+    color:#fff; margin-top:48px; padding:72px 0 24px;
+    position: relative;
+}
+footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.9);
+}
+footer .container {
+    position: relative;
+    z-index: 2;
+}
+footer a:hover{color:var(--brand);}
+.footer-grid{display:grid;gap:40px}
+@media(min-width:992px){.footer-grid{grid-template-columns: 2fr 1fr 1.5fr;}}
+
+/* --- Footer Partners --- */
+.footer-partners {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+}
+.footer-partners .logos-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.footer-partners .logo-item {
+    background: #fff;
+    border-radius: var(--r-sm);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+.footer-partners .logo-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elev);
+}
+.footer-partners .logo-item img {
+    height: 45px;
+    max-width: 130px;
+}
+
+.footer-bottom{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);color:#94a3b8;font-size:14px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between; gap:12px;}
+.fab{position:fixed;left:16px;bottom:16px;display:grid;gap:12px;z-index:40}
+.fab a{
+    width:48px;height:48px;border-radius:999px;display:grid;place-items:center;
+    background:#fff; border:1px solid var(--border);box-shadow:var(--shadow-elev);
+    transition:var(--transition);
+}
+.fab a:hover{background:var(--brand); color:#fff; transform:scale(1.1);}
+.backtotop{
+    position:fixed;right:16px;bottom:16px;width:44px;height:44px;border-radius:999px;
+    background:var(--brand);color:#fff;display:grid;place-items:center;
+    box-shadow:var(--shadow-elev);opacity:0;visibility:hidden;transition:var(--transition);
+}
+.backtotop.show{opacity:1;visibility:visible}
+.backtotop:hover{background:var(--brand-dark); transform:scale(1.1);}
+
+/* Service Detail Styles */
+.service-detail-container { max-width: 900px; margin: 0 auto; padding: 24px 16px; }
+.service-hero { text-align: center; padding: 40px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.service-icon { font-size: 48px; color: var(--brand); margin-bottom: 16px; display: block; }
+.service-title { font-size: 32px; color: var(--dark); margin-bottom: 16px; line-height: 1.3; }
+.service-description { font-size: 18px; color: var(--sub); line-height: 1.6; max-width: 600px; margin: 0 auto; }
+.service-content { display: grid; gap: 32px; }
+.features-section, .details-section { background: #fff; padding: 32px; border-radius: var(--r-lg); box-shadow: var(--shadow-card); }
+.section-title { font-size: 24px; color: var(--dark); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+.section-title i { color: var(--brand); font-size: 20px; }
+.features-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.features-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+.features-list li:last-child { border-bottom: none; }
+.features-list li i { color: var(--brand); font-size: 16px; margin-top: 2px; flex-shrink: 0; }
+.feature-text { color: var(--dark); line-height: 1.6; }
+.cta-section { text-align: center; padding: 40px 0; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: var(--r-lg); margin-top: 32px; }
+.cta-title { font-size: 24px; color: var(--dark); margin-bottom: 12px; }
+.cta-subtitle { color: var(--sub); margin-bottom: 24px; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; background: var(--brand); color: #fff; padding: 14px 32px; border-radius: var(--r); text-decoration: none; font-weight: 600; transition: var(--transition); border: none; font-size: 16px; }
+.cta-button:hover { background: var(--brand-dark); transform: translateY(-2px); box-shadow: var(--shadow-elev); }
+.error-container { text-align: center; padding: 80px 20px; }
+.error-icon { font-size: 64px; color: #e2e8f0; margin-bottom: 24px; }
+.error-title { font-size: 28px; color: var(--dark); margin-bottom: 16px; }
+.error-message { color: var(--sub); font-size: 18px; margin-bottom: 32px; }
+.back-button { display: inline-flex; align-items: center; gap: 8px; background: var(--brand); color: #fff; padding: 12px 24px; border-radius: var(--r); text-decoration: none; font-weight: 500; transition: var(--transition); }
+.back-button:hover { background: var(--brand-dark); transform: translateY(-2px); }
+@media (max-width: 768px) {
+  .service-detail-container { padding: 16px; }
+  .service-title { font-size: 24px; }
+  .service-description { font-size: 16px; }
+  .features-section, .details-section { padding: 20px; }
+  .section-title { font-size: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container row">
+    <div class="small" style="display:flex; align-items:center; gap:16px;">
+        <span><i data-lucide="mail" style="width:14px; vertical-align:middle; margin-left:4px;"></i> info@alfarissa.org</span>
+        <span><i data-lucide="phone" style="width:14px; vertical-align:middle; margin-left:4px;"></i> 0555490800</span>
+    </div>
+    <div class="topbar-socials">
+      <a href="#" title="Twitter"><i data-lucide="twitter" style="width:16px;"></i></a>
+      <a href="#" title="Instagram"><i data-lucide="instagram" style="width:16px;"></i></a>
+      <a href="#" title="LinkedIn"><i data-lucide="linkedin" style="width:16px;"></i></a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container row">
+    <a href="index.html" class="brand">
+      <div class="logo">
+        <img src="https://i.postimg.cc/jj9rwth9/image.png" alt="شعار الفارس للأعمال">
+      </div>
+      <div>
+        <div style="font-weight:800;line-height:1; font-size:18px;">الفارس للأعمال</div>
+        <div class="small" style="color:#cbd5e1; font-size:12px;">تحت إشراف شركة المحامي محمد الفارس</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="about.html">من نحن</a>
+      <a href="services.html">الخدمات</a>
+      <a href="packages.html">الباقات</a>
+      <a href="blogs.html">المدونة</a>
+      <a href="help.html">اتصل بنا</a>
+      <a href="faq.html">الأسئلة الشائعة</a>
+    </nav>
+    <div><a class="btn btn-primary" href="help.html">اطلب استشارة</a></div>
+  </div>
+</header>
+<div class="subnav">
+  <div class="container row">
+    <a href="services.html" style="color: var(--brand);">← العودة للخدمات</a>
+  </div>
+</div>
+
+<main>
+    <div class="service-detail-container">
+        <!-- Service Hero Section -->
+        <div class="service-hero" id="serviceHero">
+            <i class="service-icon" id="serviceIcon" data-lucide="help-circle"></i>
+            <h1 class="service-title" id="serviceTitle">جاري التحميل...</h1>
+            <p class="service-description" id="serviceDescription">جاري تحميل تفاصيل الخدمة...</p>
+        </div>
+
+        <!-- Service Content -->
+        <div class="service-content" id="serviceContent" style="display: none;">
+            <!-- Features Section -->
+            <div class="features-section">
+                <h2 class="section-title">
+                    <i data-lucide="check-circle"></i>
+                    مميزات الخدمة
+                </h2>
+                <ul class="features-list" id="featuresList">
+                    <!-- Features will be dynamically populated -->
+                </ul>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h3 class="cta-title">جاهز لطلب الخدمة؟</h3>
+                <p class="cta-subtitle">تواصل معنا الآن للحصول على استشارة مجانية وبدء تنفيذ الخدمة</p>
+                <a href="help.html" class="cta-button" id="ctaButton">
+                    <i data-lucide="phone"></i>
+                    اطلب الخدمة الآن
+                </a>
+            </div>
+        </div>
+
+        <!-- Error Container -->
+        <div class="error-container" id="errorContainer" style="display: none;">
+            <i class="error-icon" data-lucide="search-x"></i>
+            <h2 class="error-title">الخدمة غير موجودة</h2>
+            <p class="error-message">عذراً، لم نتمكن من العثور على الخدمة المطلوبة. تأكد من صحة الرابط أو اختر خدمة من قائمة خدماتنا.</p>
+            <a href="services.html" class="back-button">
+                <i data-lucide="arrow-right"></i>
+                عودة للخدمات
+            </a>
+        </div>
+    </div>
+    <script>
+        // Service Data Object - All 42 services with detailed information
+        const serviceData = {
+            // Legal Services (12 services)
+            'legal_consultation': {
+                icon: 'message-square',
+                title: 'استشارات قانونية',
+                description: 'تحليل دقيق وتقديم استشارة متكاملة لمساعدتك على اتخاذ قرارات مستنيرة في جميع المسائل القانونية.',
+                category: 'الخدمات القانونية',
+                features: [
+                    'استشارة شخصية مع محامين متخصصين ومرخصين',
+                    'تحليل شامل للحالة القانونية وتقييم المخاطر',
+                    'توضيح الحقوق والواجبات وفقاً للأنظمة السعودية',
+                    'تقديم خيارات قانونية متعددة مع شرح الإيجابيات والسلبيات',
+                    'متابعة مستمرة وإجابة على الاستفسارات اللاحقة',
+                    'توثيق الاستشارة كتابياً مع التوصيات القانونية'
+                ]
+            },
+            'contract_drafting': {
+                icon: 'file-text',
+                title: 'صياغة العقود',
+                description: 'صياغة ومراجعة كافة أنواع العقود لضمان حماية حقوقك القانونية وتجنب النزاعات المستقبلية.',
+                category: 'الخدمات القانونية',
+                features: [
+                    'صياغة العقود التجارية والمدنية والعمالية',
+                    'مراجعة العقود الموجودة وتعديلها قانونياً',
+                    'ضمان التوافق مع الأنظمة واللوائح السعودية',
+                    'إضافة بنود حماية للحقوق والمصالح',
+                    'صياغة اتفاقيات الشراكة والاستثمار',
+                    'عقود الخدمات والتوريد والمقاولات'
+                ]
+            }
+                            <a href="service-detail.html?service=memo_drafting" class="service-card"><div class="icon-wrap"><i data-lucide="pencil-ruler"></i></div><h4>صياغة المذكرات</h4><p>كتابة المذكرات القانونية (دعاوى، ردود، استئناف) باحترافية ودقة.</p></a>
+                            <a href="service-detail.html?service=judgment_execution" class="service-card"><div class="icon-wrap"><i data-lucide="hammer"></i></div><h4>تنفيذ الأحكام</h4><p>متابعة فعّالة لإجراءات تنفيذ الأحكام والسندات التنفيذية الصادرة لصالحك.</p></a>
+                            <a href="service-detail.html?service=labor_cases" class="service-card"><div class="icon-wrap"><i data-lucide="users"></i></div><h4>القضايا العمالية</h4><p>تمثيل العمال وأصحاب العمل في النزاعات العمالية أمام المحاكم المختصة.</p></a>
+                            <a href="service-detail.html?service=commercial_cases" class="service-card"><div class="icon-wrap"><i data-lucide="landmark"></i></div><h4>القضايا التجارية</h4><p>التمثيل في المنازعات التجارية بين الشركات والمؤسسات بكل احترافية.</p></a>
+                            <a href="service-detail.html?service=real_estate_cases" class="service-card"><div class="icon-wrap"><i data-lucide="home"></i></div><h4>القضايا العقارية</h4><p>التعامل مع النزاعات العقارية، الإفراغ، وقضايا الإيجار المختلفة.</p></a>
+                            <a href="service-detail.html?service=personal_status_cases" class="service-card"><div class="icon-wrap"><i data-lucide="heart-handshake"></i></div><h4>قضايا الأحوال الشخصية</h4><p>التمثيل في قضايا الزواج، الطلاق، الحضانة، والتركات والمواريث.</p></a>
+                            <a href="service-detail.html?service=criminal_cases" class="service-card"><div class="icon-wrap"><i data-lucide="shield"></i></div><h4>القضايا الجنائية</h4><p>الدفاع والمرافعة في مختلف القضايا الجنائية أمام الجهات المختصة.</p></a>
+                            <a href="service-detail.html?service=debt_collection" class="service-card"><div class="icon-wrap"><i data-lucide="banknote"></i></div><h4>تحصيل الديون</h4><p>اتخاذ الإجراءات النظامية لتحصيل الديون المستحقة للأفراد والشركات.</p></a>
+                            <a href="service-detail.html?service=internal_regulations" class="service-card"><div class="icon-wrap"><i data-lucide="file-bar-chart-2"></i></div><h4>إعداد اللوائح الداخلية</h4><p>صياغة لوائح تنظيم العمل والسياسات الداخلية للمنشآت بما يوافق النظام.</p></a>
+                            <a href="service-detail.html?service=legal_package" class="service-card"><div class="icon-wrap"><i data-lucide="package-check"></i></div><h4>الباقة القانونية الشاملة</h4><p>تقديم دعم قانوني مستمر للمنشآت بعقد سنوي لتلبية كافة الاحتياجات.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 2: Business Gov Services -->
+            <div class="accordion-item" id="gov-business-tab">
+                <button class="tab-button" data-tab="gov-business">
+                    <h3><span><i data-lucide="briefcase" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> الخدمات الحكومية للأعمال</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="gov-business">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=company_formation" class="service-card"><div class="icon-wrap"><i data-lucide="building-2"></i></div><h4>تأسيس الشركات</h4><p>إصدار السجل التجاري وعقد التأسيس للمؤسسات والشركات بكافة أنواعها.</p></a>
+                            <a href="service-detail.html?service=trademark_registration" class="service-card"><div class="icon-wrap"><i data-lucide="shield-check"></i></div><h4>تسجيل العلامات التجارية</h4><p>حماية علامتك التجارية رسميًا لدى هيئة الملكية الفكرية لضمان حقوقك.</p></a>
+                            <a href="service-detail.html?service=qiwa_services" class="service-card"><div class="icon-wrap"><i data-lucide="briefcase"></i></div><h4>خدمات منصة قوى</h4><p>إدارة شاملة: نقل موظفين، إصدار تأشيرات، وتوثيق عقود العمل.</p></a>
+                            <a href="service-detail.html?service=misa_services" class="service-card"><div class="icon-wrap"><i data-lucide="trending-up"></i></div><h4>خدمات المستثمرين (MISA)</h4><p>إصدار وتجديد تراخيص الاستثمار الأجنبي وتعديل بياناتها بكل يسر.</p></a>
+                            <a href="service-detail.html?service=gosi_services" class="service-card"><div class="icon-wrap"><i data-lucide="shield-plus"></i></div><h4>التأمينات الاجتماعية</h4><p>تسجيل المنشأة والموظفين (سعوديين وأجانب) وإدارة الاشتراكات.</p></a>
+                            <a href="service-detail.html?service=zakat_tax" class="service-card"><div class="icon-wrap"><i data-lucide="percent"></i></div><h4>الزكاة والضريبة والجمارك</h4><p>التسجيل وإصدار الشهادات وتقديم الإقرارات الزكوية والضريبية.</p></a>
+                            <a href="service-detail.html?service=balady_licenses" class="service-card"><div class="icon-wrap"><i data-lucide="clipboard-list"></i></div><h4>تراخيص بلدية (بلدي)</h4><p>إصدار وتجديد رخص الأنشطة التجارية والمهنية واللوحات الإعلانية.</p></a>
+                            <a href="service-detail.html?service=muqeem_services" class="service-card"><div class="icon-wrap"><i data-lucide="user-check"></i></div><h4>خدمات مقيم</h4><p>إصدار وتجديد الإقامات، وتأشيرات الخروج والعودة للعمالة الخاصة بك.</p></a>
+                            <a href="service-detail.html?service=chamber_of_commerce" class="service-card"><div class="icon-wrap"><i data-lucide="handshake"></i></div><h4>الغرفة التجارية</h4><p>تجديد الاشتراكات، تصديق الوثائق، وإصدار شهادات المنشأ للمصدرين.</p></a>
+                            <a href="service-detail.html?service=cr_cancellation" class="service-card"><div class="icon-wrap"><i data-lucide="file-x-2"></i></div><h4>شطب السجل التجاري</h4><p>تنفيذ إجراءات إغلاق المنشأة وشطب السجل التجاري نهائيًا بشكل نظامي.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accordion Item 3: Individual Gov Services -->
+            <div class="accordion-item" id="gov-individuals-tab">
+                <button class="tab-button" data-tab="gov-individuals">
+                    <h3><span><i data-lucide="user" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> الخدمات الحكومية للأفراد</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="gov-individuals">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=absher_individuals" class="service-card"><div class="icon-wrap"><i data-lucide="user-check"></i></div><h4>خدمات أبشر أفراد</h4><p>تنفيذ كافة خدماتك: تجديد وثائق، إصدار تصاريح، وتنفيذ التفاويض.</p></a>
+                            <a href="service-detail.html?service=traffic_services" class="service-card"><div class="icon-wrap"><i data-lucide="car"></i></div><h4>خدمات المرور</h4><p>نقل ملكية، تجديد رخص، إسقاط مركبات، والاعتراض على المخالفات.</p></a>
+                            <a href="service-detail.html?service=real_estate_services" class="service-card"><div class="icon-wrap"><i data-lucide="home"></i></div><h4>الخدمات العقارية</h4><p>إفراغ عقاري، تسجيل عقود إيجار، فرز الوحدات، وإصدار رخص البناء.</p></a>
+                            <a href="service-detail.html?service=passports_services" class="service-card"><div class="icon-wrap"><i data-lucide="passport"></i></div><h4>الجوازات</h4><p>إصدار وتجديد جواز السفر السعودي، وإصدار تصاريح السفر اللازمة.</p></a>
+                            <a href="service-detail.html?service=domestic_workers" class="service-card"><div class="icon-wrap"><i data-lucide="users-2"></i></div><h4>خدمات العمالة المنزلية</h4><p>إصدار الإقامة، تأشيرة خروج وعودة، نقل خدمات، وبلاغات الهروب.</p></a>
+                            <a href="service-detail.html?service=power_of_attorney" class="service-card"><div class="icon-wrap"><i data-lucide="file-lock-2"></i></div><h4>إصدار الوكالات</h4><p>إصدار وفسخ الوكالات الشرعية عبر منصة 'ناجز' بكل سهولة.</p></a>
+                            <a href="service-detail.html?service=stop_services_lifting" class="service-card"><div class="icon-wrap"><i data-lucide="shield-off"></i></div><h4>رفع إيقاف الخدمات</h4><p>متابعة الإجراءات النظامية لرفع إيقاف الخدمات بعد معالجة المديونيات.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 4: Gov Support -->
+            <div class="accordion-item" id="gov-support-tab">
+                <button class="tab-button" data-tab="gov-support">
+                    <h3><span><i data-lucide="sprout" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> خدمات الدعم الحكومي والعمل الحر</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="gov-support">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=social_security" class="service-card"><div class="icon-wrap"><i data-lucide="shield-half"></i></div><h4>الضمان الاجتماعي المطور</h4><p>التسجيل والمتابعة للحصول على معاش الضمان للأسر والأفراد المستحقين.</p></a>
+                            <a href="service-detail.html?service=citizen_account_reg" class="service-card"><div class="icon-wrap"><i data-lucide="users-2"></i></div><h4>حساب المواطن</h4><p>التسجيل وتحديث البيانات وإدارة الطلبات لبرنامج الدعم المالي.</p></a>
+                            <a href="service-detail.html?service=reef_support" class="service-card"><div class="icon-wrap"><i data-lucide="tractor"></i></div><h4>دعم ريف</h4><p>مساعدة الأسر المنتجة في القطاع الزراعي للحصول على الدعم المخصص.</p></a>
+                            <a href="service-detail.html?service=freelance_doc_issue" class="service-card"><div class="icon-wrap"><i data-lucide="file-badge-2"></i></div><h4>وثيقة العمل الحر</h4><p>إصدار وتجديد وثيقة العمل الحر لممارسة الأنشطة المهنية المختلفة.</p></a>
+                            <a href="service-detail.html?service=freelance_loan" class="service-card"><div class="icon-wrap"><i data-lucide="banknote"></i></div><h4>قرض العمل الحر</h4><p>المساعدة في التقديم على تمويل من بنك التنمية الاجتماعية لدعم مشروعك.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 5: Petitions -->
+            <div class="accordion-item" id="petitions-tab">
+                <button class="tab-button" data-tab="petitions">
+                    <h3><span><i data-lucide="pencil-line" style="width:20px; vertical-align: -4px; margin-left: 8px;"></i> المعاريض والبرقيات</span> <span class="icon"><i data-lucide="chevron-down"></i></span></h3>
+                </button>
+                <div class="tab-content" id="petitions">
+                    <div>
+                        <div class="services-grid">
+                            <a href="service-detail.html?service=job_application" class="service-card"><div class="icon-wrap"><i data-lucide="briefcase"></i></div><h4>معروض طلب وظيفة</h4><p>صياغة خطاب احترافي ومقنع لتقديمه للجهات الحكومية أو الخاصة.</p></a>
+                            <a href="service-detail.html?service=financial_aid" class="service-card"><div class="icon-wrap"><i data-lucide="coins"></i></div><h4>معروض طلب مساعدة مالية</h4><p>كتابة طلب مؤثر لتقديمه للديوان الملكي أو الجمعيات الخيرية.</p></a>
+                            <a href="service-detail.html?service=complaint_letter" class="service-card"><div class="icon-wrap"><i data-lucide="megaphone"></i></div><h4>معروض شكوى</h4><p>صياغة شكوى رسمية ضد جهة أو شخص مع ذكر التفاصيل والأدلة.</p></a>
+                            <a href="service-detail.html?service=royal_court_telegram" class="service-card"><div class="icon-wrap"><i data-lucide="crown"></i></div><h4>برقية للديوان الملكي</h4><p>كتابة وإرسال البرقيات العاجلة للديوان الملكي لمختلف الأغراض.</p></a>
+                            <a href="service-detail.html?service=mercy_plea" class="service-card"><div class="icon-wrap"><i data-lucide="shield-alert"></i></div><h4>معروض استرحام</h4><p>صياغة طلب استرحام وتخفيف العقوبة لتقديمه لإمارة المنطقة.</p></a>
+                            <a href="service-detail.html?service=medical_treatment_request" class="service-card"><div class="icon-wrap"><i data-lucide="heart-pulse"></i></div><h4>معروض طلب علاج</h4><p>كتابة طلب للمقام السامي أو وزارة الصحة للعلاج بالداخل أو الخارج.</p></a>
+                            <a href="service-detail.html?service=reconsideration_request" class="service-card"><div class="icon-wrap"><i data-lucide="search"></i></div><h4>معروض التماس إعادة نظر</h4><p>صياغة طلب التماس إعادة النظر في حكم قضائي وفق الأصول النظامية.</p></a>
+                            <a href="service-detail.html?service=official_letters" class="service-card"><div class="icon-wrap"><i data-lucide="mail"></i></div><h4>صياغة الخطابات الرسمية</h4><p>كتابة كافة أنواع الخطابات الموجهة للجهات الحكومية والخاصة.</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand" style="margin-bottom:12px;">
+            <div class="logo">
+                <img src="https://i.postimg.cc/jj9rwth9/image.png" alt="شعار الفارس للأعمال">
+            </div>
+            <div style="font-weight:800; font-size:18px;">الفارس للأعمال</div>
+        </a>
+        <p class="small" style="color:#cbd5e1;max-width:300px;">ننجز معاملاتك الحكومية والقانونية باحترافية ووقتٍ قياسي، لنكون شريكك الموثوق نحو النجاح.</p>
+      </div>
+      <div>
+        <h4 style="font-weight:700;margin-bottom:12px; font-size:18px;">روابط سريعة</h4>
+        <div class="small" style="display:grid;gap:8px; color:#cbd5e1;">
+          <a href="index.html">الرئيسية</a>
+          <a href="services.html">الخدمات</a>
+          <a href="packages.html">الباقات</a>
+          <a href="blogs.html">المدونة</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-weight:700;margin-bottom:12px; font-size:18px;">معلومات التواصل</h4>
+        <div class="small" style="display:grid;gap:8px; color:#cbd5e1;">
+          <div><i data-lucide="phone" style="width:14px; vertical-align:middle; margin-left:4px;"></i> 0555490800 | 0555648602</div>
+          <div><i data-lucide="mail" style="width:14px; vertical-align:middle; margin-left:4px;"></i> info@alfarissa.org</div>
+          <div style="display:flex;"><i data-lucide="map-pin" style="width:14px; vertical-align:top; margin-left:4px; flex-shrink:0;"></i><span>جدة – حي الحمدانية – شارع الحمدانية الفرعي – مبنى 6551 – الرمز البريدي 23761</span></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-partners">
+        <div class="logos-grid">
+            <a href="#" class="logo-item" title="المركز السعودي للأعمال"><img src="https://i.postimg.cc/Qt3RqJzZ/Saudi-Business-Center-01.png" alt="Saudi Business Center Logo"></a>
+            <a href="#" class="logo-item" title="وزارة التجارة"><img src="https://i.postimg.cc/K85q2hqw/Ministry-of-Commerce-01-1.png" alt="Ministry of Commerce Logo"></a>
+            <a href="#" class="logo-item" title="وزارة الموارد البشرية والتنمية الاجتماعية"><img src="https://i.postimg.cc/Xv72N1tJ/Ministry-of-Human-Resources-and-Social-Development.png" alt="Ministry of Human Resources Logo"></a>
+            <a href="#" class="logo-item" title="هيئة الزكاة والضريبة والجمارك"><img src="https://i.postimg.cc/vmq04Ldv/VAT.png" alt="ZATCA VAT Logo"></a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>جميع الحقوق محفوظة © الفارس للأعمال 2025</div>
+      <div style="display:flex; gap:16px;"><a href="privacy-policy.html">سياسة الخصوصية</a> • <a href="terms-of-use.html">شروط الاستخدام</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="fab">
+  <a href="tel:0555490800" title="اتصال"><i data-lucide="phone"></i></a>
+  <a href="https://wa.me/966555648602" target="_blank" title="واتساب"><i data-lucide="message-circle"></i></a>
+</div>
+<a href="#" class="backtotop" title="العودة للأعلى"><i data-lucide="arrow-up"></i></a>
+
+<script>
+function ready(fn){document.readyState!='loading'?fn():document.addEventListener('DOMContentLoaded',fn)}
+
+function setupAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+        const button = item.querySelector('.tab-button');
+        button.addEventListener('click', () => {
+            const wasActive = button.classList.contains('active');
+            
+            // Close all tabs first
+            accordionItems.forEach(i => {
+                i.querySelector('.tab-button').classList.remove('active');
+                i.querySelector('.tab-content').classList.remove('active');
+            });
+
+            if (!wasActive) {
+                button.classList.add('active');
+                const content = item.querySelector('.tab-content');
+                content.classList.add('active');
+                
+                // Stagger animation for cards inside the opened tab
+                const cards = content.querySelectorAll('.service-card');
+                cards.forEach((card, index) => {
+                    card.style.transitionDelay = `${index * 60}ms`;
+                });
+            }
+        });
+    });
+
+    // Animate the initially active tab on page load
+    const initiallyActiveTab = document.querySelector('.tab-content.active');
+    if (initiallyActiveTab) {
+        const cards = initiallyActiveTab.querySelectorAll('.service-card');
+        cards.forEach((card, index) => {
+            card.style.transitionDelay = `${index * 60}ms`;
+        });
+    }
+}
+
+
+function setupBackToTop(){
+  const btt = document.querySelector('.backtotop');
+  if(!btt) return;
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY > 600){btt.classList.add('show')}else{btt.classList.remove('show')}
+  });
+}
+
+ready(()=>{
+  lucide.createIcons();
+  setupAccordion();
+  setupBackToTop();
+});
+</script>
+
+</body></html>
+
